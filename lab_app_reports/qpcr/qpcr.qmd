@@ -1,0 +1,166 @@
+---
+title: Quantative Polymerase Chain Reaction (qPCR)
+subtitle: Lab Report - Session 6
+code-fold: true
+---
+
+# Objective
+
+The objective of the experiment outlined in the sources is to determine the concentration of an unknown experimental DNA sample using quantitative PCR (qPCR) and comparing it against a known control sample.
+
+# Background
+
+## Quantitative PCR (qPCR) {#sec-qpcr}
+qPCR measures the amplification of DNA in real-time by measuring the fluorescence of primers successfully binding to nucleotides. Unlike traditional PCR, qPCR allows for quantifying exact analyses.[^edvotek]
+
+qPCR contains a series of variables which provide useful metrics when analyzing the amplification of DNA. A key variable is the *quantification cycle (Cq)*, or the cycle number at which a sample's fluorescence reaches a preset threshold.
+
+Lower Cq values indicate a higher initial concentration of target DNA. This gives an important measure as to the reliability of the PCR amplification process to produce the Gene-of-Interest.
+
+## Applications of qPCR {#sec-applied-qpcr}
+
+qPCR has several applications which relies upon its ability to provide quantified analyses on a targeted DNA sequence within the sample, and qPCR's melting-curve program for verifying its accuracy.
+
+**Gene Expression Analysis**: qPCR is widely used to study changes in gene expression levels by quantifying specific mRNA transcripts.
+
+**Disease Diagnosis and Management**: qPCR is valuable for diagnosing and monitoring diseases, particularly viral infections by quantifying viral DNA or RNA to assess the viral load in patients.
+
+**Food Testing**: qPCR can be applied in food safety and quality control to detect and quantify genetically modified organisms (GMOs) in food products.
+
+# Results
+## Extracting data from qPCR results {#sec-ext-data}
+```{python}
+#| label: fig-dataFrame
+#| fig-cap: "DataFrame of qPCR results"
+#| fig-cap-location: top
+
+import polars as pl
+import plotly.express as px
+
+owners = pl.DataFrame({
+    "name": ["NL", "ML", "AS", "DY", "MB", "PB", "RP", "LK", "OR", "YY", "SL", "HW"]
+  , "well_num": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+})
+
+contents = pl.DataFrame({
+    "column": ["A", "B", "C", "D", "E", "F", "G", "H"]
+  , "exp_type": ["SC", "SC", "SC", "SC", "EXP", "EXP", "EXP", "EXP"]
+  , "exp_num": [1, 2, 3, 4, 1, 2, 3, 4]
+})
+
+results = pl.read_csv("./data/qpcr_results.csv")
+results = results.with_columns(
+      (pl.col("Well Position")
+        .str.slice(offset=0, length=1)
+        .alias("col_name"))
+    
+    , (pl.col("Well Position")
+        .str.slice(offset=1, length=2)
+        .str.to_integer()
+        .alias("col_num"))
+    
+    , (pl.col("Cq")
+        .str.to_decimal())
+)
+
+results = results.join(other=owners, left_on="col_num", right_on="well_num")
+results = results.join(other=contents, left_on="col_name", right_on="column")
+results
+```
+
+## Plotting the qPCR melting temperature {#sec-plot-data}
+```{python}
+#| label: fig-qpcr-bar
+#| fig-cap: "Examination of Melting Temperature by Well Position"
+#| fig-cap-location: top
+fig_results = results
+
+fig = px.box(
+     fig_results 
+    , y="Tm1 (Melt Temperature)"
+    , x="name"
+    , color="exp_type"
+    , title="Examination of Melting Temperature by Well Position"
+)
+
+fig.show()
+```
+
+
+
+# Interpretation & Discussion
+
+# Study Questions 
+## What are the three steps in a polymerase chain reaction and what does each accomplish?
+
+PCR is a three step process composed of:
+
+1. **Denaturation** occurs at **94°C**. During denaturation, the double-stranded DNA molecule is decomposed into two single strands.[^lehninger]
+
+2. **Annealing** occurs between **40-65°C**. During annealing, Taq polymerase primers bind to complementary regions on the single-stranded DNA templates. Primers flank the target DNA sequence to be amplified, acting as the starting point for polymerase to synthesize new DNA.
+
+3. **Extension** occurs at **72°C**. During extension, a heat-stable DNA polymerase called Taq polymerase adds nucleotides to the 3' end of the primers, synthesizing a new strand of complementary DNA.
+
+These three steps are repeated cyclically, exponentially increasing the amount of the target DNA sequence in the sample. 
+
+## How much does target DNA increase during each PCR cycle under ideal conditions? What are some factors that can dampen this rate of increase?
+
+Under ideal conditions, the target DNA in a polymerase chain reaction (PCR) creates an exponential increase in the amount of the specific DNA sequence being targeted. 
+
+## How is amplified DNA visualized in regular PCR? How is it visualized in qPCR? What information can be gained from each approach?
+
+### Regular PCR
+In regular PCR, amplified DNA is visualized after the PCR process is complete. The PCR products are separated and visualized using gel electrophoresis, stained, and compared alongside a DNA ladder to compare the speed of migration.
+
+- **Presence or Absence of the Target Sequence**: If a band of the expected size is observed on the gel, it indicates that the target DNA sequence was present in the original sample and was successfully amplified.
+
+- **Relative Amount of Amplified DNA**: The intensity of the band on the gel can give a rough indication of the amount of DNA amplified when compared against the Base Pair Ladder.[^edvotek]
+
+### Quantitative PCR (qPCR)
+In qPCR, the amplification of DNA is monitored *in real time*, during the PCR process. This is achieved by using fluorescent dyes or probes that bind to the DNA and emit fluorescence as the DNA is amplified.
+
+- **Measuring Target DNA**: qPCR allows for the precise measurement of the initial amount of target DNA in the sample. This is possible because the fluorescence signal is directly proportional to the amount of DNA present.
+
+- **Melting Curve Analysis**: The melting curve analysis, which measures the temperature at which the double-stranded DNA product melts into single strands, can provide information about the specificity of the PCR reaction and help identify the presence of non-specific products or primer dimers. 
+
+## Compare and contrast relative quantification and absolute quantification in the context of qPCR.
+
+### Relative Quantification
+Relative Quantification aims to determine the fold change in target gene expression between different samples. 
+
+**Method:** Relative Quantification involves comparing the expression of the target gene to housekeeping gene by measuring the difference between the *threshold cycle (Ct)* values between the two. The Ct value represents the PCR cycle where the fluorescence signal crosses a defined threshold measuring the significant increase in amplified DNA.[^edvotek]
+
+### Absolute Quantification
+Absolute Quantification determines the number of copies of the target DNA sequence in a sample. 
+
+**Method:** Absolute Quantification requires the use of a standard curve. This curve is generated using a series of known concentrations of a DNA standard that corresponds to the target sequence. 
+
+By plotting the Ct values of the standard samples against their known concentrations on a logarithmic scale to establish a linear relationship. This standard curve allows for the conversion between the Ct value of an unknown sample into its corresponding DNA concentration.
+
+## What occurs to DNA during a melting curve program? And what do the results say about the PCR reaction? {#sec-q-melting-curve}
+
+A melting curve program assess the quantity of *amplicons* which occured during the qPCR process. Amplicons occur when primers bind to each other, as opposed to the Gene-of-Interest. 
+
+- **Single Peak:** A single, well-defined peak in the melting curve suggests that the PCR reaction amplified a single, specific product. This indicates that the primers used in the reaction were highly specific for the target sequence.
+
+- **Multiple Peaks:** Multiple peaks in the melting curve suggest the presence of non-specific products, such as primer dimers (primers annealing to each other) or amplification of unintended sequences.
+
+## Why might a researcher decide to use qPCR over traditional PCR? {#sec-on-pcr}
+
+qPCR's most significant advantage is its ability to **quantify** the amount of DNA present in a sample, while traditional PCR only provides a **qualitative** assessment.
+
+qPCR monitors DNA amplification in real-time using fluorescent dyes or probes. As the amount of DNA increases during each PCR cycle, the fluorescence signal also increases, allowing researchers to directly measure the amount of DNA being amplified.
+
+## The alternative melting curve (Figure 2) looks different from the melting curve (Figure 1). What would cause the melting curve found in Figure 2 and why?
+
+![Melting curve without amplicons, as evinced by singular peak in right-hand curve](images/fig1_melting_curve.png){#fig-curve-1}
+
+![Melting curve with primer dimer amplicons, evinced by the two peaks in the right-hand curve](images/fig2_melting_curve.png){#fig-curve-2}
+
+As mentioned in @sec-q-melting-curve, the two peaks in @fig-curve-2 evince the presence of amplicons within the sample. Amplicons occur when the primers bind to other free-floating primers as opposed to the Gene-of-Interest, this creates the two melting curves seen above.
+
+# References
+
+[^edvotek]: Edvotek. (2008-2024). Biotechnolgoy Cirriculum Modules. Section 6 - "Quantative PCR (qPCR)"
+[^lehninger]: David L. Nelson; Michael M. Cox. (2021). Lehninger Principles of Biochemistry. "*Double-Helical DNA and RNA Can Be Denatured*" pg 297.
+[^adesh]: Suchit Adesh. (2024). Conversations on the Nature of qPCR

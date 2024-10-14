@@ -1,0 +1,135 @@
+---
+title: "Ligation & Transformation"
+subtitle: "Lab Report - Session #4" 
+date: 2024-10-03
+
+title-block-banner: true
+page-layout: article 
+author: 
+  - name: Matthew Lyn 
+    id: 835822093
+    email: mml167@georgetown.edu 
+format:
+  html:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    linestretch: 1.5
+    font-size: 12
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    linestretch: 1.5
+    font-size: 12
+---
+___
+# Lab Objective
+This lab report details two experiments conducted on 2024-09-23 investigating the use of recombinant DNA ligation for inserting inducible gene promoters into bacteria via transformation, and using multiple, layered assays/screenings to visually monitor the successful insertion of the engineered plasmid into the bacterial colonies.
+
+## Blue/White Cloning of DNA Fragments and $\beta$-galactosidase ($\beta_g$) assay
+Our objective in this first experiment is to 1) ligate DNA fragments into recombinant plasmid DNA, then, 2) transform the pUC8 plasmids into *E. coli* bacteria, 3) verify the successful transformation through a two part assay/screening process; 3.a) extracting colonies with ampicillin resistance incubated in ampicillin-laced cultures, and 3.b) assaying these colonies for $\beta_g$ activity.
+
+## Genetically Engineering *E. coli* to express Green Fluorescent Protein (pGFP)
+Our objective in this second experiment is to 1) transform *E. coli* with pGFP and its constituent ampicillin resistance and GFP synthesis, 2) screen transformed *E. coli* bacteria using LB-ampicillin plates, and 3) examine whether the introduction of isopropyl-$\beta$-D-thiogalactopyranoside (IPTG) within our plated bacterial cultures regulated the expression of GFP.
+
+# Background
+The key concepts underlying the experiment are as follows: 1) the creation of the recombinant plasmid DNA, 2) the transformation of bacteria to express genes encoded within the recombinant plasmid DNA, 3) the reliability of the screening/selection process of the resulting *E. coli* colonies. 
+
+## Creation of Recombinant Plasmid DNA
+The creation and design of the recombinant plasmid DNA is the foundation of experiments one and two. Specifically, the recombinant plasmids pUC8/pGFP are engineered to include genes for both ampicillin resistance and either: 1) the synthesis of $\beta_g$, 2) or the synthesis of GFP proteins. These genes will allow us to screen the bacterial colonies resulting from the experiment to verify whether the genes were inserted successfully.
+
+Both the pUC8/pGFP plasmids contain Multiple Cloning Regions (MCRs), prominent locations within the *lacZ* DNA sequence which allow for the convenient insertion of foreign DNA fragments. 
+
+## Transformation of Bacteria
+
+The bacteria were transformed via "heat shock"; where rapid changes in the bacteria's environment changes the permeability of the cell wall, thus allowing the uptake of foreign DNA into the cell. 
+
+## Screening/Selection Process of Resulting Bacteria
+
+### Blue/White selection
+When the *lacZ* gene is interrupted with the insertion of foreign DNA, the formation of enzyme product $\beta_g$ is inhibited, when $\beta_g$ is inhibited the product of x-gal, a blue protein is similarly inhibited. 
+
+Thus, colonies which are blue haven't had their *lacZ* gene interrupted with the insertion and represent an incomplete insertion. Conversely, colonies which are white have had *lacZ* gene successfully interrupted with the insertion of the foreign DNA fragments. White colonies therefore represent a successful insertion.
+
+We can therefore screen colonies as to whether or not they've successfully incorporated the insertion by confirming whether the colonies are blue/white.
+
+### GFP synthesis in the presence of IPTG
+
+The second experiment involved the insertion of the pGFP into the *E. coli* bacterial colonies. The GFP plasmid is engineered to use the T7 promoter, which, in the presence of IPTG and the deactivation of the *lac* repressor, express the T7 polymerase and transcribe large quantities of GFP protein and cause the cells to fluoresce. 
+
+# Results
+## Blue/White Cloning Results
+### Neither plate had living colonies
+![**Figure 1** - Blue/White Screening: Control plate containing pUC8 transformed *E. coli* left with single blue artifact, Ligation plate of pUC8 transformed *E. coli* right](images/beta_g_activity.JPG){width=3in #fig-no-bg}
+
+- Singular blue artifact within the control plate.
+- Both plates were incubated for 7 days.
+- Both plates were laced with ampicillin.
+
+## pGFP  
+### Multiple colonies collected from +DNA/+AMP/IPTG and +DNA/+AMP plates
+![**Figure 2** - pGFP plates (top left to bottom right) plate without tDNA/with Ampicillin, DNA or Ampicillin, DNA Ampicillin IPTG, DNA & Ampicillin](images/iptg_plates_2.JPG){width=3in #fig-pgfp}
+
+- No colonies present within the -DNA/+AMP or -DNA/-AMP plates.
+- 20+ colonies within the +DNA/+AMP/+IPTG and +DNA/+AMP plates.
+
+### The pGFP-inserted *E. coli* did not fluoresce 
+![**Figure 3** - Flourescent imaging photo by transilluminator of *E. coli* colonies post pGFP transformation](images/no_flourescence.JPG){width=3in #fig-no-fl}
+
+# Interpretation of Results and Discussion
+## Blue/White Screening Discussion
+### Blue artifact in control plate
+
+In the blue/white screening, the control plate in @fig-no-bg contained an artifact with blue color, presumably from a bacterial colony which produced $\beta$-galactosidase. While there were no living bacterial colonies within the plate after 7 days of incubation, there was a leftover blue color. My hypothesis is that the cells within the plate died after producing a small amount of $\beta$-galactosidase, leaving this singular artifact.
+
+### The lack of colonies in the ligation and control plate
+
+The lack of colonies, either blue or white, within the ligation plate in @fig-no-bg implies that there were no cells implanted in the culture. My assumption is that there weren't enough *E. coli* cells collected from the original sample. Thus, even accurately following the protocol outlined through the rest of the transformation process, the pUC8 plasmids wouldn't have any cells to transform. 
+
+## Green Fluourescent Protein Discussion
+
+### Successful insertion within the *lac Z* MCR region without GFP expression
+
+The presence of white colonies within @fig-pgfp demonstrates the presence of the interruption of the *lac Z* gene within the *E. coli* colonies. However, as seen in @fig-no-fl, those same colonies did not flouresce when examined under the transilluminator. From @fig-pgfp we can rule-out gross contamination as the source of white colonies within the +DNA/+AMP/+IPTG and +DNA/+AMP plates. 
+
+However, without the GFP protein expressing within @fig-no-fl, the remaining cause presume that the GFP gene was successfully inserted within the *E. coli* colonies, but the plates weren't properly laced with the IPTG molecule which causes the GFP protein to synthesize. We know that this is the most likely cause because colonies without a succesful insertion wouldn't be able to survive the ampicillin laced within the plates.
+
+# Answers to Study Questions
+
+## Name one alternative method to ligation that can clone a gene, describe how to accomplish the cloning.
+
+Recombinational cloning is another method which can be used to clone a gene of interest. This method requires four steps: 
+
+1. design PCR primers which include homologous sequences to the intended insertion site of the gene-of-interest; 
+
+2. Amplify the gene-of-interest fragments with the PCR primers from step 1; 
+
+3. Mix recombinatorial enzyme solution with vector DNA and the amplified gene-of-interest fragments from step 2; 
+
+4. transfect the mixture from step 3 into bacteria whose polymerase will then insert the gene-of-interest into vector at the homologous regions.
+
+## Describe two methods you can use to identify clones containing inserts other than blue/white screening. Describe the method.
+
+**Restriction Enzyme Digest Analysis** uses restriction enzyme’s specific recognition sites to isolate the vector-insertion sequence from the gene-of-interest. During electrophoresis, clones with the vector-insertion sequence and the gene-of-interest sequence will yield two fragments creating two bands, while clones without both sequences will yield only one fragment and thus create only one band.
+
+
+**PCR Amplification Screening** uses bacterial colonies which potentially contain the insert and customized PCR primers designed to bind to the vector sequence flanking the insertion-site to selectively amplify the DNA fragments which contain the vector-insertion sequence and the gene-of-interest. Gel electrophoresis of the PCR product will yield either: nothing, in which case the PCR did not find/amplify any fragments without the vector-insertion sequence, or distinct bands in the gel, in which case PCR did find/amplify to the vector-insertion sequence.
+
+## Why is the *lacY* gene required for lactose metabolism?
+
+The *lacY* gene encodes for the enzyme permease which is responsible for bringing lactose into the cell for metabolism. Without permease, lactose cannot enter the cell and lactose metabolism can’t occur.
+
+## How is the expression of GFP is controlled by the *lac* Operator and the *lac* repressor?
+
+The *lac* Operator and *lac* Repressor function as an on/off switch for the GFP-expressing gene. Because the lac Operator/Repressor activates in the presence/absence of lactose to regulate the, or a lactose analog; the lac Operator/Repressor dictates whether the GFP gene is expressed.
+
+## One type of positive selection is auxotrophic selection, how does this work?
+
+Auxotrophic selection is a form of positive selection which screens bacteria by using a metabolic deficiency in the host cell to screen for cells that have taken up the gene-of-interest. The plasmid which contains the genes-of-interest that satisfies the host's metabolic deficiency allows the cell to grow on a minimal medium where it would otherwise die.
+
+# References
+
+1. Edvotek. (2008-2024). Biotechnolgoy Cirriculum Modules
+2. David L. Nelson; Michael M. Cox. (2021). Lehninger Principles of Biochemistry
+3. Suchit Adesh, M.S.c (2024). Conservations on Molecular Cloning.

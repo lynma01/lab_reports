@@ -1,0 +1,133 @@
+---
+title: Agricultural Biotechnology
+subtitle: Lab Report - Session 5
+---
+
+# Objective
+The primary objective of this experiment is to determine whether food samples had come from genetically modified organisms by conducting a PCR analysis to amplify plant DNA to screen for common Multiple Cloning Sites (MCS) used in Genetic Engeering within the samples' DNA.[^edvotek]
+
+# Background
+This experiment relies on several fundamental concepts in molecular biology to identify genetically modified organisms (GMOs) in food samples.
+
+1. **Genetically Modified Organisms** (GMOs): GMOs are organisms whose genetic material (DNA) has been altered in a way that does not occur naturally. This is often done by introducing specific genes (transgenes) from other organisms to confer desired traits, such as insect resistance or enhanced nutritional value.
+
+3. **Transgenes and their Components**: A transgene is a gene that has been transferred from one organism to another. For a transgene to function correctly in its new host, it needs specific components:
+   - Promoter: This DNA sequence initiates the transcription of the transgene, allowing the host cell's machinery to produce the desired protein. The experiment uses the Cauliflower Mosaic Virus (CaMV) promoter, a common choice in plant genetic engineering because it works efficiently across various plant species.
+   - Terminator: This sequence signals the end of transcription, ensuring that the transgene is transcribed correctly.
+
+4. **Polymerase Chain Reaction** (PCR): PCR amplifies specific DNA sequences, generating vast quantities of target sequence from relatively small starting samples. In this experiment, PCR is used to amplify DNA within the food samples so that we might screen for the different MCS like CaMV which would suggest genetic engineering. This experiment uses primers targeting two main sequences:
+   - CaMV 35S Promoter: Since this promoter is frequently used in genetic engineering, its presence in a food sample can indicate genetic modification.
+   - B. thuringiensis cry1F Gene: This gene codes for an insecticidal protein, making its presence a marker for certain GMOs.
+
+5. **Gel Electrophoresis**: This experiment requires gel electrophoresis technique separates DNA fragments based on their size. An electric current is passed through an agarose gel, causing negatively charged DNA fragments to move towards the positive electrode. Smaller fragments migrate faster, allowing separation based on size. By comparing the migration distances of amplified DNA fragments to known size markers, researchers can identify the presence of specific DNA sequences.
+
+6. **Western Blots**: The presence of the CaMV/cry1F transgenes doen't guarantee that it is being transcribed and translated into a functional protein. Western blots address this by detecting the protein encoded by the transgene. In this experiment, the target genes are the CaMV 35S promoter and the cry1F gene from B. thuringiensis. Western blots could be used to detect the protein encoded by the cry1F gene, which is an insecticidal protein. The presence of this protein would confirm that the cry1F gene is not only present but also actively expressed in the GMO.
+
+# Results
+
+## No results from Western Blot
+
+![Lack of results in Western Blog](images/blot_in_cont.JPG){width=3in}
+
+
+## Gel Electrophoresis
+
+![Gel Electrophoresis of Food Samples labelled 1 to 6 from left to right.](images/gel.JPG){width=3in #fig-gel-pic}
+
+|Well Position (Left to Right)|Sample Contents|Analysis|
+|---|---|---|
+|1 | Control | IDK|
+|2 | IDK | IDK|
+|3 | IDK | IDK|
+|4 | IDK | IDK|
+|5 | IDK | IDK|
+|6 | IDK | IDK|
+: Gel Electrophorsis Results {.striped .hover #gel-results}
+
+
+From @fig-gel-pic results.
+
+
+# Interpretation & Discussion
+
+
+
+# Study Questions ***Needs Rewording***
+## What would you expect to see if the blocking step was missed? Why would you have that result?
+### Results Without a Blocking Step
+*   If the blocking step is missed in a Western Blot, the antibodies used for detection could bind to the membrane **nonspecifically**, instead of just the target protein.
+*   This is because the membrane has a limited capacity to bind protein.
+*   Without blocking unoccupied sites on the membrane with a non-specific protein mixture, like milk proteins, there is a risk of the antibodies binding directly to the membrane instead of the protein of interest.
+*   This would result in a **high background signal** across the entire membrane, making it difficult or impossible to distinguish the specific signal from the target protein.
+*   The results would be **inaccurate and unreliable**.
+*   The purpose of the blocking step is to prevent accidental contamination of the membrane and ensure the detection is specific to the target protein. 
+*   This is critical for the accuracy and reliability of the Western Blot.
+
+## Certain brain diseases can only be detected by Western Blot (Bovine Spongiform Encephalopathy is one of them) why can you only use Western Blot and not PCR?
+
+### Detecting Prions
+While the sources provided discuss the applications of Western Blot and PCR, they don't specifically address why Western Blot is exclusively used to detect certain brain diseases like Bovine Spongiform Encephalopathy (BSE). However, external information can shed light on this. 
+
+*   BSE, commonly known as Mad Cow Disease, is caused by prions. Prions are **misfolded proteins** that can trigger normal proteins in the brain to fold abnormally. [External Information]
+*   **PCR is a technique used to amplify DNA sequences**. It is highly effective in identifying genetic modifications in organisms by targeting specific DNA sequences. 
+*   **Western Blot, on the other hand, is used to detect specific proteins**. This technique separates proteins based on size and then uses antibodies to identify the target protein. 
+*   Since prions are misfolded proteins, **detecting the presence of the misfolded prion protein is crucial for diagnosing BSE**.  [External Information]
+*   Western Blot is well-suited for this task as it allows for the identification of specific protein conformations, including misfolded ones. [External Information]
+
+**Therefore, Western Blot is likely used to detect BSE because it can directly identify the presence of the misfolded prion protein, which is the hallmark of the disease.** PCR, focusing on DNA amplification, wouldn't be effective in detecting the misfolded protein. 
+
+Please note that the explanation of prions and their detection is based on information not found in the sources provided and should be independently verified. 
+
+## How are genes from different species correctly translated in GMO plants?
+### How Genes Are Translated in GMO Plants
+The sources primarily focus on the techniques used to identify and analyze genetically modified organisms (GMOs), such as PCR and Western Blot, rather than the specific mechanisms of gene translation in different species. However, the sources do provide some insights into how genes from different species are correctly translated in GMO plants:
+
+*   **Promoter Sequences:** To ensure proper expression of a transgene (a gene transferred from one organism to another) in a GMO plant, it must include a promoter sequence. The promoter acts as a signal for RNA polymerase, the enzyme responsible for transcribing DNA into RNA, to begin transcription of the transgene.
+*   **Universal Promoters:** Some promoters, like the one from the Cauliflower Mosaic Virus (CaMV), are recognized by the transcriptional machinery of many different plant species. This means that a single promoter can be used to drive the expression of a transgene in a variety of plants. 
+*   **Terminator Sequences:** In addition to a promoter, a transgene also needs a terminator sequence to signal RNA polymerase to end transcription.
+
+**The use of appropriate promoter and terminator sequences helps ensure that genes from different species are correctly transcribed in GMO plants.** 
+
+*   **The Genetic Code is Universal:** While not explicitly stated in the sources, it's important to note that the genetic code, which dictates how DNA sequences are translated into proteins, is essentially universal across all living organisms. This means that the same codons (three-nucleotide sequences in DNA or RNA) code for the same amino acids in different species. 
+
+**This universality of the genetic code is a fundamental principle that allows for the successful transfer and expression of genes between different species.**
+
+However, it's crucial to acknowledge that the successful translation of genes from different species in GMOs is a complex process that goes beyond just promoters and the genetic code.  Factors such as:
+
+*   **Codon Usage Bias:** Different organisms may have preferences for using certain codons over others, even if they code for the same amino acid.
+*   **Protein Folding and Modification:** Proteins may require specific chaperone proteins or post-translational modifications to fold correctly and function properly, which might differ between species. 
+
+These aspects are not discussed in detail in the sources provided. 
+
+## What region of the Ti plasmid of Agrobacterium tumefaciens carries genes into the plant cellvchromosomes?
+### T-DNA: The Gene Carrier
+The sources provide information about the use of *Agrobacterium tumefaciens* in genetic engineering but don't explicitly state which region of the Ti plasmid carries genes into plant chromosomes. However, based on general knowledge of *Agrobacterium tumefaciens* and the Ti plasmid, this region is called the **T-DNA (transferred DNA)**. 
+
+*   *Agrobacterium tumefaciens* is a natural plant pathogen that uses the **Ti plasmid (tumor-inducing plasmid)** to transfer its own genes into plant cells.
+*   The **T-DNA** is a specific region of the Ti plasmid that contains the genes that are transferred into the plant genome. 
+*   These genes typically cause the plant cells to proliferate, forming a tumor or crown gall. [External Information]
+
+In genetic engineering, scientists modify the T-DNA region of the Ti plasmid:
+
+*   They remove the tumor-inducing genes and replace them with the desired transgene.
+*   The modified Ti plasmid is then introduced back into *Agrobacterium tumefaciens*.
+*   When these bacteria infect plant cells, the modified T-DNA carrying the transgene is transferred and integrated into the plant's chromosomes.
+
+Therefore, the **T-DNA** region of the Ti plasmid is the carrier of genes from *Agrobacterium tumefaciens* into plant cell chromosomes. 
+
+It's important to note that the information about the T-DNA and its role in genetic engineering is not directly stated in the sources provided but is based on general knowledge of this topic. You may want to independently verify this information. 
+
+## What do the normal genes in the Ti plasmid code for (Auxin, cytokinin and opine)?
+### The Role of Ti Plasmid Genes
+
+The sources focus on the application of *Agrobacterium tumefaciens* in genetic engineering, particularly highlighting the modification and utilization of the Ti plasmid to introduce desired genes into plants. However, they do not explicitly detail the functions of the normal genes present in the Ti plasmid. Based on external knowledge, the normal genes in the Ti plasmid of *Agrobacterium tumefaciens* typically code for the production of:
+
+*   **Auxin and Cytokinin:** These are plant hormones that promote cell division and growth. The genes responsible for their production in the Ti plasmid lead to the overproduction of these hormones in infected plant cells. This uncontrolled growth results in the formation of crown gall tumors, a characteristic symptom of *Agrobacterium* infection. [External Information]
+*   **Opines:** Opines are unique amino acid derivatives that are produced and secreted by the plant cells transformed by the T-DNA. The Ti plasmid also contains genes that allow *Agrobacterium* to metabolize and utilize these opines as a nutrient source. This gives the bacteria a competitive advantage, as other microbes in the environment typically cannot utilize opines. [External Information]
+
+Therefore, the normal genes in the Ti plasmid contribute to the pathogenicity of *Agrobacterium tumefaciens* by manipulating plant hormone production to induce tumor formation and by providing the bacteria with a unique food source through the synthesis of opines. 
+
+# References
+[^edvotek]: Edvotek. (2008-2024). Biotechnolgoy Cirriculum Modules
+[^lehn]: David L. Nelson; Michael M. Cox. (2021). Lehninger Principles of Biochemistry
+[^adesh]: Suchit Adesh, M.S.c (2024). Conservations on Molecular Cloning.
