@@ -1,2 +1,4 @@
 /.quarto/
-output
+output/
+.venv/
+lab_app_reports/.DS_Store
