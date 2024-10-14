@@ -1,0 +1,27 @@
+project:
+  title: "Lab Reports"
+  output-dir: output
+
+title-block-banner: true
+code-fold: true
+page-layout: article 
+author: 
+  - name: Matthew Lyn 
+    id: 835822093
+    email: mml167@georgetown.edu 
+format:
+  html:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    linestretch: 1.5
+    font-size: 12
+    theme:
+      light: flatly
+      dark: darkly
+  pdf:
+    toc: true
+    number-sections: true
+    colorlinks: true
+    linestretch: 1.5
+    font-size: 12

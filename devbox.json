@@ -1,0 +1,17 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jetify-com/devbox/0.13.2/.schema/devbox.schema.json",
+  "packages": [
+    "python@latest",
+    "poetry@latest"
+  ],
+  "shell": {
+    "init_hook": [
+      "poetry install"
+    ],
+    "scripts": {
+      "test": [
+        "poetry run python"
+      ]
+    }
+  }
+}
