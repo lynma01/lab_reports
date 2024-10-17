@@ -6,12 +6,12 @@ code-fold: true
 
 # Objective
 
-The objective of the experiment outlined in the sources is to determine the concentration of an unknown experimental DNA sample using quantitative PCR (qPCR) and comparing it against a known control sample.
+The objective of the experiment is to determine the concentration of an unknown experimental DNA sample using quantitative PCR (qPCR) by calculating the concentration of DNA by referencing known control sample.
 
 # Background
 
 ## Quantitative PCR (qPCR) {#sec-qpcr}
-qPCR measures the amplification of DNA in real-time by measuring the fluorescence of primers successfully binding to nucleotides. Unlike traditional PCR, qPCR allows for quantifying exact analyses.[^edvotek]
+qPCR quantifies the amplification of DNA in real-time by measuring the fluorescence of primers successfully bound, and released, from their complementary DNA strands. qPCR is distinct from PCR in that it allows for the measurement of DNA concentrations as opposed to qualitative analysis of the gel sample against a base pair ladder.[^edvotek]
 
 qPCR contains a series of variables which provide useful metrics when analyzing the amplification of DNA. A key variable is the *quantification cycle (Cq)*, or the cycle number at which a sample's fluorescence reaches a preset threshold.
 
@@ -28,67 +28,65 @@ qPCR has several applications which relies upon its ability to provide quantifie
 **Food Testing**: qPCR can be applied in food safety and quality control to detect and quantify genetically modified organisms (GMOs) in food products.
 
 # Results
-## Extracting data from qPCR results {#sec-ext-data}
-```{python}
-#| label: fig-dataFrame
-#| fig-cap: "DataFrame of qPCR results"
-#| fig-cap-location: top
 
-import polars as pl
-import plotly.express as px
+## Scatter plot of Cycle Threshold by Log DNA Concentration 
 
-owners = pl.DataFrame({
-    "name": ["NL", "ML", "AS", "DY", "MB", "PB", "RP", "LK", "OR", "YY", "SL", "HW"]
-  , "well_num": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
-})
+![Excel plot of the qPCR results data with the x/y-axis being the Ct value, Log DNA Concentration, and linear regression equation with R2 value.](images/exl_results.png){#fig-scatter-results}
 
-contents = pl.DataFrame({
-    "column": ["A", "B", "C", "D", "E", "F", "G", "H"]
-  , "exp_type": ["SC", "SC", "SC", "SC", "EXP", "EXP", "EXP", "EXP"]
-  , "exp_num": [1, 2, 3, 4, 1, 2, 3, 4]
-})
+## Melting curve of qPCR Samples
 
-results = pl.read_csv("./data/qpcr_results.csv")
-results = results.with_columns(
-      (pl.col("Well Position")
-        .str.slice(offset=0, length=1)
-        .alias("col_name"))
-    
-    , (pl.col("Well Position")
-        .str.slice(offset=1, length=2)
-        .str.to_integer()
-        .alias("col_num"))
-    
-    , (pl.col("Cq")
-        .str.to_decimal())
-)
+![Edvotek Thermocycler Melt Curve Plot of qPCR sample results measuring the derivative of fluorescence levels across temperature.](images/results_curve.png){#fig-mcurve-results}
 
-results = results.join(other=owners, left_on="col_num", right_on="well_num")
-results = results.join(other=contents, left_on="col_name", right_on="column")
-results
-```
+## Calculated concentration of DNA from Unknown Samples 
 
-## Plotting the qPCR melting temperature {#sec-plot-data}
-```{python}
-#| label: fig-qpcr-bar
-#| fig-cap: "Examination of Melting Temperature by Well Position"
-#| fig-cap-location: top
-fig_results = results
+![Excel table of calculated concentration of DNA from experimental samples provided in the lab. Where Wells A2:D2 are known concentrations, while E2:H2 are unknown concentrations.](images/calc_qpcr.png){#fig-calc-qpcr}
 
-fig = px.box(
-     fig_results 
-    , y="Tm1 (Melt Temperature)"
-    , x="name"
-    , color="exp_type"
-    , title="Examination of Melting Temperature by Well Position"
-)
+- Data for Well Positions E2:H2 was calculated using the m and b values from @fig-scatter-results where m = -0.1753 and b = 3.1369.
 
-fig.show()
-```
+- The equation for calculating nanograms of DNA per micro-liter within the unknown samples was $R_o=10^{(C_q-b)/m}$. 
 
-
+- Wells A2:D2 were known concentrations of nanograms DNA per micro-liter in consecutively increasing ratios from 1:1 to 1:1000.
 
 # Interpretation & Discussion
+
+## $R^2=0.085$ value from @fig-scatter-results suggests an inefficient qPCR amplification compared to the $R^2=0.98$ standard
+
+Given the lab manuals statement that an "*Efficient qPCR reactions will have an $R^2$ value of 0.98*"[^edvotek], analysis of the linear regression provided by the above calculations suggests and inefficient amplification result from the qPCR reaction.
+
+This implies the starting concentration of DNA for primer binding was considerably lower, and the Cq values listed in @fig-calc-qpcr are higher than the efficiency standard.
+
+## Analysis of Edvotek ThermoCycler Melt Curve results plotted in @fig-mcurve-results {#sec-mc-curve}
+
+### Experimental Samples: {#sec-exp-samples}
+
+The experimental samples contained staggered melting temperatures, and/or dual peaks. The first peaks within the experimental samples appeared pre-65 degrees celsius, suggesting a considerable quantity of amplicons across the experimental samples.
+
+Potential causes for this phenomena imply issues with the ligation process binding the primers to the DNA samples. However, the elevated base-level of fluorescence across all samples also points towards premature activation of the fluorescent tags as further elucidated in @sec-kn-fl.
+
+#### Targets 5, 7 {#sec-targets-5-7}
+Targets 5, 7 had peaks pre-80 degrees celsius suggesting they contained a large quantity of amplicons when compared again the study question references provided in @fig-curve-2. These curves were also notable because they were almost twice as fluorescent as the maximum level achieved by the samples with known concentrations.
+
+#### Targets 6, 8 {#sec-targets-6-8}
+
+Targets 6, 8 had one peak post-85 degrees. These melting points suggest the sample did *not* contain amplicons when compared against the reference images provided within @fig-curve-2. While the elevated base-level of fluorescence suggests free-floating fluorescent probes within the sample, the curves post-85 degrees does suggest validity within the accuracy of the sample.
+
+### Known Concentration Samples {#sec-known-samples}
+
+The samples within Targets 1 through 4 were the samples with a known concentration of DNA. These targets were used to calculate the concentration of the unknown samples in @sec-calc-unknown. 
+
+#### Fluorescence levels of the known samples {#sec-kn-fl}
+
+Of note, none of the samples with known concentrations were able to reach a fluorescence level above the experimental samples. Potential cause for this phenomena would be activation of the fluorescent dye within the sample by the lab's ambient light interacting with the samples before reaching its melting point prematurely within the thermocycler.
+
+#### All Known Sample exhibited a dip in fluorescence before their peaks post-85 degrees celsius {#sec-known-samples-dip}
+
+An unexplained artifact within @fig-mcurve-results is the dip in fluorescence around the 80 degrees celsius mark. Potential explanations for the dip would be similar to those outline in @sec-kn-fl.
+
+## Calculated concentrations of unknown samples yielded infinitesimally tiny values {#sec-calc-unknown}
+
+Given the variability and low fluorescence of the known samples as described in @sec-known-samples, the accuracy of these calculations is considerable despite the validity of the calculations involved. 
+
+A secondary experiment would be required to gain greater signal from the known control samples to ensure a more accurate reading of the DNA concentration of the unknown samples.
 
 # Study Questions 
 ## What are the three steps in a polymerase chain reaction and what does each accomplish?
@@ -147,20 +145,19 @@ A melting curve program assess the quantity of *amplicons* which occured during 
 
 ## Why might a researcher decide to use qPCR over traditional PCR? {#sec-on-pcr}
 
-qPCR's most significant advantage is its ability to **quantify** the amount of DNA present in a sample, while traditional PCR only provides a **qualitative** assessment.
+qPCR's most significant advantage is its ability to *quantify* the amount of DNA present in a sample, while traditional PCR only provides a *qualitative* assessment.
 
 qPCR monitors DNA amplification in real-time using fluorescent dyes or probes. As the amount of DNA increases during each PCR cycle, the fluorescence signal also increases, allowing researchers to directly measure the amount of DNA being amplified.
 
 ## The alternative melting curve (Figure 2) looks different from the melting curve (Figure 1). What would cause the melting curve found in Figure 2 and why?
 
-![Melting curve without amplicons, as evinced by singular peak in right-hand curve](images/fig1_melting_curve.png){#fig-curve-1}
+![Melting curve without amplicons as evinced by the concentration of the samples around a singular peak in right-hand curve.](images/fig1_melting_curve.png){#fig-curve-1}
 
-![Melting curve with primer dimer amplicons, evinced by the two peaks in the right-hand curve](images/fig2_melting_curve.png){#fig-curve-2}
+![Melting curve with primer dimer amplicons evinced by the staggered, low melting temperatures and the blue sample's dual peaks.](images/fig2_melting_curve.png){#fig-curve-2}
 
 As mentioned in @sec-q-melting-curve, the two peaks in @fig-curve-2 evince the presence of amplicons within the sample. Amplicons occur when the primers bind to other free-floating primers as opposed to the Gene-of-Interest, this creates the two melting curves seen above.
 
 # References
-
 [^edvotek]: Edvotek. (2008-2024). Biotechnolgoy Cirriculum Modules. Section 6 - "Quantative PCR (qPCR)"
 [^lehninger]: David L. Nelson; Michael M. Cox. (2021). Lehninger Principles of Biochemistry. "*Double-Helical DNA and RNA Can Be Denatured*" pg 297.
 [^adesh]: Suchit Adesh. (2024). Conversations on the Nature of qPCR
