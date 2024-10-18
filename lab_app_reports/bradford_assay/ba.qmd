@@ -6,7 +6,27 @@ date: 2024-10-09
 
 # Objective
 
+The objective of the experiment is to measure the purity and specific activity of enzyme activity using both the $\beta$-galactosidase and Bradford Comassie Blue assays. The Bradford Assay will be used to quantify the total protein concentration at different stages of the purification process. 
+
 # Background
+## Principles Behind the Bradford Assay for Protein Quantification
+
+The Bradford assay, a central technique in this experiment, is used to determine the concentration of protein in a sample.
+
+*   **Color Change Upon Protein Binding:** The Bradford assay leverages a dye called Coomassie Brilliant Blue G-250. This dye exists in different ionic forms, with varying colors depending on the pH of the solution.  In its acidic form, the dye appears reddish-brown. However, when the dye binds to protein molecules, it undergoes a shift to its anionic form, resulting in a vivid blue color. This color change is directly proportional to the amount of protein present in the sample.
+
+*   **Mechanism of Dye-Protein Interaction:** The color shift occurs due to the dye's interaction with specific amino acids within the protein structure. Primarily, Coomassie Brilliant Blue G-250 binds to basic amino acids, particularly arginine, and to a lesser extent, aromatic amino acids like tryptophan, tyrosine, and histidine. This binding stabilizes the anionic, blue form of the dye.
+
+*   **Spectrophotometry for Quantification:**  The intensity of the blue color is measured using a spectrophotometer at a wavelength of 595 nm.  The higher the protein concentration, the more intense the blue color, and consequently, the higher the absorbance reading at 595 nm.
+
+*   **Standard Curve for Calibration:** A standard curve is generated using known concentrations of a reference protein, typically Bovine Serum Albumin (BSA). The absorbance readings of these known BSA concentrations are plotted against their corresponding concentrations. This creates a calibration curve that relates absorbance to protein concentration. 
+
+*   **Determining Unknown Sample Concentration:** The absorbance of an unknown sample is measured at 595 nm. By referencing the established standard curve, the corresponding protein concentration of the unknown sample can be determined. 
+
+*   **Utility in Protein Purification:** In the context of the EcoRI purification experiment, the Bradford assay helps assess the effectiveness of each purification step. By comparing the total protein concentration before and after a purification stage, researchers can determine how much unwanted protein has been removed. Ideally, as the purification progresses, the total protein concentration should decrease while the activity of the target protein (EcoRI) remains consistent or increases. 
+
+The Bradford assay is a valuable tool for protein research due to its simplicity, sensitivity, and relatively low cost. It provides researchers with a quick and reliable method for quantifying total protein content, aiding in the assessment of protein purity and the effectiveness of purification protocols. 
+
 
 # Results
 
