@@ -1,133 +1,189 @@
 ---
-title: Agricultural Biotechnology
-subtitle: Lab Report - Session 5
+title: Agricultural Biotech & Western Blot
+subtitle: Lab Report - Session 6 & 7
 ---
 
 # Objective
-The primary objective of this experiment is to determine whether food samples had come from genetically modified organisms by conducting a PCR analysis to amplify plant DNA to screen for common Multiple Cloning Sites (MCS) used in Genetic Engeering within the samples' DNA.[^edvotek]
+## Experiment 1: qPCR
+The objective of this experiment is to determine whether food samples have come from genetically modified organisms (GMOs) by conducting a PCR analysis to amplify sample DNA to screen for common Multiple Cloning Sites (MCS) and transgenes commonly used in genetic engineering.[^edvotek]
+
+## Experiment 2: Western Blot
+The secondary objective of this experiment was to test the presence of Bovine Serum Albumin (BSA) 
 
 # Background
-This experiment relies on several fundamental concepts in molecular biology to identify genetically modified organisms (GMOs) in food samples.
+This experiment relies on several fundamental concepts in molecular biology to identify genetically modified organisms in food samples.
 
-1. **Genetically Modified Organisms** (GMOs): GMOs are organisms whose genetic material (DNA) has been altered in a way that does not occur naturally. This is often done by introducing specific genes (transgenes) from other organisms to confer desired traits, such as insect resistance or enhanced nutritional value.
+## **Genetically Modified Organisms** (GMOs): 
+GMOs are organisms whose DNA has been engineered to contain desired traits, such as insect resistance or enhanced nutritional value, from other organisms. These genetically encoded traits are called "Transgenes".
 
-3. **Transgenes and their Components**: A transgene is a gene that has been transferred from one organism to another. For a transgene to function correctly in its new host, it needs specific components:
-   - Promoter: This DNA sequence initiates the transcription of the transgene, allowing the host cell's machinery to produce the desired protein. The experiment uses the Cauliflower Mosaic Virus (CaMV) promoter, a common choice in plant genetic engineering because it works efficiently across various plant species.
-   - Terminator: This sequence signals the end of transcription, ensuring that the transgene is transcribed correctly.
+## **Transgenes and their Components**: 
+A transgene is an artifically inserted gene which has been transferred from one organism to another. For a transgene to function successfully, it requires specific genetic components:
 
-4. **Polymerase Chain Reaction** (PCR): PCR amplifies specific DNA sequences, generating vast quantities of target sequence from relatively small starting samples. In this experiment, PCR is used to amplify DNA within the food samples so that we might screen for the different MCS like CaMV which would suggest genetic engineering. This experiment uses primers targeting two main sequences:
-   - CaMV 35S Promoter: Since this promoter is frequently used in genetic engineering, its presence in a food sample can indicate genetic modification.
-   - B. thuringiensis cry1F Gene: This gene codes for an insecticidal protein, making its presence a marker for certain GMOs.
+   - **Promoter**: This DNA sequence initiates the transcription of the transgene, which is translated to produce the desired protein. The experiment uses the Cauliflower Mosaic Virus (CaMV) promoter as evidence of genetic modification because of its versatility across different species.
 
-5. **Gel Electrophoresis**: This experiment requires gel electrophoresis technique separates DNA fragments based on their size. An electric current is passed through an agarose gel, causing negatively charged DNA fragments to move towards the positive electrode. Smaller fragments migrate faster, allowing separation based on size. By comparing the migration distances of amplified DNA fragments to known size markers, researchers can identify the presence of specific DNA sequences.
+   - **Terminator**: This sequence signals the end of transcription, ensuring that the transgene is transcribed correctly into resulting protein.
 
-6. **Western Blots**: The presence of the CaMV/cry1F transgenes doen't guarantee that it is being transcribed and translated into a functional protein. Western blots address this by detecting the protein encoded by the transgene. In this experiment, the target genes are the CaMV 35S promoter and the cry1F gene from B. thuringiensis. Western blots could be used to detect the protein encoded by the cry1F gene, which is an insecticidal protein. The presence of this protein would confirm that the cry1F gene is not only present but also actively expressed in the GMO.
+## **Polymerase Chain Reaction** (PCR): 
+This experiment uses PCR to amplify DNA from the food samples to ensure there's enough sample genetic material to accurately screen for different markers of genetic manipulation.
+
+Specifically, we're using PCR to amplify any samples of the ***CaMV 35S Promoter*** and the ***B. thuringiensis cry1F Gene***. The *cry1F* gene is notable because it encodes an insecticidal protein which improves the plants resistance against insect-pests. Because of its absence in wild phenotypes of different agricultural species, its presence is a marker for certain GMOs.
+
+## **Gel Electrophoresis**: 
+This experiment requires gel electrophoresis technique to differentiate DNA fragments. In the presence of both a Base Pair ladder, as well as a GMO Chloroplast we can visually compare our food samples to the control to qualitatively confirm/deny the presence of transgenes in the samples.
+
+## **Western Blots**:
+Western Blots are a form of immunological detection which uses the affinity of a given antibody to bind to the specific protein-of-interest. In this case, we're using a primary antibody to bind to the Bovine Serum Albumin protein and a secondary reporter antibody (HRP) which binds to the primary antibody and allows for visualization of the protein on the membrane.[^la_6]
 
 # Results
 
-## No results from Western Blot
+## Gel Electrophoresis Analysis of Food Samples
 
-![Lack of results in Western Blog](images/blot_in_cont.JPG){width=3in}
+### Transillumination image capture of results investigating the presence of transgenes
+![Gel Electrophoresis of Food Samples labelled 1 to 6 from left to right. Well samples with contents and analysis detailed in table "*Gel Electrophoresis Results*".](images/gel.JPG){width=3in #fig-gel-pic}
 
+- @sec-gel-results analyzes the presence of Transgenes from @fig-gel-pic.
 
-## Gel Electrophoresis
+- Light artifacts both over well #1, and the rippling effect pressent throughout the center to right-hand side of the image, were produced during secondary capture of the transilluminator-connected display.
 
-![Gel Electrophoresis of Food Samples labelled 1 to 6 from left to right.](images/gel.JPG){width=3in #fig-gel-pic}
+- Both wells #4, and #6 contain indistinct bands, further disrupted by above-mentioned light-artifacts.
 
-|Well Position (Left to Right)|Sample Contents|Analysis|
-|---|---|---|
-|1 | Control | IDK|
-|2 | IDK | IDK|
-|3 | IDK | IDK|
-|4 | IDK | IDK|
-|5 | IDK | IDK|
-|6 | IDK | IDK|
-: Gel Electrophorsis Results {.striped .hover #gel-results}
+## Western Blot Assay analyzing presence of Bovine Serum Albumin 
 
+### Membrane did not contain distinct marks BSA prsence after application of first substrate.
 
-From @fig-gel-pic results.
+![Image of Western Blot produced by food samples post distilled-water bath. Protein Ladder markers are present in the center of blot, however, markings suggesting BSA presence are absent.](images/blot_in_hand.JPG){width=3in #fig-wb-results}
 
+- @sec-gel-artifact discusses the polyacrylamide gel artifact present in the center of the membrane producing a distinct discoloration.
+- The Protein Ladder is present in the center of the membrane.
+- Absence of distinct marks suggesting presence of BSA proteins are absent from the membrane.
+
+### Distinct marks suggesting Bovine Serum Albumin presence did not appear after adding supplementary substrate to the membrane
+
+![Image of Western Blot after second substrate was added to evoke any potential signals of BSA presence, but no distinct markings emerged.](images/blot_in_cont.JPG){width=3in #fig-wb-results-2}
 
 # Interpretation & Discussion
 
+## Analyzing transgene presence in food samples via gel electrophoresis{#sec-gel-results}
 
+From @fig-gel-pic, we can conclude that specific samples within the gel electrophoresis contain transgenes given the similarity of their banding patterns to the GMO control in well #2:
 
-# Study Questions ***Needs Rewording***
-## What would you expect to see if the blocking step was missed? Why would you have that result?
-### Results Without a Blocking Step
-*   If the blocking step is missed in a Western Blot, the antibodies used for detection could bind to the membrane **nonspecifically**, instead of just the target protein.
-*   This is because the membrane has a limited capacity to bind protein.
-*   Without blocking unoccupied sites on the membrane with a non-specific protein mixture, like milk proteins, there is a risk of the antibodies binding directly to the membrane instead of the protein of interest.
-*   This would result in a **high background signal** across the entire membrane, making it difficult or impossible to distinguish the specific signal from the target protein.
-*   The results would be **inaccurate and unreliable**.
-*   The purpose of the blocking step is to prevent accidental contamination of the membrane and ensure the detection is specific to the target protein. 
-*   This is critical for the accuracy and reliability of the Western Blot.
+|Well Position|Sample Contents|Analysis|
+|---|---|---|
+|1 | 1000 kbp Ladder | Used for visual comparison of quantities of DNA Base Pairs.|
+|2 | GMO Positive Control (GPC) | Genetically modified plant chloroplast cells used as positive control/reference for known GMO containing sample.|
+|3 | Sample 1 (V) | Comparison to GPC suggests the presence of GMO transgenes within the sample.|
+|4 | Sample 2 (B) | Banding compared to Wells 2, 3, 5 are faint, however, presence of bands in the same BP range as the GPC ambiguously suggests the presence of GMO transgenes.|
+|5 | Sample 1 (V) | Sample is very similar to Well 3, suggesting both the presence of GMO transgenes and that the samples came from extremely similar sources.|
+|6 | Sample 3 (C) | Outlier compared to other well samples and is distinct from GPC, suggesting the absence of GMO transgenes found in other wells and the sample came from a novel source.|
 
-## Certain brain diseases can only be detected by Western Blot (Bovine Spongiform Encephalopathy is one of them) why can you only use Western Blot and not PCR?
+: Gel Electrophorsis Results {.striped .hover}
 
-### Detecting Prions
-While the sources provided discuss the applications of Western Blot and PCR, they don't specifically address why Western Blot is exclusively used to detect certain brain diseases like Bovine Spongiform Encephalopathy (BSE). However, external information can shed light on this. 
+From @fig-gel-pic transillumination capture of gel electrophoresis.
 
-*   BSE, commonly known as Mad Cow Disease, is caused by prions. Prions are **misfolded proteins** that can trigger normal proteins in the brain to fold abnormally. [External Information]
-*   **PCR is a technique used to amplify DNA sequences**. It is highly effective in identifying genetic modifications in organisms by targeting specific DNA sequences. 
-*   **Western Blot, on the other hand, is used to detect specific proteins**. This technique separates proteins based on size and then uses antibodies to identify the target protein. 
-*   Since prions are misfolded proteins, **detecting the presence of the misfolded prion protein is crucial for diagnosing BSE**.  [External Information]
-*   Western Blot is well-suited for this task as it allows for the identification of specific protein conformations, including misfolded ones. [External Information]
+Of note, Wells #5, #6 were prepared and contributed by Sophia Levit, and Henry Ware[^sophie_henry] while wells #3, and #4 were contributed by the author and Adesh Suchit[^adesh]. All samples were prepared by, and collected from the same source.
 
-**Therefore, Western Blot is likely used to detect BSE because it can directly identify the presence of the misfolded prion protein, which is the hallmark of the disease.** PCR, focusing on DNA amplification, wouldn't be effective in detecting the misfolded protein. 
+As elucidated in @sec-gel-results, comparing the banding patterns against well #2, we can confirm the presence of transgenes within wells #3, #5, their ambiguous presence in well #4, and their absence in well #6.
 
-Please note that the explanation of prions and their detection is based on information not found in the sources provided and should be independently verified. 
+### Examination of outliers, wells #4 and #6
 
-## How are genes from different species correctly translated in GMO plants?
-### How Genes Are Translated in GMO Plants
-The sources primarily focus on the techniques used to identify and analyze genetically modified organisms (GMOs), such as PCR and Western Blot, rather than the specific mechanisms of gene translation in different species. However, the sources do provide some insights into how genes from different species are correctly translated in GMO plants:
+Well #4 has faint banding patterns compared to that of wells #3, #5, and because of that faintness, well #4 *potentially* contains transgenes given the similarity of its banding pattern to the GPC in well #2.
 
-*   **Promoter Sequences:** To ensure proper expression of a transgene (a gene transferred from one organism to another) in a GMO plant, it must include a promoter sequence. The promoter acts as a signal for RNA polymerase, the enzyme responsible for transcribing DNA into RNA, to begin transcription of the transgene.
-*   **Universal Promoters:** Some promoters, like the one from the Cauliflower Mosaic Virus (CaMV), are recognized by the transcriptional machinery of many different plant species. This means that a single promoter can be used to drive the expression of a transgene in a variety of plants. 
+Well #6, on the other hand, does not contain banding patterns similar to the GPC in well #2, suggesting the ***absence*** of CaMV/cry1F transgenes. The banding pattern within this well is distinct from all other wells in the electrophoresis gel. We can conclude that the sample is likewise unique, and does not contain transgenes.
+
+## Western Blot screening for BSA presence
+
+### Distinct banding patterns suggesting BSA are absent from the membrane
+
+Despite the application of two different substrates between @fig-wb-results and @fig-wb-results-2, distinct banding patterns demonstrating BSA presence were absent from the membrane. 
+
+Potential causes for this phenomena would include the duration and frequency of washing the membrane with distilled water before and after the addition of substrates after a rest period. This is a crucial step in the process because it removes unbound antibodies which would obstruct colormetric signals.
+
+Therefore, we cannot confirm presence in the membrane despite the presence of the protein ladder across the center of the membrane. 
+
+### Polyacrylamide gel artifact on the membrane {#sec-gel-artifact}
+
+In the process of loading the membrane and the gel into the Trans-Blot Turbo Instrument (TBTI), sections of the SDS-PAGE gel used to denature the sample proteins into their primary structures were applied onto the membrane placed within the TBTI. This resulted in a small artifact on the membrane near the center of the membrane.
+
+# Study Questions
+## Agricultural Biotechnology
+### What would you expect to see if the blocking step was missed? Why would you have that result?
+If the blocking step is missed in a Western Blot, the antibodies used for detection could bind to the membrane **nonspecifically**, instead of just the target protein. This would cause the antibodies to bind directly to the entire membrane instead of the protein of interest. (see also @sec-sq-blocking-agent)
+
+### Certain brain diseases can only be detected by Western Blot (Bovine Spongiform Encephalopathy is one of them) why can you only use Western Blot and not PCR?
+
+This is because diseases like BSE are caused by the presence of prions; misfolded proteins which cause other healthy proteins within the brain to also misfold. Detecting prion proteins is crucial for diagnosing BSE.
+
+Thus of the two tools, a Western Blot is the only one which can detect BSE because it can identify the presence of prions. PCR, focusing on DNA amplification, wouldn't be effective because it has no mechanism for screening gene expression of proteins.
+
+### How are genes from different species correctly translated in GMO plants?
+Genes from different species are translated into GMO plants via the introduction of *universal promoters*, which include *terminator sequences*, to overcome any *codon usage bias* and ensure their proper *protein folding and modification*. 
+
+*   **Universal Promoters:** Promoters like CaMV are recognized by many different plant species during transcription. This means that a single promoter can be used to drive the expression of a transgene in a variety of plants. 
+
 *   **Terminator Sequences:** In addition to a promoter, a transgene also needs a terminator sequence to signal RNA polymerase to end transcription.
 
-**The use of appropriate promoter and terminator sequences helps ensure that genes from different species are correctly transcribed in GMO plants.** 
-
-*   **The Genetic Code is Universal:** While not explicitly stated in the sources, it's important to note that the genetic code, which dictates how DNA sequences are translated into proteins, is essentially universal across all living organisms. This means that the same codons (three-nucleotide sequences in DNA or RNA) code for the same amino acids in different species. 
-
-**This universality of the genetic code is a fundamental principle that allows for the successful transfer and expression of genes between different species.**
-
-However, it's crucial to acknowledge that the successful translation of genes from different species in GMOs is a complex process that goes beyond just promoters and the genetic code.  Factors such as:
-
 *   **Codon Usage Bias:** Different organisms may have preferences for using certain codons over others, even if they code for the same amino acid.
-*   **Protein Folding and Modification:** Proteins may require specific chaperone proteins or post-translational modifications to fold correctly and function properly, which might differ between species. 
 
-These aspects are not discussed in detail in the sources provided. 
+*   **Protein Folding and Modification:** Proteins may require specific chaperone proteins or post-translational modifications to fold correctly and function properly, which might differ between species.
 
-## What region of the Ti plasmid of Agrobacterium tumefaciens carries genes into the plant cellvchromosomes?
-### T-DNA: The Gene Carrier
-The sources provide information about the use of *Agrobacterium tumefaciens* in genetic engineering but don't explicitly state which region of the Ti plasmid carries genes into plant chromosomes. However, based on general knowledge of *Agrobacterium tumefaciens* and the Ti plasmid, this region is called the **T-DNA (transferred DNA)**. 
+### What region of the Ti plasmid of Agrobacterium tumefaciens carries genes into the plant cell chromosomes?
 
-*   *Agrobacterium tumefaciens* is a natural plant pathogen that uses the **Ti plasmid (tumor-inducing plasmid)** to transfer its own genes into plant cells.
-*   The **T-DNA** is a specific region of the Ti plasmid that contains the genes that are transferred into the plant genome. 
-*   These genes typically cause the plant cells to proliferate, forming a tumor or crown gall. [External Information]
+The region of the *Agrobacterium tumefaciens* plasmid which carries genes into the plant cell chromosomes is called the *T-DNA* or "Transferred DNA". 
 
-In genetic engineering, scientists modify the T-DNA region of the Ti plasmid:
+### What do the normal genes in the Ti plasmid code for (Auxin, cytokinin and opine)?
+Normal genes in the Ti plasmid of *Agrobacterium tumefaciens* typically code for:
 
-*   They remove the tumor-inducing genes and replace them with the desired transgene.
-*   The modified Ti plasmid is then introduced back into *Agrobacterium tumefaciens*.
-*   When these bacteria infect plant cells, the modified T-DNA carrying the transgene is transferred and integrated into the plant's chromosomes.
+*   **Auxin and Cytokinin:** plant hormones promoting cell division and growth. The genes responsible for their production in the Ti plasmid lead to the overproduction of these hormones in infected plant cells, resulting in the formation of crown gall tumors, a characteristic symptom of *Agrobacterium* infection.[^auxin_wikipedia] [^cytokinin_wikipedia]
 
-Therefore, the **T-DNA** region of the Ti plasmid is the carrier of genes from *Agrobacterium tumefaciens* into plant cell chromosomes. 
+*   **Opines:** Opines are amino acid derivatives that are produced and secreted by the plant cells transformed by the T-DNA. The Ti plasmid also contains genes that allow *Agrobacterium* to metabolize and utilize these opines as a nutrient source. This gives the bacteria a competitive advantage, as other microbes in the environment typically cannot utilize opines.[^opines_wikipedia]
 
-It's important to note that the information about the T-DNA and its role in genetic engineering is not directly stated in the sources provided but is based on general knowledge of this topic. You may want to independently verify this information. 
+## Western Blot Study Questions
 
-## What do the normal genes in the Ti plasmid code for (Auxin, cytokinin and opine)?
-### The Role of Ti Plasmid Genes
+### What is the western blot procedure used to detect?
+The Western blot procedure is used to detect the presence of a specific protein within a complex mixture of proteins. For example, Western blots are used for detecting viral proteins, characterizing monoclonal and polyclonal antibodies, and assessing immune responses to viral antigens.[^la_6]
 
-The sources focus on the application of *Agrobacterium tumefaciens* in genetic engineering, particularly highlighting the modification and utilization of the Ti plasmid to introduce desired genes into plants. However, they do not explicitly detail the functions of the normal genes present in the Ti plasmid. Based on external knowledge, the normal genes in the Ti plasmid of *Agrobacterium tumefaciens* typically code for the production of:
+### Why are polyacrylamide gels commonly used for the electrophoresis of proteins (SDS-PAGE) rather than agarose gels? What is the purpose of the gel system?
 
-*   **Auxin and Cytokinin:** These are plant hormones that promote cell division and growth. The genes responsible for their production in the Ti plasmid lead to the overproduction of these hormones in infected plant cells. This uncontrolled growth results in the formation of crown gall tumors, a characteristic symptom of *Agrobacterium* infection. [External Information]
-*   **Opines:** Opines are unique amino acid derivatives that are produced and secreted by the plant cells transformed by the T-DNA. The Ti plasmid also contains genes that allow *Agrobacterium* to metabolize and utilize these opines as a nutrient source. This gives the bacteria a competitive advantage, as other microbes in the environment typically cannot utilize opines. [External Information]
+Polyacrylamide gels are favored over agarose gels for protein electrophoresis (SDS-PAGE) for their smaller pore size, and thus higher resolution results. Polyacrylamide gels can separate proteins with smaller size differences more effectively. 
 
-Therefore, the normal genes in the Ti plasmid contribute to the pathogenicity of *Agrobacterium tumefaciens* by manipulating plant hormone production to induce tumor formation and by providing the bacteria with a unique food source through the synthesis of opines. 
+The general purpose of the gel systems is to separate the well contents into distinct bands for identification and analysis. Agarose gels, with their larger pores, are better suited for separating larger molecules like DNA, while the polyacrylamid gels in SDS-PAGE are used to identify/analyze specific proteins.
+
+### What is the purpose of the blocking agent? What would happen if you forgot to add the blocking agent? {#sec-sq-blocking-agent}
+
+The blocking agent prevents non-specific binding of antibodies to the membrane by filling unoccupied binding sites with proteins, thus minimizing background noise and ensuring that the detected signal is specifically from the target protein.
+
+If the blocking agent is omitted, the antibodies bind randomly to the membrane, making the ratio of background "noise" to assay "signal" extremely unfavorable, resulting in inaccurate or unreliable results.
+
+### What is the purpose of the secondary antibody?
+
+This secondary antibody is typically conjugated to a reporter molecule, such as horseradish peroxidase (HRP)[^la_6]. Because the secondary antibody is designed to bind specifically to the primary antibody, it acts as a method of "reporting" via colormetric signal in the Western Blot membrane, the presence of the protein-of-interest.
+
+### What are some of the detection methods used in Western Blot?
+
+Several detection methods are available for Western blots, with the choice depending on factors like sensitivity, cost, and equipment availability.
+
+- **Colorimetric Detection:** Uses substrates that produce a colored product upon reaction with the enzyme conjugated to the secondary antibody. This method is relatively inexpensive and straightforward but offers lower sensitivity.
+
+- **Chemiluminescent Detection:** Employs substrates that emit light upon reaction with the enzyme. This method is highly sensitive and widely used, allowing for the detection of even low-abundance proteins. The light signal can be captured on X-ray film or using specialized imaging systems.[^la_6]
+
+# Appendix
+
+## Reference Images Provided in Lab Report
+
+### Western blot reference staining
+
+![Western Blot used as reference image within provided lab report questions, Lanes labelled left-to-right, 1 to 4, as Markers, Control, High Conc., Low Conc.](images/lr_wb.png){width=3in #fig-lr-wb}
+
+### Gel Electrophoresis of GMO Foods
+
+![Gel Electrophoresis of GMO Foods used as reference from provided lab report questions](images/lr_gel.png){#fig-lr-gel}
 
 # References
 [^edvotek]: Edvotek. (2008-2024). Biotechnolgoy Cirriculum Modules
-[^lehn]: David L. Nelson; Michael M. Cox. (2021). Lehninger Principles of Biochemistry
+[^lehn]: David L. Nelson; Michael M. Cox. (2021). Lehninger Principles of Biochemistry. pages 
 [^adesh]: Suchit Adesh, M.S.c (2024). Conservations on Molecular Cloning.
+[^opines_wikipedia]: Wikipedia - The Free Encyclopedia. Opines. "https://en.wikipedia.org/wiki/Opine"
+[^sophie_henry]: Levit Sophia, M.S.c (Sept. 2024); Ware Henry, M.S.c (Sept. 2024). Agricultural Biotechnology Lab Results
+[^la_6]: Donohue Robert, M.S.c, Gimenez Naroa, Phd. Lab Applications of Biotechnology; Lecture Session #6 "Agricultural Biotechnology".
+[^auxin_wikipedia]: Wikipedia - The Free Encyclopedia. Auxin. "https://en.wikipedia.org/wiki/Auxin"
+[^cytokinin_wikipedia]: Wikipedia - The Free Encyclopedia. Cytokinin. "https://en.wikipedia.org/wiki/Cytokinin"
