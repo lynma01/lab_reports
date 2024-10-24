@@ -29,22 +29,28 @@ The Bradford assay is a valuable tool for protein research due to its simplicity
 
 ## $\beta$-Galactosidase Assay measuring Specific Activity {#sec-bga-assay}
 
+### Lac+/- Samples With ONPG Expression After placement within Spectrophotomerter
+
+![Pictures of Lac+/- samples showing coloration after 3 minute reaction time within 1.5 $\mu$l volume tubes.](images/lac_wells_post_bath.JPG){#fig-lac-bath width=3in}
+
+- Lac+ Samples showing deep yellow coloration, evincing greater ONPG presence than the Lac- Samples.
+
 ### Completed Readings from UV-1600PC Spectrophotometer
 ![Completed spectrophotometer readings of Lac-/Lac+ cuvettes at $OD_{420}$ nanometers wavelength absorbance. Author's samples are Numbers 16, 17 within the reader.](images/spect_data.JPG){width=4in #fig-spec-data}
 
 ### Graph of Calculated Enzymatic Specific Activity
 ![Plot of completed Enzymatic Specific Activity, measured in Miller Units, using the data from the UV-1600PC Spectrophotomerter in @fig-spec-data.](images/specific_activity.png){width=4in #fig-sa-plot}
 
-- Equation for calculating Miller Units of Specific Enzyme Activity (M) is: $M = \frac{(X^{OD_{420}} * V)} {4.6 * t_{minutes}}$ where $X$ is the reading for the sample at $OD_{420}$, $V$ is the final volume of the sample, and $t$ is time in minutes.
+- Equation for calculating Miller Units of Specific Enzyme Activity (M) is: $M = \frac{(X^{OD_{420}} * V)} {4.6 * t_{minutes}}$ where $X$ is the reading for the sample at $OD_{420}$, $V$ is the final volume of the sample in mL, and $t$ is time in minutes.
 
-#### Data used to Calculate Solution
+#### Data used to Calculate Solution {#sec-sa-data-table}
 
 |Variable Name|Value|
 |---|---|
 |time (minutes) *t*|3|
 |$OD_{420}$ Absorbance for Lac+|1.868|
 |$OD_{420}$ Absorbance for Lac-|0.396|
-|final volume ($\mu$l) *V*|1425|
+|final volume mL) *V*|1.425|
 
 ## Bradford Assay measuring Protein Concentration
 
@@ -74,17 +80,17 @@ The Bradford assay is a valuable tool for protein research due to its simplicity
 
 ### Linear Regression of Protein Concentration of BSA containing wells from @sec-ba-data {#sec-lr-bsa}
 
-![Linear Regression produced in Microsoft Excel using data from @fig-ba-final-data used to calculate the concentration of the unknown protein samples](images/bsa_lr.png){#fig-bsa-lr}
+![Linear Regression produced in Microsoft Excel using data from @fig-ba-final-data used to calculate the concentration of the unknown protein samples.](images/bsa_lr.png){#fig-bsa-lr}
 
 ### Estimating Equivalent BSA ($\mu$l) for Lac+/- Wells using the Linear Regression Equation from @fig-bsa-lr {#sec-calc-bsa-eqv}
 
-![Table of Lac+/- Microplate Wells with Estimated Equivalent BSA ($\mu$l) using the Linear Regression Equation in @fig-bsa-lr](images/lac_equiv_bsa.png){#fig-lac-bsa-equiv}
+![Table of Lac+/- Microplate Wells with Estimated Equivalent BSA ($\mu$l) using the Linear Regression Equation in @fig-bsa-lr.](images/lac_equiv_bsa.png){#fig-lac-bsa-equiv}
 
-- Equation used to estimate BSA Equivalent in $\mu$l ($B_{eq}$) was $B_{eq}=\frac {(B_{FV}-0.0485)} {0.0105}$
+- Equation used to estimate BSA Equivalent in $\mu$l ($B_{eq}$) was $B_{eq}=\frac {(B_{FV}-0.0485)} {0.0105}$.
 
 #### Estimated Avg. Equivalent BSA in $\mu$l for Lac+/- Samples Grouped By Concentration. {#sec-avg-bsa-eqv}
 
-![Pivot Table analysis of Average BSA Equivalent isolated by Lac+/- Sample and stated concentration of the protein](images/lac_avg_bsa.png){#fig-lac-avg-bsa width=3in}
+![Pivot Table analysis of Average BSA Equivalent isolated by Lac+/- Sample and stated concentration of the protein.](images/lac_avg_bsa.png){#fig-lac-avg-bsa width=3in}
 
 - Lac- samples have a greater estimated amount of BSA Equivalent than Lac+ samples. This implies that Lac- samples have a greater concentration of their respective proteins than the Lac+ sample.
 
@@ -96,10 +102,16 @@ Results from @sec-bga-assay suggests that the Lac+ samples have at least ~4x the
 
 These results suggest that while the concentration of Lac- proteins is greater than the Lac+ proteins, the enzymes in the Lac+ samples are more active than the Lac- ones. Thus, while the Lac- samples have a higher concentration, they have more inactive enzymes than Lac+ samples. 
 
+### Explanations for samples measuring specific activity for ONPG despite being Lac-
+
+Within both @fig-sa-plot and @fig-lac-bath, there remains ONPG activity of unexplained origin. Random noise appears to be the most reasonable source of the specific activity within the sample given that the value for mean background absorbance within the Spectrophotomer readings within @fig-ba-final-data were 0.302 at $OD_{420}$, close fo the values used for the Lac-specific activity equation in @sec-sa-data-table. 
+
+A less-likely potential explanation for the *E. coli* bacteria producing specific activity despite being Lac- could be that there are other naturally-produced enzymes by *E. coli* which were able to cleave the lactose analog ONPG. Therefore, even though the bacterial cells did not contain any inserts of the Lac gene, they'd be able to cleave the lactose analog and produce the small amount of specific activity seen in @fig-sa-plot.
+
 # Study Questions
 ## Why do proteins precipitate during "salting out" with ammonium sulfate?
 
-Proteins dissolve in water because of interactions between their charged/polar groups and water molecules. Adding a high concentration of salt, like ammonium sulfate, disrupts these interactions by out-competing the protein for hydrogen-bonds with water molecules. 
+Proteins dissolve in water because of interactions between their charged/polar groups and water molecules. Adding a high concentration of salt, like ammonium sulfate, disrupts these interactions by out-competing the protein for hydrogen-bonds with water molecules.
 
 As the salt concentration increases, and there are fewer water molecules to interact with the protein, the proteins are forced to aggregate together leading to their precipitation out of solution.
 
@@ -109,11 +121,11 @@ When a solution containing proteins is centrifuged, denser proteins move towards
 
 ## How does the Bradford assay determine protein concentration?
 
-The Bradford assay uses a dye called Coomassie Blue to measure protein concentration. The color change from redish-brown in an acid environment, to bright blue, is proportional to the amount of protein present. The assay involves these steps:
+The Bradford assay uses a dye called Coomassie Blue to measure protein concentration.[^la_7] The color change from redish-brown in an acid environment, to bright blue, is proportional to the amount of protein present. The assay involves these steps:
 
-- **Preparing a standard curve**: Known concentrations of a standard protein like BSA are reacted with the Bradford reagent. A spectrophotometer measures the absorbance of these solutions at 595 nm, and a standard curve with absorbance on the y-axis and protein concentration on the x-axis is plotted.
+- **Preparing a standard curve**: Known concentrations of a standard protein like BSA are reacted with the Bradford reagent. A spectrophotometer measures the absorbance of these solutions at 420nm, and a standard curve with absorbance on the y-axis and protein concentration on the x-axis is plotted.
 
-- **Sample measurement**: The unknown protein sample is reacted with the Bradford reagent, and its absorbance at 595 nm is measured.
+- **Sample measurement**: The unknown protein sample is reacted with the Bradford reagent, and its absorbance at 420nm is measured.
 
 - **Determining the unknown concentration**: By comparing the absorbance of the unknown sample to the standard curve, the corresponding protein concentration can be determined.
 
@@ -123,7 +135,7 @@ An activity assay is the preferred method for measuring the amount of a specific
 
 ## In the β-galactosidase assay, the amount of o-nitrophenol produced correlates with what?
 
-In the β-galactosidase assay, the higher the β-galactosidase activity, the more ONPG is cleaved, and consequently, the more o-nitrophenol is produced.[^la_7] This is because ONPG is an analog of lactose, a molecule which is cleaved by $\beta$-galactosidase activity into o-nitrophenol.
+In the $\beta$-galactosidase assay, the higher the $\beta$-galactosidase activity, the more ONPG is cleaved, and consequently, the more o-nitrophenol is produced.[^la_7] This is because ONPG is an analog of lactose, a molecule which is cleaved by $\beta$-galactosidase activity into o-nitrophenol.
 
 # References
 
