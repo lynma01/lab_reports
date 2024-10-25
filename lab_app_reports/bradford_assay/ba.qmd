@@ -1,17 +1,17 @@
 ---
-title: Bradford (BioRad) Assay & Protein Purification
-subtitle: Lab Session 7
+title: Bradford and $\beta$-galactosidase Assays 
+subtitle: Lab Session 7 - Measuring Protein Purity & Concentration
 date: 2024-10-09
 ---
 
 # Objective
 
-The objective of the experiment is to measure the purity/specific activity of enzyme activity using the Bradford Coomassie Blue Assay, and the $\beta$-galactosidase assay with O-nitrophenyl-$\beta$-D-galactopyranoside (ONPG) artificial substrate. 
+The objective of the experiment is to measure the concentration and specific activity of enzyme activity using the Bradford Coomassie Blue Assay, and the $\beta$-galactosidase assay with O-nitrophenyl-$\beta$-D-galactopyranoside (ONPG) artificial substrate. 
 
 The Bradford Assay (BA) will be used to quantify the total protein concentration at different stages of the purification process. While the $\beta$-galactosidase assay will be used to derive the specific activity of the enzyme present.
 
 # Background
-## Principles Behind the Bradford Assay for Protein Quantification
+## Principles Behind the Bradford and $\beta$-galactosidase Assays for Protein Quantification
 
 - **Color Change Upon Protein Binding:** The Bradford assay leverages a dye called Coomassie Brilliant Blue G-250. This dye exists in different ionic forms, with varying colors depending on the pH of the solution.  In its acidic form, the dye appears reddish-brown. However, when the dye binds to protein molecules, it undergoes a shift to its anionic form, resulting in a vivid blue color. This color change is directly proportional to the amount of protein present in the sample.[^edvotek]
 
@@ -31,13 +31,19 @@ The Bradford Assay (BA) will be used to quantify the total protein concentration
 
 - Lac+ Samples showing deep yellow coloration, evincing greater ONPG presence than the Lac- Samples.
 
+- Air bubbles present within images of the samples were also present during their analysis within the spectrophotometer. 
+
 ### Completed Readings from UV-1600PC Spectrophotometer
-![Completed spectrophotometer readings of Lac-/Lac+ cuvettes at $OD_{420}$ nanometers wavelength absorbance. Author's samples are Numbers 16, 17 within the reader.](images/spect_data.JPG){width=4in #fig-spec-data}
+![Completed spectrophotometer readings of Lac-/Lac+ cuvettes at $OD_{420}$ nanometers wavelength absorbance. Author's samples are Numbers 16, 17 within the reader.](images/spect_data.JPG){width=3in #fig-spec-data}
+
+- The author's Lac+/- samples were recorded as entries 16 and 17, with measurements of 1.868 and 0.396 respectively. 
 
 ### Graph of Calculated Enzymatic Specific Activity
 ![Plot of completed Enzymatic Specific Activity, measured in Miller Units, using the data from the UV-1600PC Spectrophotomerter in @fig-spec-data.](images/specific_activity.png){width=4in #fig-sa-plot}
 
 - Equation for calculating Miller Units of Specific Enzyme Activity (M) is: $M = \frac{(X^{OD_{420}} * V)} {4.6 * t_{minutes}}$ where $X$ is the reading for the sample at $OD_{420}$, $V$ is the final volume of the sample in mL, and $t$ is time in minutes.
+
+- Results for calculating specific activity of Lac+/- samples was 0.193 and 0.041 Miller Units respectively. The Lac+ sample was more than 4x the specific activity of the Lac- sample.
 
 #### Data used to Calculate Solution {#sec-sa-data-table}
 
@@ -51,14 +57,21 @@ The Bradford Assay (BA) will be used to quantify the total protein concentration
 ## Bradford Assay measuring Protein Concentration
 
 ### Lac+/- Samples placed within BioTek instrument for Spectrophotometric Analysis
+
 ![Prepared Bradford Assay microplate within BioTek Spectrophotometer for protein analysis.](images/ba_biotek_analysis.JPG){width=3in #fig-plates-in-machine}
 
+- Microplates prepared from the same Lac+/- samples were dilluted into a standard curve and analyzed within the BioTek Spectrophotometer. 
+
+- Air-bubbles within the plates were removed by micro-pipette tips, requiring a secondary analysis within the spectrophotometer to generate cohesive/accurate data for analysis.
+
 ### Spectrophotometric Results used for analysis {#sec-ba-data}
-![Data provided by BioTek Spectrophotometer for Bradford Assay. Author's data is within wells 1:6, rows A:F.](images/final_ba.png){#fig-ba-final-data}
+![Data provided by BioTek Spectrophotometer for Bradford Assay. Author's data is within wells 1:6, rows A:F.](images/final_ba.png){#fig-ba-final-data width=5in}
+
+- A standard curve from BSA containing wells was prepared within rows A:F, columns 1:3, while the Lac+/- samples with unknown protein concentration were diluted and pipetted into rows A:D, columns 4:6.
 
 ### Table of BSA microplate contents {#sec-bsa-contents}
 
-![Contents of wells 1:3, rows B:F included in Bradford Assay (BA), with dilutions and concentration amounts for wells produced by the author.](images/bsa_spect_contents.png){#fig-bsa-spect-contents}
+![Contents of wells 1:3, rows B:F included in Bradford Assay (BA), with dilutions and concentration amounts for wells produced by the author.](images/bsa_spect_contents.png){#fig-bsa-spect-contents width=5in}
 
 - Does not list the 200$\mu$l of Bradford Assay Protein Reagent included in the wells.
 
@@ -68,7 +81,7 @@ The Bradford Assay (BA) will be used to quantify the total protein concentration
 
 ### Table of Lac+/- microplate contents {#sec-lac-contents}
 
-![Contents of samples of wells 4:6, rows A:D included in Bradford Assay, with dillutions/concentrations amounts produced by author.](images/lac_spect_contents.png){#fig-lac-spect-contents}
+![Contents of samples of wells 4:6, rows A:D included in Bradford Assay, with dillutions/concentrations amounts produced by author.](images/lac_spect_contents.png){#fig-lac-spect-contents width=5in}
 
 - Final BA values subtract the mean background absorbance calculated from @sec-bsa-contents. 
 
@@ -76,11 +89,11 @@ The Bradford Assay (BA) will be used to quantify the total protein concentration
 
 ### Linear Regression of Protein Concentration of BSA containing wells from @sec-ba-data {#sec-lr-bsa}
 
-![Linear Regression produced in Microsoft Excel using data from @fig-ba-final-data used to calculate the concentration of the unknown protein samples.](images/bsa_lr.png){#fig-bsa-lr}
+![Linear Regression produced in Microsoft Excel using data from @fig-ba-final-data used to calculate the concentration of the unknown protein samples.](images/bsa_lr.png){#fig-bsa-lr width=3in}
 
-### Estimating Equivalent BSA ($\mu$l) for Lac+/- Wells using the Linear Regression Equation from @fig-bsa-lr {#sec-calc-bsa-eqv}
+### Estimating Equivalent BSA ($\mu$l) for Lac+/- samples from the Linear Regression in @fig-bsa-lr {#sec-calc-bsa-eqv}
 
-![Table of Lac+/- Microplate Wells with Estimated Equivalent BSA ($\mu$l) using the Linear Regression Equation in @fig-bsa-lr.](images/lac_equiv_bsa.png){#fig-lac-bsa-equiv}
+![Table of Lac+/- Microplate Wells with Estimated Equivalent BSA ($\mu$l) using the Linear Regression Equation in @fig-bsa-lr.](images/lac_equiv_bsa.png){#fig-lac-bsa-equiv width=5in}
 
 - Equation used to estimate BSA Equivalent in $\mu$l ($B_{eq}$) was $B_{eq}=\frac {(B_{FV}-0.0485)} {0.0105}$.
 
@@ -103,6 +116,14 @@ These results suggest that while the concentration of Lac- proteins is greater t
 Within both @fig-sa-plot and @fig-lac-bath, there remains ONPG activity of unexplained origin. Random noise appears to be the most reasonable source of the specific activity within the sample given that the value for mean background absorbance within the Spectrophotomer readings within @fig-ba-final-data were 0.302 at $OD_{420}$, close fo the values used for the Lac-specific activity equation in @sec-sa-data-table. 
 
 A less-likely potential explanation for the *E. coli* bacteria producing specific activity despite being Lac- could be that there are other naturally-produced enzymes by *E. coli* which were able to cleave the lactose analog ONPG. Therefore, even though the bacterial cells did not contain any inserts of the Lac gene, they'd be able to cleave the lactose analog and produce the small amount of specific activity seen in @fig-sa-plot.
+
+## Potential Sources of Error in @sec-sa-data-table
+
+Noted in @fig-lac-bath, and within @fig-plates-in-machine, air-bubbles were present within both samples as they were placed in both the BioTek and the UV-1600PC spectrophotometers for their respective analyses. Originally unknown to the author, bubbles within the samples would create anomalies in the data, requiring their removal.
+
+While air-bubbles trapped in the samples placed into @fig-plates-in-machine were removed using micro-pipette tips, the air-bubbles within @fig-lac-bath were still present when the cuvettes were analyzed. Thus, air-bubbles could have introduced inaccuracies within the calculations for @sec-sa-data-table.
+
+A second set of spectrophotometry analyses using the UV-1600PC instrument of the same samples, with the air-bubbles removed, would be required to confirm the validity to the experiment's original results. 
 
 # Study Questions
 ## Why do proteins precipitate during "salting out" with ammonium sulfate?
@@ -129,13 +150,16 @@ The Bradford assay uses a dye called Coomassie Blue to measure protein concentra
 
 An activity assay is the preferred method for measuring the amount of a specific enzyme in a solution because it can distinguish between the active vs. inactive forms of the enzyme. Inactive enzymes may inaccurately inflate the final count of a specific enzyme.
 
-## In the β-galactosidase assay, the amount of o-nitrophenol produced correlates with what?
+## In the $\beta$-galactosidase assay, the amount of o-nitrophenol produced correlates with what?
 
 In the $\beta$-galactosidase assay, the higher the $\beta$-galactosidase activity, the more ONPG is cleaved, and consequently, the more o-nitrophenol is produced.[^la_7] This is because ONPG is an analog of lactose, a molecule which is cleaved by $\beta$-galactosidase activity into o-nitrophenol.
 
 # References
 
 [^edvotek]: Edvotek. (2008-2024). Biotechnolgoy Cirriculum Modules
+
 [^lehn]: David L. Nelson; Michael M. Cox. (2021). Lehninger Principles of Biochemistry. pages 
+
 [^adesh]: Suchit Adesh, M.S.c (2024). Conservations on Bradford Assay.
+
 [^la_7]: Donohue Robert, M.S.c, Gimenez Naroa, Phd. Lab Applications of Biotechnology; Lecture Session #7 "Protein Extraction and Assays Protein Purification β-Galactosidase and and Bradford Assays".
