@@ -1,0 +1,64 @@
+---
+title: Purification of EcoR1 Nuclease
+subtitle: Lab Report 8 - Ion Exchange Chromatography
+date: 2024-10-14
+---
+
+# Objective
+
+The objective of this experiment is to isolate the EcoR1 nuclease proteins from a series of unknown samples using Ion Exchange Chromatography, and verifying our results using gel electrophoresis.
+
+# Background
+
+# Results
+
+## Isolating suspected EcoR1 nuclease proteins from unknown samples via Gel Electrophoresis {#sec-first-gel}
+
+![Transilluminator image capture of unknown samples to discern which samples contain the EcoR1 nuclease. Lambda DNA are in the left-most wells for visual comparison.](images/pp_ecor1_screen.JPG){#fig-first-gel width=3in}
+
+## Gel Electrophoresis of EcoR1 nucleases isolated from @sec-first-gel and dilluted according to a standard curve.
+
+![Transilluminator image capture of final gel electrophoresis of purified samples. Author's results are in the bottom-most gel.](images/pp_final_gel.JPG){#fig-final-gel width=3in}
+
+- EcoR1 nuclease are distinguished by the two distinct bands evinced in the left-most well.
+
+## Nano-Drop A280 measurements of EcoR1 Protein Concentration 
+
+![Secondary image capture of Nano-Drop Protein Concentration analysis using A280 measurements at 280 nanometers wavelength.](images/pp_final_nd.JPG){width=3in #fig-nanodrop}
+
+# Interpretation & Discussion
+
+## Sources of Error within A280 Analysis using Nano-Drop instrument
+
+![Sources of error from A280 Nano-Drop Instrument resulting from provided sample-volumes for analysis being too small](images/pp_error_nd.JPG){#fig-error-nanodrop width=3in}
+
+# Study Questions
+
+
+## What is Affinity Chromatography?
+Affinity chromatography is used to purify proteins with tags like His6. The His6 tag binds specifically to nickel ions (Ni2+) that are immobilized on the chromatography resin. 
+
+This interaction allows the tagged protein to be retained on the column while other proteins are washed away. The His6-tagged protein can then be eluted from the column using a solution containing a high concentration of imidazole, which competes with the histidine residues for binding to the nickel ions.
+
+## What type of chromatography is used to purify EcoR1 and why?
+Ion exchange chromatography is used to purify EcoR1. This method separates proteins based on their net charge. The resin used in this experiment, DEAE Cellulose, has a positive charge. EcoR1, being negatively charged, binds to the positively charged resin.
+
+## How is the protein concentration measured in this experiment? What is the limitation of this method?
+Protein concentration in this experiment is measured using **A280**, which measures the absorbance of a sample at a wavelength of 280 nm. This method is based on the fact that aromatic amino acids like tryptophan and tyrosine absorb light at 280 nm. 
+
+The limitation of this method is that it is not specific for a particular protein and can be affected by the presence of other molecules that absorb light at 280 nm.
+
+## Why is KCl used to elute the protein from the column matrix?
+KCl is used to elute the protein from the column matrix because it increases the ionic strength of the buffer, disrupting the ionic interactions between the protein and the charged resin, allowing the protein to be eluted.
+
+## What is the difference between Molarity and Normality?
+**Molarity (M)** is defined as the number of moles of solute per liter of solution, while **Normality (N)** is defined as the number of gram equivalents of solute per liter of solution. One gram equivalent of a substance is defined as the mass of the substance that can donate or accept one mole of protons.
+
+# References
+[^edvotek]: Edvotek. (2008-2024). Biotechnolgoy Cirriculum Modules
+
+[^lehn]: David L. Nelson; Michael M. Cox. (2021). Lehninger Principles of Biochemistry. pages 
+
+[^adesh]: Suchit Adesh, M.S.c (2024). Conservations on Bradford Assay.
+
+[^la_7]: Donohue Robert, M.S.c, Gimenez Naroa, Phd. Lab Applications of Biotechnology; Lecture Session #8 "Purification of EcoR1".
