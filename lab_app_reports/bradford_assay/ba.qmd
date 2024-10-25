@@ -21,10 +21,6 @@ The Bradford Assay (BA) will be used to quantify the total protein concentration
 
 - **Standard Curve for Calibration:** A standard curve is generated using known concentrations of a reference protein, and for this experiment, Bovine Serum Albumin (BSA). The absorbance readings of known BSA concentrations are plotted against their corresponding unknown concentrations to create a curve relating absorbance to protein concentration. 
 
-- **Utility in Protein Purification:** By comparing the total protein concentration before and after a purification stage, researchers can determine how much unwanted protein has been removed. Ideally, as the purification progresses, the total protein concentration should decrease while the activity of the target protein (Lactose) remains consistent or increases. 
-
-The Bradford assay is a valuable tool for protein research due to its simplicity, sensitivity, and relatively low cost. It provides researchers with a quick and reliable method for quantifying total protein content, aiding in the assessment of protein purity and the effectiveness of purification protocols. 
-
 # Results
 
 ## $\beta$-Galactosidase Assay measuring Specific Activity {#sec-bga-assay}
