@@ -16,6 +16,8 @@ format:
     colorlinks: true
     linestretch: 1.5
     font-size: 12
+    mermaid: 
+      theme: forest
     theme:
       light: flatly
       dark: darkly
@@ -25,3 +27,5 @@ format:
     colorlinks: true
     linestretch: 1.5
     font-size: 12
+    mermaid:
+      theme: forest
