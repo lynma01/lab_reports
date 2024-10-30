@@ -1,0 +1,41 @@
+---
+title: Using Forebrain Organoids to Replace Silicone Processors
+subtitle: Biotech Industry News - 2024-10-31
+format: revealjs
+---
+
+## About Me
+
+- New York University
+- Kingston, Jamaica
+- Georgetown, Biotechnology: Industrial Sciences
+
+## Introduction
+
+FinalSpark is a Swiss Company which is pioneering research on using Forebrain Organoids (FOs) to replace silicone computer processors while training Artificial Neural Networks.
+
+## What's the impact?
+
+FinalSpark claims that for the same set of computations executed by a computer, their Forebrain Organoids use. 
+
+## Forebrain Organoids are not a silver bullet
+
+FOs cannot replace the vast majority of computational processes because of their natural variability (age/degradation), difficulty "learning" new signal-pathways, and the complexity of the manufacturing process.
+
+However, they're **extremely** efficient when it comes to the 1% of computational problems which take up 11% (and growing) of the energy expenditures we see every day.
+
+## Why does this matter?
+
+Countries across the world are experiencing unprecedented strain on their electrical grids for two reasons: 1) The development and use of artificial intelligence; 2) grid strain related to the effects of climate change.
+
+## Why is this market so unusual?
+
+Normally, Biopharmaceutical companies have an issue with being "too effective". If they cure the disease, demand dries up.
+
+What's interesting about AI data centers?
+
+"Breakthroughs that allow access to low-cost, highly efficient compute do not necessarily lower the demand for electricity. Rather, such breakthroughs may increase the complexity of models that can be run, and they may even enable more use cases that lead to more power demand."
+
+AKA: Improvements in computation efficiency yields demand for more computation.[^mckinsey]
+## References
+
