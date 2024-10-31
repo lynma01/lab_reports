@@ -6,50 +6,220 @@ date: 2024-10-14
 
 # Objective
 
-The objective of this experiment is to isolate the EcoR1 nuclease proteins from a series of unknown samples using Ion Exchange Chromatography, and verifying our results using gel electrophoresis.
+The objective of this experiment is to isolate the EcoR1 nuclease proteins from a series of unknown samples using Ion Exchange Chromatography, then verify our successful isolation using agarose gel electrophoresis, before finally measuring the final protein concentration of the EcoR1 nuclease via A280 analysis in the Nano-Drop instrument.
 
-# Background
+# Background {#sec-bg}
+
+## Experimental Procedure {#sec-bg-pc}
+
+### Step 1: Protein Isolation {#sec-bg-pc-one}
+
+Isolate the EcoR1 endonuclease via Ion Exchange Chromatography. The sample is eluted into 8 fractions by incrementally increasing KCl concentration. 
+
+One fraction will contain 1mL reference guide of confirmed Lambda DNA and EcoR1 as positive experimental control, and one fraction will contain uncut Lambda DNA, making for 10 total fractions for verification in @sec-bg-pc-two.
+
+### Step 2: Verification of EcoR1 {#sec-bg-pc-two}
+
+Verify the presence of the EcoR1 endonuclease within the samples from step 1 by visualizing the cleavage of the Lambda DNA via agarose Gel electrophoresis. As described in @sec-bg-ecor1-verf, without the presence of two distinct bands, EcoR1 is *not* contained within the fraction.
+
+### Step 3: Protein Concentration Assays and Verification {#sec-bg-pc-three}
+
+Measure the protein concentration of the final samples via A280 and Specific Activity assays. Repeat the SDS-PAGE to confirm EcoR1 presence in final sample.
+
+#### Step 3, Part A {#sec-bg-pc-three-a}
+The A280 assay measures the absorbance of the protein at 280nm (see @sec-bg-quant-prot).
+
+#### Step 3, Part B {#sec-bg-pc-three-b}
+The Specific Activity assay measures the enzymatic activity of the protein, ensuring the presence of "active" enzymes within the sample. (see @sec-bg-sa)
+
+#### Step 3, Part C {#sec-bg-pc-three-c}
+Finally, as experimental control, we verify the presence of the EcoR1 endonuclease to ensure that the samples used in 3.a, 3.b truly contained the endonuclease. (see @sec-bg-ecor1-verf)
+
+### Process Diagram {#sec-bg-pdg}
+```{mermaid}
+flowchart TD
+    A[Start] --> B[Step 1: Isolate EcoR1 via Ion Exchange Chromatography]
+
+    B --> C[Collect 8 fractions with increasing KCl Conc.]
+
+    C --> D[Step 2: Load fractions in agarose Gel Electrophoresis, verify presence of EcoR1]
+
+    D --> E{Lambda DNA Cleaved?}
+        E -- Yes --> F[Fraction Contains EcoR1]
+        E -- No --> G[Discard Fraction]
+
+    F --> H[Step 3: Measure Protein Concentration]
+        H --> K[Step 3.c: Repeat agarose Electrophoresis, verify presence of EcoR1]
+        H --> I[Step 3.a: A280 Assay]
+        H --> J[Step 3.b: Specific Activity Assay]
+
+    I & J & K --> L[End]
+```
+
+## Protein of Interest: EcoR1 Endonuclease {#sec-bg-ecor1}
+
+Restriction enzymes, or Type II endonucleases, are enzymes that cut double-stranded DNA by hydrolyzing two phosphodiester bonds (one per strand) in defined nucleotide sequences.[^lehn]
+
+These enzymes are extracted from various bacterial strains, where the name of a restriction enzyme is derived from the genus and species of the bacterium from which it is isolated. In many instances, a bacterial strain contains more than one restriction endonuclease, where each enzyme is assigned a Roman numeral.[^la_7]
+
+Most restriction enzymes are composed of two polypeptides of equal subunits with molecular weights of 20,000-35,000 or single polypeptides with molecular weights of 30,000-40,000. The sequences recognized by restriction enzymes are for the most part centrosymmetric palindromic sequences that are usually hexamers, pentamers, or tetramers.[^edvotek]
+
+Several Type II restriction enzymes recognize DNA at a specific site and hydrolyze phosphodiester bonds at a defined distance from that site. An example of this group of enzymes is BgI I, which recognizes a sequence containing two groups of specified residues separated by completely unspecified residues - CC\*\*\*GG; it therefore generates DNA fragments with variable end groups.[^edvotek]
+
+## Ion Exchange Chromatography (IEC) {#sec-bg-iec}
+
+### Experimental application of IEC {#sec-bg-iec-app}
+
+EcoR1, an endonuclease restriction enzyme with charged properties, binds to charged resins in the chromatography column based on ionic interactions. The specific type used in this experiment is DEAE resin.
+
+The elution of EcoR1 is executed by stepwise increases in KCl concentration, which competes with the enzyme's ionic bonds to the resin, allowing gradual release of EcoR1 fractions at various salt strengths. Eight fractions are collected, representing incremental salt concentrations (from 0M KCl to 0.5M KCl) to elute the enzyme based on affinity strength.[^la_7] [^edvotek]
+
+### Principles of IEC {#sec-bg-iec-princ}
+
+Ion exchange chromatography can be used for the purification of restriction enzymes. It is a separation technique exploiting the charge differential between a biomolecule and a resin. The stationary phase is a resin (such as Sephadex or DEAE Cellulose) packed into a column, where the sample containing the biomolecule/protein-of-interest is applied to the top.
+
+Because of the charge differential between the protein-of-interest and the resin, the protein is selectively bound to column while non-specific species within the column are washed away. The purification of the protein occurs by application of a secondary molecule which out-competes the binding strength of the biomolecule and the resin, causing the biomolecule to elute out of the column. This elution step is known as the mobile phase. 
+
+There's two primary categories of Ion Exchange Chromatography:
+
+- **Anion exchange** uses (+) charged beads to bind (-) molecules.
+- **Cation exchange** uses (-) charged beads to bind (+) molecules[^la_7]
+
+## Verifying Successful Purification of EcoR1 Endonuclease using agarose Gel Electrophoresis {#sec-bg-ecor1-verf}
+
+EcoR1 cleaves Lambda DNA at a specific recognition sequence (5'-GAATTC-3'). This cleavage is used to confirm the enzyme’s presence and activity within collected fractions. If the agarose gel does not display *at least* two distinct bands within the well (evincing cleavage of the Lambda DNA) then the fraction did not contain the EcoR1 endonuclease.
+
+After a reaction period allowing for the EcoR1 endonuclease to digest the Lambda DNA, the products are run on an agarose gel, where bands confirm EcoR1’s successful cleavage of Lambda DNA.[^la_7] [^edvotek]
+
+## Quantifying Protein Concentration {#sec-bg-quant-prot}
+
+Protein quantification is used to determine the concentration of protein in a sample. There is no single "best" method of measuring protein concentration. As a result, protein quantification methods are iteratively applied to ensure validity/accuracy of the readings. 
+
+Protein quantification is used for the following scenarios: 
+
+- Studies of protein expression, including how varied conditions affect SA in the cell (induction or repression).
+
+- Clinical diagnostics: physiological conditions or diseases, including protein levels in the body (liver/kidney enzyme levels, specific proteins).
+
+### A280 Measurement {#sec-bg-a280}
+
+The concentration of EcoR1 is quantified by measuring absorbance at 280 nm (A280), where the presence of tryptophan and tyrosine residues in proteins is a good indicator of concentration. The A280 measurements have certain drawbacks in that any biomolecules which have similar absorbance to tryptophane/tyrosine will create false-positives within the sample. Likewise, any samples without biomolecules like tryptophan/tyrosine will create a false negative.
+
+### Specific Activity Assay {#sec-bg-sa}
+
+Specific activity is defined as the number of enzyme units per mg of protein and is used to evaluate enzyme purity. The specific activity of EcoR1 is calculated by assessing its ability to digest a set amount of Lambda DNA under standardized conditions, which allows for a comparison of enzyme concentration and activity across fractions.[^la_7] [^edvotek]
+
+Restriction Enzyme Units are defined as the amount of enzyme activity that will digest 1 $\mu$g of Lambda DNA at 37c within one hour.[^la_7]
+
+The equations are given in @sec-r-calc-sa.
 
 # Results
 
-## Isolating suspected EcoR1 nuclease proteins from unknown samples via Gel Electrophoresis {#sec-first-gel}
+## Isolating EcoR1 via agarose Gel Electrophoresis {#sec-first-gel}
 
-![Transilluminator image capture of unknown samples to discern which samples contain the EcoR1 nuclease. Lambda DNA are in the left-most wells for visual comparison.](images/pp_ecor1_screen.JPG){#fig-first-gel width=3in}
+![Transilluminator image capture of unknown samples to discern which samples contain the EcoR1 nuclease. Lambda DNA are in the left-most wells for visual reference.](images/pp_ecor1_screen.JPG){#fig-first-gel width=3in}
 
-## Gel Electrophoresis of EcoR1 nucleases isolated from @sec-first-gel and dilluted according to a standard curve.
+- Wells are labelled 1 -> 12 from top left to bottom right, where Wells #1 and #7 are the 1mL reference guides provided as positive control of cleaved Lambda DNA.
 
-![Transilluminator image capture of final gel electrophoresis of purified samples. Author's results are in the bottom-most gel.](images/pp_final_gel.JPG){#fig-final-gel width=3in}
+- Cleavage is evident in Wells #4, #5. Well #6 produced faint banding, rending it's classification inconclusive.
 
-- EcoR1 nuclease are distinguished by the two distinct bands evinced in the left-most well.
+- Fractions from Wells #4, #5 were isolated for further purification given their distinct banding patterns.
 
-## Nano-Drop A280 measurements of EcoR1 Protein Concentration 
+## Gel Electrophoresis of EcoR1 endonucleases isolated from @sec-first-gel and diluted according to a standard curve. {#sec-final-gel}
+
+![Transilluminator image capture of final gel electrophoresis of purified samples. Author's results are in the bottom-most gel. Wells are numbered 1:10, left to right.](images/pp_final_gel.JPG){#fig-final-gel width=3in}
+
+- Visual reference EcoR1 endonuclease are distinguished by the two distinct bands, the visual references were loaded into the left-most wells as markers.
+
+- Complete digestion of the Lambda DNA by EcoR1 should present at least 5 distinct bands, while incomplete digestion should produce at least 2 bands.[^edvotek] However, none of the wells contained distinct banding suggesting the presence of EcoR1 by Lambda DNA cleavage.
+
+- Wells #3, #4 are the only wells which contained *faint* banding. However, the cleavage in Wells #3, #4 are distant to the cleavage/distance within Well #1.
+
+## Nano-Drop A280 measurements of EcoR1 Protein Concentration {#sec-r-nanodrop}
 
 ![Secondary image capture of Nano-Drop Protein Concentration analysis using A280 measurements at 280 nanometers wavelength.](images/pp_final_nd.JPG){width=3in #fig-nanodrop}
 
+- Result of A280 reading from Nano-Drop instrument is: 0.191 mg/ml.
+  
+- A260/A280 reading is 1.47
+
+- Lambda DNA - EcoR1 Reaction began at 5:40PM, ending at 6:10PM on 2024-10-14, for a 30 minute total reaction time.
+
+- Dilution Factor of the sample applied to the Nano-Drop is: 1:1.
+
+### Calculating Protein Purity of the Sample {#sec-r-calc-sa}
+
+- The variables ***Total Units***, ***Specific Activity***, ***Reaction Time*** are demarked as: $T_u$, $S_a$, $T_m$
+
+- The equations for each are:
+  - $T_u = \frac {Volume_{Pooled}} {Volume_{Assay} * A_{280}} * \frac {60} {T_{m}}$
+  - $S_a = \frac{T_u} {A_{280}*{Volume_{Fractions}}}$
+
+```{python}
+import polars as pl
+
+# Total Units Calculation
+av=20 # Assay Volume for Total Units (mL)
+pv=2000 # Pooled Volume 
+df=[round(x, 3) for x in [1, 1/2, 1/3, 1/4, 1/10, 1/20]] #Dilution Factor
+
+# Specific Activity Calculation
+a=0.191 # a280 reading mg/ml
+fv=8 # Fraction Volume for Specific Activity (ml)
+
+oh=60 # One hour
+rt=30 # Reaction Time
+
+tu=[round(pv/(av*x)*(oh/rt), 3) for x in df] # Calculate Total Units
+sa=[round(x/(a*fv), 3) for x in tu] # Calculate Specific Activity
+
+print(f"""
+- Protein Concentration A280 (mg/ml): {a}\n
+- Dilution Factors; {df}\n
+- Total Units: {tu}\n
+- Specific Activity (units/mg): {sa}\n
+""")
+```
+
 # Interpretation & Discussion
 
-## Sources of Error within A280 Analysis using Nano-Drop instrument
+## Interpreting presence of EcoR1 in @fig-first-gel but absence in @fig-final-gel {#sec-i-gel}
 
-![Sources of error from A280 Nano-Drop Instrument resulting from provided sample-volumes for analysis being too small](images/pp_error_nd.JPG){#fig-error-nanodrop width=3in}
+This is an unexpected result, given that the previous preparatory step was visually confirmed to contain EcoR1 endonuclease. Potential explanations for this phenomena must have occurred within the Step 3 of the protocol outlined in Step 3 (@sec-bg-pc-three). 
+
+The lack of cleavage in the second electrophoresis pictured in @fig-final-gel could have happened for two reasons: 1) the enzymatic reaction between the Lambda DNA and the EcoR1 was inhibited; 2) the agarose gel electrophoresis didn't receive sufficient time to visualize the cleavage reaction. Of the two explanations, the inhibition of the enzymatic reaction is the most likely given that the gel electrophoresis time was 30 minutes.
+
+This is corroborated from the @sec-r-nanodrop, A260/A280 where the 1.47 value compared to "pure" Nucleic Acid readings between 1.7 - 2.0 implies that significant amounts of Nucleic Acid degradation did *not* take place. If there had been more EcoR1 endonuclease present, the A260/A280 value would have been lower.
+
+### Inhibition of EcoR1 enzymatic reaction
+
+The endonuclease reaction could've been inhibited because there wasn't enough purified protein from Step 2 (@sec-bg-pc-two). The lack of EcoR1 transferred from the first isolated fractions would've inhibited the cleavage of the Lambda DNA to be visualized in the @sec-final-gel. Sources of error during pipetting the dilution series could have further decreased the isolated fraction of EcoR1 endonuclease compounding the issue.
+
+## The absence of EcoR1 in @fig-final-gel complicates results for Nano-Drop readings in @fig-nanodrop {#sec-i-nd}
+
+Given that EcoR1 was not confirmed in step @sec-bg-pc-three-c, it's therefore unlikely that the Nano-Drop instrument was reading the protein concentration/specific activity of the EcoR1 endonuclease. It's therefore unclear *what* protein exactly the Nano-Drop A280 measurement was recording for. 
 
 # Study Questions
 
-
 ## What is Affinity Chromatography?
-Affinity chromatography is used to purify proteins with tags like His6. The His6 tag binds specifically to nickel ions (Ni2+) that are immobilized on the chromatography resin. 
+
+Affinity chromatography exploits the natural binding affinity of substrates and proteins to selectively separate proteins from an unknown mixture. An example of Affinity chromatography is purifying proteins with the His6 tag, which binds specifically to nickel ions (Ni2+) that are immobilized on the chromatography resin. 
 
 This interaction allows the tagged protein to be retained on the column while other proteins are washed away. The His6-tagged protein can then be eluted from the column using a solution containing a high concentration of imidazole, which competes with the histidine residues for binding to the nickel ions.
 
 ## What type of chromatography is used to purify EcoR1 and why?
+
 Ion exchange chromatography is used to purify EcoR1. This method separates proteins based on their net charge. The resin used in this experiment, DEAE Cellulose, has a positive charge. EcoR1, being negatively charged, binds to the positively charged resin.
 
 ## How is the protein concentration measured in this experiment? What is the limitation of this method?
-Protein concentration in this experiment is measured using **A280**, which measures the absorbance of a sample at a wavelength of 280 nm. This method is based on the fact that aromatic amino acids like tryptophan and tyrosine absorb light at 280 nm. 
+
+Protein concentration in this experiment is measured using **A280**, which measures the absorbance of a sample at a wavelength of 280 nm, because aromatic amino acids like tryptophan and tyrosine absorb light at 280 nm. 
 
 The limitation of this method is that it is not specific for a particular protein and can be affected by the presence of other molecules that absorb light at 280 nm.
 
 ## Why is KCl used to elute the protein from the column matrix?
-KCl is used to elute the protein from the column matrix because it increases the ionic strength of the buffer, disrupting the ionic interactions between the protein and the charged resin, allowing the protein to be eluted.
+
+KCl is used to elute the protein from the column matrix because it increases the ionic strength of the buffer, disrupting the ionic interactions between the protein and the charged resin, allowing the protein to be eluted. KCl out-competes the resin's natural affinity to bind to the protein, allowing it to elute out of the column into the fraction samples.
 
 ## What is the difference between Molarity and Normality?
 **Molarity (M)** is defined as the number of moles of solute per liter of solution, while **Normality (N)** is defined as the number of gram equivalents of solute per liter of solution. One gram equivalent of a substance is defined as the mass of the substance that can donate or accept one mole of protons.
