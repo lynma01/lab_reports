@@ -17,7 +17,7 @@ format:
     linestretch: 1.5
     font-size: 12
     mermaid: 
-      theme: forest
+      theme: neutral 
     theme:
       light: flatly
       dark: darkly
@@ -28,4 +28,4 @@ format:
     linestretch: 1.5
     font-size: 12
     mermaid:
-      theme: forest
+      theme: neutral
