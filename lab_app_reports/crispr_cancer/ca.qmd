@@ -11,7 +11,6 @@ This experiment has three components: 1) knock-out a gene-of-interest in *E. col
 # Background
 
 ## CRISPR-CAS9 & Gene Knock-Out
-
 ### Process diagram of experiment's CRISPR-CAS9 knock-out technique {#sec-bg-cr-pcd}
 
 ```{mermaid}
@@ -33,8 +32,53 @@ flowchart TD
 
 ### Principles of CRISPR-CAS9
 
+CRISPR/Cas9 is a naturally occurring immune system in bacteria with two primary components: a CAS9 Protein: A nuclease that cuts DNA like a pair of "molecular scissors", with Cas9 being the most commonly used type in genome editing; and a Short Guide RNA (sgRNA): A small RNA molecule that guides the CAS9 nuclease to cut a specific nucleotide sequence.
 
-## Quantifying viral load using the plaque assay
+### Experimental Application of CRISPR-CAS9
+
+The experiment uses an sgRNA which targets the *lacZ* gene in *E. coli*, which encodes the β-galactosidase enzyme. The knockout of the *lacZ* gene allows for a visual test verifying the genetic edit:
+
+$\beta$-galactosidase cleaves the lactose analog X-gal, producing a blue precipitate and indicates the presence of a functional *lacZ* gene. White colonies, on the other hand, indicate the *lacZ* gene has been successfully knocked out.
+
+*E. coli* bacteria used in the experiment don't naturally contain the CAS9 protein. As a result, 
+
+- **pKO Plasmid:** Contains the *cas9* gene and instructions for a guide RNA that's complementary to the *lacZ* gene
+
+- **pCtrl Plasmid:** Contains the *cas9* gene and instructions for a sgRNA with a random sequence. 
+
+The bacteria are grown on plates containing X-gal. The color of the resulting bacterial colonies helps determine if the CAS9 protein successfully disabled the *lacZ* gene:
+
+- Blue colonies indicate that the *lacZ* gene is functional, implying the Cas9 protein didn't disable the *lacZ* gene.
+
+- White colonies indicate that the *lacZ* gene has been disabled, implying the CAS9 protein, guided by the *lacZ*-specific sgRNA, cut the *lacZ* gene, knocking  out its ability to produce $\beta$-galactosidase.
+
+## Quantifying viral load using the Plaque Assay
+
+### Conceptual Summary of the Plaque Assay
+
+The plaque assay is a virological technique used to quantify the number of infectious viral particles in a sample, also known as the viral load. Monitoring viral load is crucial for evaluating the success of the treatment and detecting the development of antiviral resistance. 
+
+The Plaque Assay relies on the ability of a single virus to infect a host cell and spread the infection to neighboring cells, ultimately leading to the formation of a visible zone of cell death called "plaques". 
+
+### Experimental Application of the Plaque Assay
+
+The experiment uses the plaque assay to simulate measuring the viral load of two patients undergoing antiviral treatment for HIV. The protocol's primary steps are described as follows:
+
+- **Serial dilution of the suspected infected blood sample:** This is done because the viral concentration can vary significantly, and dilutions help ensure at least some plates will have a countable number of plaques.
+
+- **Inoculation of host cell culture with each dilution:** This provides a suitable environment for the virus to infect cells.
+
+- **Incubation period:** Allows time for the virus to attach to and infect the host cells.
+
+- **Addition of an agar layer:** The agar restricts the vertical movement of the virus, ensuring that infection spreads only to neighboring cells in a horizontal plane.
+
+- **Second incubation period:** This allows for the formation of plaques, which appear as circular zones of infected, dead cells.
+
+- **Calculation of viral load:** **The viral load is expressed as plaque-forming units (PFU) per milliliter**. Only plates containing between 30 and 300 plaques are considered for calculations to ensure accuracy and account for variations in counting.[^la_9]
+
+- **Incorporation of the dilution factor:** The final PFU/ml value is adjusted based on the dilution factor of the specific sample used.
+
+By comparing the viral load before and during treatment, the experiment simulates how doctors evaluate the effectiveness of the antiviral therapy.  **The shared results and analysis in the classroom setting provide a comprehensive understanding of the treatment outcomes for both patients**. 
 
 
 ## Analyzing the morphology of cancer cells
@@ -81,4 +125,4 @@ flowchart TD
 
 [^adesh]: Suchit Adesh, M.S.c (2024). Conservations on CRISPR-CAS9.
 
-[^la_7]: Donohue Robert, M.S.c, Gimenez Naroa, Phd. Lab Applications of Biotechnology; Lecture Session #9 "Gene Targeting (CRISPR), Virus, Infection, Morphology of Cancer Cells.".
+[^la_9]: Donohue Robert, M.S.c, Gimenez Naroa, Phd. Lab Applications of Biotechnology; Lecture Session #9 "Gene Targeting (CRISPR), Virus, Infection, Morphology of Cancer Cells.".
