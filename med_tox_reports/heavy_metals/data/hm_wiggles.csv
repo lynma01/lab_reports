@@ -1,0 +1,13 @@
+sample,observations,start,end
+control,74,00:00,00:30
+control,94,02:30,03:00
+control,72,05:00,05:30
+aldicarb,43,00:00,00:30
+aldicarb,40,02:30,03:00
+aldicarb,3,05:00,05:30
+metaborate,16,00:00,00:30
+metaborate,25,02:30,03:00
+metaborate,1,05:00,05:30
+boric_acid,53,00:00,00:30
+boric_acid,0,02:30,03:00
+boric_acid,0,05:00,05:30
