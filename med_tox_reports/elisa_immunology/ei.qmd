@@ -1,0 +1,19 @@
+---
+title: Testing for Allergens using the ELISA Assay
+subtitle: Medical Toxicology - Lab Report 5
+date: 2024-10-19
+---
+
+# Objective
+
+The objective of this experiment is to demonstrate how ELISA (Enzyme-Linked Immunosorbent Assay) and/or a lateral flow assay can be used to analyze the presence of melamine/immune-response proteins in a sample. Specifically, this experiment will use these different immunological assays to simulate the detection of metabolic/food allergens.
+
+# Results
+
+
+
+# Interpretation & Discussion
+
+# References
+
+[^mt_5]: Donohue Robert, M.S.c, Ascione Richard, Phd. Medical Toxicology; Experimental Manual "Allergies and Immunology. Testing for Metabolic and Food Allergens: Enzyme Linked Immuno Sorbent Assay (ELISA) and Rapid (Lateral Flow) Testing" pages 63-76.

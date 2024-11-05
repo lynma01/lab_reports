@@ -1,0 +1,19 @@
+---
+title: Applying the Comet Assay to Quantify DNA Damage
+subtitle: Medical Toxicology Lab Report 2
+date: 2024-10-05
+---
+
+# Objective
+
+The objective of this experiment is to use the Comet Assay to visualize genotoxic alterations to DNA by specific environmental toxicants. The overarching goal is to understand the relationship between exposure to environmental hazards and potential adverse health effects, particularly in the context of DNA damage and cancer risk.
+
+# Results
+
+# Interpretation & Discussion
+
+The comet assay is a sensitive technique for detecting DNA breaks in individual cells. The process involves embedding cells in agarose, lysing them to remove cell components, and then subjecting them to electrophoresis.  During electrophoresis, DNA fragments, particularly those containing breaks, migrate towards the anode, creating a "comet tail" visible under fluorescence microscopy. The length and intensity of the tail reflect the extent of DNA damage.
+
+# References
+
+[^mt_2]: Donohue Robert, M.S.c, Ascione Richard, Phd. Medical Toxicology; Experimental Manual "To Demonstrate The Use of the Comet Assay as a Model System to Monitor Genotoxic Alterations due to Specific Environmental Toxicants" pages 31-40.

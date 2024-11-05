@@ -6,11 +6,76 @@ date: 2024-10-12
 
 # Objective
 
-# Background
+The objective of this experiment is to assess if nanoparticle-toxicity impacts different cellular and organismal systems. The organisms being examined in the experiment are specifically, *C. elegans* and germinating Mung Bean seedlings.
 
 # Results
 
+## Effects of Nanoparticles on *C. elegans*
+
+*C. elegans* were exposed to several suspected toxic substances, and their thrashes were recorded during 30 second intervals with intervening 2 minute break periods for a total of five minutes total observation for each substance.
+
+The collected data is rendered in the following chart:
+
+```{python}
+import polars as pl
+import altair as alt
+
+alt.renderers.enable("svg")
+
+ce=pl.read_csv("data/c_elgans.csv")
+
+# make the chart
+alt.Chart(ce, height=60,width=480).mark_bar().encode(
+    alt.Y("sample_num:N").title("Sample #"),
+    alt.X("thrashes:Q").title("C. Elegans Observed Thrashes"),
+    alt.Row('substance:N').title("Suspected Toxic Substance"),
+    color=alt.Color('thrashes:Q').scale(scheme="yellowgreenblue")
+)
+```
+
+- TiO2 had a greater number of observed thrashes than pbs/control sample.
+
+- Samples #1, #3 for both Ag and AlO2 were greater than pbs/control for those same sample observations.
+
+- *C. elegans* exposed to bleach were paralyzed, and recorded 0 thrashes for all three samples.
+
+## Assessing Nanoparticles effects on Mung Beans {#sec-r-mb}
+
+### Chart analyzing impact of nanoparticles on plant germination {#sec-r-mb-chart}
+```{python}
+pl=pl.read_csv("data/mb_plant_data.csv")
+
+alt.Chart(pl, height=60,width=480).mark_circle(size=80).encode(
+    alt.Y("weight_g:Q").title("Weight (g)"),
+    alt.X("root_length_cm:Q").title("Root Length (cm)"),
+    alt.Row('substance:N').title("Suspected Toxic Substance"),
+    color=alt.Color('sample:N').scale(scheme="yellowgreenblue"),
+    tooltip="sample"
+)
+```
+
+### Examination of Germinating Plant Samples {#sec-r-mb-pics}
+
+Each of the petri dishes below contained 10 Mung Bean samples which were coated in the same nanoparticles as the *C. elegans* experiment above. The root length, and sample weight were recorded for use in the analytical section for visualization (see section @sec-r-mb-chart).
+
+:::{layout-nrow=2}
+
+![Samples exposed to Titanium Dioxide nanoparticles.](images/mb_tio2_dish.JPG)
+
+![Samples coated in PBS acting as the experimental control.](images/mb_pbs_dish.JPG)
+
+![Samples coated in Aluminum Dioxide nanoparticles.](images/mb_alo2_dish.JPG)
+
+![Samples exposed to silver nanoparticles.](images/mb_ag_dish.JPG)
+
+![Samples exposed to bleach acting as second control. Samples in this dish had no germination activity.](images/mb_bleach_dish.JPG)
+:::
+
 # Interpretation & Discussion
 
-# Refernces
+
+
+# References
+
+[^mt_4]: Donohue Robert, M.S.c, Ascione Richard, Phd. Medical Toxicology; Experimental Manual "Nanoparticle Toxicity No. 4" pages 51-62.
 

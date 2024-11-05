@@ -1,48 +1,56 @@
 ---
 title: Inducing Reverse Mutation
-subtitle: Medical Toxicology Lab Report 4
+subtitle: Medical Toxicology Lab Report 3
 date: 2024-10-05
 ---
 
 # Objective
 
+The objective of this experiment is to demonstrate the Ames Assay's ability to detect the mutagenic potential of chemicals and compounds. Specifically, we will attempt to detect mutations caused by exposure of bacteria to an S9 fraction, reverting them to their wild-type phenotype and enabling them to grow in the absence of histidine.
+
 # Results {#sec-results}
 
-## Examination of B Plates without S9 Fraction
+## B Plates without S9 Fraction
 
 ![96 well microarray containing boron (B) without the S9 fraction evinces a purple color across all wells.](images/mutation_p1_top.JPG){width=4in}
 
 ![Side-view of the boron containing plate demonstrating the experimental sample does not contain the S9 fraction the the SvB plate does.](images/mutation_p1_side.JPG){width=4in}
 
-## Examination of SvB plates containing S9 Fraction
+- The purple coloring is consistent across all 96 wells.
+- Condensation on the microarray cover is present for both samples from incubation.
+
+## SvB plates with S9 Fraction
 
 ![96 well microarray containing SvB samples with S9 mutagenic fraction evinces a yellow color across all wells. The Muta-ChromPlate suggests that all wells yielded a mutation.](images/mutation_p2_top.JPG){width=4in}
 
 ![Side-view of the SvB plate demonstrating that it does contain the mutagenic S9 fraction which would theoretically cause the mutations to manifest.](images/mutation_p2_side.JPG){width=4in}
 
+- The yellow coloring is present across all 96 wells in the microarray.
+
 # Interpretation & Discussion
 
+Some chemicals require metabolic activation to become mutagenic, and the metabolic enzymes in bacteria differ from those in mammals. The S9 fraction, derived from liver homogenate, contains enzymes responsible for metabolizing xenobiotics, including cytochrome P450 isoforms.
+
 ## Summary of Results
-The results suggest that the tested compound is **not mutagenic in its original form** but **becomes mutagenic after metabolic activation by the S9 fraction**. In the Muta-ChromPlate test, a colorimetric substrate is used. If the bacteria revert to wild type, the substrate turns yellow. If not, it remains purple.
+The results suggest that the tested compound is not mutagenic in its original form but becomes mutagenic after metabolic activation by the S9 fraction. In the Muta-ChromPlate test, a colorimetric substrate is used. If the bacteria revert to wild type, the substrate turns yellow. If not, it remains purple.
 
 The Ames test uses bacteria with a mutation in the histidine biosynthesis pathway, making them dependent on histidine for growth. Exposure to a mutagen can cause a reversion back to the wild type, allowing them to grow without histidine. 
 
-## Examining observations outlined from @sec-results
+## observations outlined from @sec-results
 
-- **Completely Purple Plate (without S9):** This indicates that the bacteria in this plate did not revert to the wild type, suggesting that the compound in its original form is not mutagenic to the bacteria.
-  
-- **Completely Yellow Plate (with S9):**  This indicates that the bacteria in this plate reverted to the wild type. The addition of the S9 fraction, which simulates mammalian metabolism, likely activated the compound into a mutagen, leading to the observed mutations in the bacteria.
+**Boron containing plate without S9 fraction:** This indicates that the bacteria in this plate did not revert to the wild type, suggesting that the compound in its original form is not mutagenic to the bacteria.
 
-**In summary:** The experiment demonstrates that the tested compound requires metabolic activation to become mutagenic. This highlights the importance of including the S9 fraction in the Ames test, as it allows for the detection of mutagens that may not be active in their original form.
+**SvB Plate with S9 fraction:** This indicates that the bacteria in this plate reverted to the wild type. The addition of the S9 fraction, which simulates mammalian metabolism, likely activated the compound into a mutagen, leading to the observed mutations in the bacteria.
 
-**Additional Considerations:**
+## Additional Considerations
 
-- **Specificity of the Test Strains:** Different strains of bacteria used in the Ames test are sensitive to different types of mutations (frameshift or base-pair substitution). Knowing the specific strain used in your experiment can provide insights into the type of mutation induced by the compound after S9 activation. 
+**Specificity of the Test Strains:** Different strains of bacteria used in the Ames test are sensitive to different types of mutations (frameshift or base-pair substitution). Knowing the specific strain used in your experiment can provide insights into the type of mutation induced by the compound after S9 activation. 
 
-- **Statistical Significance:** The number of positive wells in the experimental plates should be compared to the spontaneous mutation rate observed in the "Background" plates (without any test compound). This comparison helps determine if the observed mutagenicity is statistically significant.
+**Statistical Significance:** The number of positive wells in the experimental plates should be compared to the spontaneous mutation rate observed in the "Background" plates (without any test compound). This comparison helps determine if the observed mutagenicity is statistically significant.
 
 While a positive Ames test indicates the mutagenic potential of a compound and may act as a carcinogen, further testing is required to confirm carcinogenicity. 
 
 
 # References
 
+[^mt_3]: Donohue Robert, M.S.c, Ascione Richard, Phd. Medical Toxicology; Experimental Manual "E. coli Mutagenicity Assay (Ames Test)" pages 41-50.

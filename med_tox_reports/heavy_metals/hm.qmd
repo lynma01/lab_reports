@@ -1,0 +1,17 @@
+---
+title: Measuring Heavy Metals Toxicity using *C. elegans*
+subtitle: Medical Toxicology - Lab Report 1
+date: 2024-09-28
+---
+
+# Objective
+
+The objective of the experiment is to observe and record the effects of toxic chemicals (pesticides and heavy metals) on the nematode *C. elegans*. The experiment aims to study the toxicity of these chemicals and understand the health and environmental hazards associated with them, specifically, by comparing the effects of different toxic substances to understand why some pesticides may be less hazardous than others.
+
+# Results
+
+# Interpretation & Discussion
+
+# References
+
+[^mt_1]: Donohue Robert, M.S.c, Ascione Richard, Phd. Medical Toxicology; Experimental Manual "Demonstrate Toxicity of Heavy Metals & Pesticide in Eukaryotic organisms using C. elegans as a Model System." pages 7-30.
