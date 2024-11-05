@@ -1,14 +1,84 @@
 ---
 title: CRISPR-CAS9 Gene Editing
 subtitle: Lab Session 9
+date: 2024-10-21
 ---
 
 # Objective
 
+This experiment has three components: 1) knock-out a gene-of-interest in *E. coli* using the CRISPR-CAS9 technique, 2) quantify the viral load of two patient samples using the plaque assay, and finally 3) analyze the morphology of cancer cells from stained, rehydrated slides using a compound microscope.
+
+# Background
+
+## CRISPR-CAS9 & Gene Knock-Out
+
+### Process diagram of experiment's CRISPR-CAS9 knock-out technique {#sec-bg-cr-pcd}
+
+```{mermaid}
+flowchart TD
+    subgraph "Step 1: Sample Prep"
+    A[Start] --> B["`Transform *E. coli* with reaction samples`"]
+    end
+
+    subgraph "`Step 2: *E. coli* Transformation`"
+    B --> |pKO| C["`CRISPR *lacZ* Knock-Out`"]
+    B --> |pCtrl| F[CRISPR with random sgRNA]
+    end
+
+    subgraph "Step 3: Verification"
+    C --> D["`*lacZ* gene disabled; white colonies shown`"]
+    F --> G["`*lacZ* gene active; blue colonies shown`"]
+    end
+```
+
+### Principles of CRISPR-CAS9
+
+
+## Quantifying viral load using the plaque assay
+
+
+## Analyzing the morphology of cancer cells
+
 # Results
+
+## CRISPR-CAS9 Gene Knock-Out
+
+### Comparing Control vs. Knock-Out Plates
+
+![Plates containing the control and knock-out reactions using the CRISPR-CAS9 technique.](images/knockout/l_all_final.jpg)
+
+### High-Contrast Black and White Images of Reaction Plates
+
+#### Control Plate - High Contrast
+![Black and white image of the control plate from the CRISPR-CAS9 experiment.](images/knockout/l_cntl_bw_final.jpg)
+
+#### Knock-Out Reaction Plate - High Contrast
+![Black and white image of the reaction plate from the CRISPR-CAS9 experiment.](images/knockout/l_ko_bw_final.jpg)
+
+## Plaque Assay Quantifying Viral Load
+
+
+
+## Cancer Cell Morphology 
 
 # Interpretation & Discussion
 
 # Study Questions
 
+## Name the stages of the virus life cycle.
+
+## Describe how a viral plaque is formed on a plate.
+
+## Describe two methods of treatment for viral infections (pick a specific action for each).
+
+
+
 # References
+
+[^edvotek]: Edvotek. (2008-2024). Biotechnolgoy Cirriculum Modules
+
+[^lehn]: David L. Nelson; Michael M. Cox. (2021). Lehninger Principles of Biochemistry. pages 
+
+[^adesh]: Suchit Adesh, M.S.c (2024). Conservations on CRISPR-CAS9.
+
+[^la_7]: Donohue Robert, M.S.c, Gimenez Naroa, Phd. Lab Applications of Biotechnology; Lecture Session #9 "Gene Targeting (CRISPR), Virus, Infection, Morphology of Cancer Cells.".
