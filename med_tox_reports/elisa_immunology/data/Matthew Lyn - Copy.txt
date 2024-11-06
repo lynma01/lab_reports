@@ -1,0 +1,42 @@
+
+
+Software Version	3.13.15
+
+
+
+Experiment File Path:	D:\CCK Assay\Matthew Lyn.xpt
+Protocol File Path:	
+
+
+
+Plate Number	Plate 5
+Date	10/12/2024
+Time	1:56:25 PM
+Reader Type:	Synergy Neo2
+Reader Serial Number:	1604211D
+Reading Type	Reader
+
+Procedure Details
+
+Plate Type	96 WELL PLATE
+Eject plate on completion	
+Read	Absorbance Endpoint
+	Full Plate
+	Wavelengths:  450
+	Read Speed: Normal,  Delay: 50 msec,  Measurements/Data Point: 8
+
+
+
+Actual Temperature:	21.6
+
+Results
+	1	2	3	4	5	6	7	8	9	10	11	12
+A	2.315	0.389	2.456	2.321	2.017	2.342	2.299	0.373	1.674	1.681	1.524	1.711	450
+B	0.531	0.122	0.910	1.341	0.953	0.769	0.567	0.120	0.950	0.729	1.015	1.261	450
+C	1.039	0.880	0.721	0.980	0.810	1.251	0.600	0.724	0.576	0.804	0.966	0.717	450
+D	0.936	1.174	0.861	0.895	0.725	0.821	0.386	0.590	0.642	0.689	0.832	0.478	450
+E	1.207	0.099	0.741	0.759	0.682	0.805	0.623	0.654	0.940	0.730	0.732	0.508	450
+F	1.399	1.234	0.809	0.731	0.438	0.847	0.658	0.902	0.706	0.708	0.827	0.486	450
+G	1.209	0.780	1.082	0.752	0.622	0.657	0.499	0.937	0.737	0.982	0.702	0.524	450
+H	1.229	1.667	0.867	0.865	0.676	0.725	0.701	1.203	0.803	0.842	0.864	0.601	450
+
