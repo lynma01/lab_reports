@@ -6,13 +6,60 @@ date: 2024-10-05
 
 # Objective
 
-The objective of this experiment is to use the Comet Assay to visualize genotoxic alterations to DNA by specific environmental toxicants. The overarching goal is to understand the relationship between exposure to environmental hazards and potential adverse health effects, particularly in the context of DNA damage and cancer risk.
+The objective of this experiment is to use the Comet Assay to visualize genotoxic alterations to DNA by specific environmental toxicants, such as peroxide (H2O2) and UV radiation. 
+
+The overarching goal is to understand the relationship between exposure to environmental hazards and potential adverse health effects, particularly in the context of DNA damage and cancer risk.
 
 # Results
 
+## Comet Assay Image Capture of UV Exposed Samples
+
+![Comet Assay image capture of first UV labelled sample. The positive pole of applied electrophoresis is the left-hand side of the image.](images/ML-UV_1.jpg){#fig-r-uv1}
+
+- Observed comets are of such high concentration that they begin to cluster (**UV1 - Comet Cluster**). The number of comets becomes difficult to determine given the merging of clusters into comets like **UV1 - Comet 1**.
+
+- Comets similar to **UV1 - Comet 2** are difficult to differentiate as either the "tail" of one comet, or multiple tails of multiple comets which have migrated through each other's paths.
+
+![Comet Assay image capture of second UV labelled sample. The positive pole of applied electrophoresis is the left-hand side of the image.](images/ML-UV_2.jpg){#fig-r-uv2}
+
+- Because of the faintness of comets like **UV2 - Comet 1**, it's indeterminate if all sample comets migrated mono-directionally, or bi-directionally.
+
+- The population of comets for examination is far fewer than the number of comets observed in @fig-r-uv1. 
+
+- UV sample 2 has extremely faint comets when compared across samples to @fig-r-uv1, and within samples such as between **UV2 - Comet 1**, and **UV2 - Comet 2**.
+
+
+## Comet Assay Image Capture of Peroxide Exposed Samples
+
+![Comet Assay image capture of H2O2 labelled sample. The positive pole of applied electrophoresis is the left-hand side of the image.](images/ML%20H2O2.jpg){#fig-r-h2o2}
+
+- Comets **H2O2 - Comet 1** and **H2O2 - Comet 2** are observed to have migrated bi-directionally during electrophoresis because the tails extend both on the left and right sides of the comet.
+
+- Observed concentration of comets is significantly less than those seen in UV labelled sample 1 (see @fig-r-uv1), suggesting a smaller concentration of DNA within the sample.
+
+- **H2O2 - Comet 3** appears to have the least extended "tail" within the sample, and represents an outlier in the sample data. 
+
 # Interpretation & Discussion
 
-The comet assay is a sensitive technique for detecting DNA breaks in individual cells. The process involves embedding cells in agarose, lysing them to remove cell components, and then subjecting them to electrophoresis.  During electrophoresis, DNA fragments, particularly those containing breaks, migrate towards the anode, creating a "comet tail" visible under fluorescence microscopy. The length and intensity of the tail reflect the extent of DNA damage.
+## Comparing the Length of "Tails" Between Samples to Determine the Relative Genotoxicity of Substances
+
+Determining the relative genotoxicity of the samples in this experiment is complicated by two factors. Most importantly is the bi-directional nature of certain comets in the peroxide sample (@fig-r-h2o2), and the aggregation of comets in the UV radiation sample (@fig-r-uv1).
+
+### Bidirectional Migration of the Peroxide Exposed Sample
+
+If measuring from "tail-to-tail" within the peroxide sample, then it's evident that the peroxide samples have a greater propensity to cause DNA damage than the UV radiation samples given the relative size of the tails compared to both UV radiation exposed samples.
+
+However, the validity of the conclusion is questionable given that the application of electrophoresis should have pulled the comets mono-directionally, while half the comets in the peroxide sample are exhibiting bi-directional migration. Issues in the experimental process, most likely excess DNA degradation post-electrophoresis from time spent in storage, caused the comets to migrate bi-directionally.
+
+### Clustering of UV Radiation Exposed Samples
+
+Another factor affecting the validity of above interpretation is the clustering of the comets such that the length of the tails becomes indeterminate. As seen in @fig-r-uv1, UV1 - Comet 2 demonstrates a phenomena where it's unclear whether there's multiple comets migrating through one another, or a singular comet with an extended tail. This complicates quantification, in that the ability to determine how certain comets in the sample should be counted is adversely affected.
+
+### Future Experimentation Opportunities
+
+While it is clear that both samples have experienced significant DNA degradation given the formation of the "tails" in the first place, it's unclear which of the two toxicants has a greater capacity to cause DNA damage than the other given how prominent the excess DNA degradation is within the peroxide sample.
+
+Another experiment is necessary to confidently conclude that peroxide sample is more damaging to DNA than the peroxide sample. The second experiment would be best served by rapid analysis of the slides post-electrophoresis, and eliminating time in storage when/wherever possible. The second experiment would be validated by the vast majority of comets having tails which extend in one direction, away from the positive pole, and towards the negative pole, of the applied electrophoresis effect. 
 
 # References
 
