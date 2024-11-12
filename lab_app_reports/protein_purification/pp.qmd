@@ -24,7 +24,7 @@ Verify the presence of the EcoR1 endonuclease within the samples from step 1 by 
 
 ### Step 3: Protein Concentration Assays and Verification {#sec-bg-pc-three}
 
-Measure the protein concentration of the final samples via A280 and Specific Activity assays. Repeat the SDS-PAGE to confirm EcoR1 presence in final sample.
+Measure the protein concentration of the final samples via A280 and Specific Activity assays. Repeat the agarose gel to confirm EcoR1 presence in final sample.
 
 #### Step 3, Part A {#sec-bg-pc-three-a}
 The A280 assay measures the absorbance of the protein at 280nm (see @sec-bg-quant-prot).
@@ -133,7 +133,7 @@ The equations are given in @sec-r-calc-sa.
 
 - Complete digestion of the Lambda DNA by EcoR1 should present at least 5 distinct bands, while incomplete digestion should produce at least 2 bands.[^edvotek] However, none of the wells contained distinct banding suggesting the presence of EcoR1 by Lambda DNA cleavage.
 
-- Wells #3, #4 are the only wells which contained *faint* banding. However, the cleavage in Wells #3, #4 are distant to the cleavage/distance within Well #1.
+- Wells #3, #4 are the only wells which contained *faint* banding. However, the cleavage in Wells #3, #4 are distant to the cleavage/distance within Well #1. Thus, we're using well #3 as the chosen dilution for the calculation of specific activity.
 
 ## Nano-Drop A280 measurements of EcoR1 Protein Concentration {#sec-r-nanodrop}
 
@@ -147,7 +147,7 @@ The equations are given in @sec-r-calc-sa.
 
 - Dilution Factor of the sample applied to the Nano-Drop is: 1:1.
 
-### Calculating Protein Purity of the Sample {#sec-r-calc-sa}
+### Calculating Protein Specific Activity of the Sample {#sec-r-calc-sa}
 
 - The variables ***Total Units***, ***Specific Activity***, ***Reaction Time*** are demarked as: $T_u$, $S_a$, $T_m$
 
@@ -159,9 +159,9 @@ The equations are given in @sec-r-calc-sa.
 import polars as pl
 
 # Total Units Calculation
-av=20 # Assay Volume for Total Units (mL)
+av=10 # Assay Volume for Total Units (mL)
 pv=2000 # Pooled Volume 
-df=[round(x, 3) for x in [1, 1/2, 1/3, 1/4, 1/10, 1/20]] #Dilution Factor
+df=[round(x, 3) for x in [1/3]] #Dilution Factor
 
 # Specific Activity Calculation
 a=0.191 # a280 reading mg/ml

@@ -1,0 +1,30 @@
+---
+title: Enzyme Kinematics
+subtitle: Lab Session 10
+date: 2024-10-28
+---
+# Study Questions
+
+## What type of molecule is an enzyme?
+
+Enzymes are typically proteins that act as catalysts to speed up chemical reactions that would otherwise occur too slowly. Some nucleic acids have also been found to act as enzymes.
+
+Enzymes speed up reactions by positioning the substrates and adjusting their bonds so they become unstable and reactive.
+
+## Why is an enzyme’s shape important to its function?
+
+Each enzyme has a specific shape that complements the structure of its substrate, which is the molecule(s) that the enzyme converts into a product. The substrate fits into a space in the globular protein called the active site. The shape and chemical properties of this active site are crucial to the enzyme's function.
+
+## How does an enzyme speed up chemical reactions?
+
+Enzymes lower the activation energy of a reaction, which is the energy required to initiate the reaction.
+
+Enzymes also stabilize the transition state of the reaction, which is the highest-energy structure during the reaction process. Lowering this energy allows the reaction to occur more easily.
+
+## What is the name of the enzyme involved in this laboratory experiment?
+
+The laboratory experiment in the sources uses the enzyme cellobiase. Cellobiase is involved in the final step of breaking down cellulose, a complex sugar found in plant cell walls, into glucose. 
+
+## What is one practical, industrial application of this enzyme?
+
+One practical, industrial application of cellobiase is in the creation of ethanol for fuel. This process involves breaking down cellulose from plants into sugar, which can then be fermented to produce ethanol. 

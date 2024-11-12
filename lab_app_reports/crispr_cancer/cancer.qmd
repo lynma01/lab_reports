@@ -1,0 +1,42 @@
+---
+title: Cancer Morphology Study Questions
+subtitle: Lab Session 9
+date: 2024-10-21
+---
+# Study Questions
+
+## What is Cancer?
+
+Cancer is a disease characterized by uncontrolled cell division. This uncontrolled division is caused by mutations in genes that control the cell life-cycle. These mutations can lead to the formation of tumors, which are masses of abnormal cells; and metastasis, where the cancer, and tumor formation, spreads throughout the body.
+
+## What is the difference between an oncogene and a tumor suppressor?
+
+**Proto-oncogenes** are genes that code for proteins that regulate cell growth and division. When a proto-oncogene mutates and becomes an oncogene, it becomes overactive and signals for the cell to divide repeatedly, leading to uncontrolled cell proliferation. Oncogenes act dominantly, meaning that a mutation is needed in only one copy of the gene to have an effect.
+
+**Tumor suppressor genes** code for proteins that inhibit cell growth and prevent tumor formation. Mutations in tumor suppressor genes can inactivate or destroy these proteins, removing the barriers that prevent uncontrolled cell proliferation. Tumor suppressor genes usually act recessively, meaning that both copies of the gene must be mutated to have an effect. 
+
+An example of a tumor suppressor gene is TP53, which codes for the p53 protein. p53 regulates DNA damage repair, cell growth arrest, and apoptosis. Mutations in both copies of the TP53 gene are common in many cancers, including colon, breast, and lung cancers.
+
+## Describe the characteristics of cancer cells that make them easy to culture in the laboratory.
+
+Cancer cells are easier to culture in the laboratory than normal cells because they readily proliferate and divide in the laboratory settings, while normal cells require specialized treatments and media, and only divide a few times before arresting at the Hayflick limit.
+
+## How do pathologists distinguish between normal and cancer cells?
+
+Pathologists use both genomic alterations and physical characteristics to distinguish between normal and cancer cells. They examine tissue biopsies under a microscope for:
+
+*   **Nuclear Structure**:
+    *   **Normal Cells**: Regular shape, uniform growth, and tight cell connections.
+    *   **Cancer Cells**: Irregular shape, disorganized spreading, and fewer cell contacts. Changes in nuclear lamina proteins can affect chromatin organization and alter gene expression.
+
+*   **Cell Structure**: Cancer cells often show changes in cell structures, including:
+    *   Decreased size of the endoplasmic reticulum and mitochondria
+    *   Under-developed Golgi apparatus
+    *   Increased number of peroxisomes
+
+*   **Tissue Organization**:
+    *   **Normal Cells**: Grow as a uniform layer of cells with many tight connections between neighboring cells.
+    *   **Cancer Cells**: Show disorganized arrangement of cells, loss of normal tissue structures, and a large number of dividing cells.
+
+## Why would you use two different dyes when staining cells?
+Using two different dyes, like methylene blue and eosin, allows pathologists to clearly distinguish between different cellular structures. Methylene blue stains the nucleus blue, while eosin stains the cytoplasm and connective tissue pink. This differential staining makes it easier to observe changes in cell structure and composition that are characteristic of cancer cells.

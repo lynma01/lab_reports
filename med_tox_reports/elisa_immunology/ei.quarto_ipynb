@@ -1,0 +1,102 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: Testing for Allergens using the ELISA Assay\n",
+        "subtitle: Medical Toxicology - Lab Report 5\n",
+        "date: 2024-10-19\n",
+        "---\n",
+        "\n",
+        "\n",
+        "# Objective\n",
+        "\n",
+        "The objective of this experiment is to demonstrate how ELISA (Enzyme-Linked Immunosorbent Assay) and/or a lateral flow assay can be used to analyze the presence of melamine/immune-response proteins in a sample. Specifically, this experiment will use these different immunological assays to simulate the detection of metabolic/food allergens.\n",
+        "\n",
+        "# Results\n",
+        "\n",
+        "## ELISA Spectrophotometry Data\n",
+        "\n",
+        "### Standard Curve Calculations {#sec-r-e-scc}\n",
+        "\n",
+        "\n",
+        "- Standard Curves were generated from Synergy Neo2 photospectometer data. Both the kit's calibrating samples, and the unknown samples were filtered, selected, and plotted in @fig-sc-chart on the left and right-hand sides respectively.\n",
+        "\n",
+        "- To ensure that background absorbance did not effect the plots, the background absorbance calculated as the mean absorbance of the PBS samples were deducted from the averages of the samples' absorbance.\n",
+        "\n",
+        "- While there is an exception for sample 1's final value at 10.0 dilution factor, the majority of the dilution curve is aligned with the standard curve of known samples on the left-hand side. This verifies the majority of the samples behavior aligns with the expected values.\n",
+        "\n",
+        "### Estimating Protein Concentration {#sec-r-e-epc}"
+      ],
+      "id": "a715da70"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| label: fig-ec-chart\n",
+        "\n",
+        "fl = samples.filter(pl.col(\"dilutions\")==0.75)\n",
+        "\n",
+        "alt.Chart(fl).mark_bar().encode(\n",
+        "      alt.X(\"sample:N\").title(\"Sample ID\")\n",
+        "    , alt.Y(\"mean(calc_conc):Q\").title(\"Calculated Concentration in (ng/ml)\")\n",
+        "    , color=\"sample:N\"\n",
+        ").properties(\n",
+        "      width=250\n",
+        "    , height=250\n",
+        "    , title=\"Estimated Protein Concentration of Unknown Samples @ 0.75 Dilution\"\n",
+        ")"
+      ],
+      "id": "fig-ec-chart",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "- Using the Sample's Dilution Value of 3.0 from @fig-sc-chart, we can examine the estimate of the protein concentration in ng/ml for that value. We see that in order of most protein concentration to least is sample 3, sample 1, and sample 2.\n",
+        "\n",
+        "- However, as mentioned in @sec-r-e-scc, sample 1 has anomalous data at the dilution value of 10.0, this complicates making a confident ranking because it implies the mean of all three values is far outside the absorbance band.\n",
+        "\n",
+        "## Lateral Flow Assay {#sec-r-lf}\n",
+        "\n",
+        "![Image capture of lateral flow assay after samples have been dispensed via micropipette into the sample input. The image capture was taken 15 minutes after samples had been dispensed.](images/lf_assay_final.JPG){width=3in #fig-r-lfa}\n",
+        "\n",
+        "- While faint banding in the \"T\" line is present for both sample \"H\", and \"-\", only the milk sample (\"M\") contains the distinct banding required to confirm the absence of the melamine in the sample. This is an unexpected result because milk has been reported to have an increasing concentration of melamine as an economical method of improving the listed protein content in retail stores.[^mt_5]\n",
+        "\n",
+        "- From the lateral flow assay, we can conclude that samples \"A\", and \"+\" contained melamine. This is encouraging in that the \"+\" sample is included as a positive control within the experiment. This allows a measure of confidence while making conclusions in @sec-i-e.\n",
+        "\n",
+        "# Interpretation & Discussion\n",
+        "\n",
+        "## ELISA Experiment {#sec-i-e}\n",
+        "\n",
+        "The ELISA experiment's results for all three unknown samples plotted curves which predominantly aligned with the standard curve of known protein concentrations from the test kit. This implies that the data collection process did not contain breaches in protocol which unduly undermine our confidence in the results.\n",
+        "\n",
+        "Using the standard curve, we pick pick the pick where the relative dilution fraction is 0.75 to plot the calculated concentration in ng/ml. From that point, we can see that the estimated concentration of the three samples is \n",
+        "\n",
+        "## Lateral Flow Assay {#sec-i-lf}\n",
+        "\n",
+        "\n",
+        "\n",
+        "# References\n",
+        "\n",
+        "[^mt_5]: Donohue Robert, M.S.c, Ascione Richard, Phd. Medical Toxicology; Experimental Manual \"Allergies and Immunology. Testing for Metabolic and Food Allergens: Enzyme Linked Immuno Sorbent Assay (ELISA) and Rapid (Lateral Flow) Testing\" pages 63-76."
+      ],
+      "id": "43c7204a"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "name": "python3",
+      "language": "python",
+      "display_name": "Python 3 (ipykernel)",
+      "path": "/Users/lynma01/Library/Caches/pypoetry/virtualenvs/lab-reports-wGMiYl_B-py3.12/share/jupyter/kernels/python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

@@ -10,7 +10,81 @@ The objective of the experiment is to observe and record the effects of toxic ch
 
 # Results
 
+## Quantifying the migration of *C. elegans* in the presence of heavy metals
+
+```{python}
+#| label: fig-ce-m-chart
+#| lst-label: lst-ce-m-chart
+import polars as pl
+import altair as alt
+
+alt.renderers.enable("png")
+
+ce=pl.read_csv("data/hm_migration.csv")
+
+# make the chart
+alt.Chart(ce, height=60,width=480).mark_area().encode(
+    alt.Y("observations:Q").title("observations"),
+    alt.X("experiment_duration:Q").title("Duration of the Experiment"
+        ).scale(domain=(0,120)),
+    alt.Row('sample:N').title("Heavy Metal Exposed to C. elegans")
+)
+```
+
+- The aldicarb exposed *C. elegans* had the greatest amount of migrated *C. elegans* from the starting position on the plate to the nutrient strip placed 1/3 of the diameter away. The PBS/Control group had the second largest number of migrated *C. elegans*. 
+
+- The *C. elegans* exposed to the other substances had no migration across the plate. Many of the *C. elegans* in different samples, such as Cadmium Chloride (cd_cl), or Nicke Sulfate (ni_so4) had *C. elegans* which appeared desiccated, and paralyzed.
+
+## Quantifying the thrashes of *C. elegans* on hemocytometer
+
+```{python}
+#| label: fig-ce-t-chart
+#| lst-label: lst-ce-t-chart
+
+th=pl.read_csv("data/hm_wiggles.csv")
+
+# make the chart
+alt.Chart(th, height=60,width=480).mark_bar().encode(
+    alt.X("observations:Q").title("Observed Thrashes of C. elegans"),
+    alt.Y("end:N").title("Duration"),
+    alt.Row('sample:N').title("Heavy Metal Exposed to C. elegans"),
+    color=alt.Color('observations:Q').scale(scheme="yellowgreenblue")
+)
+```
+
+- The pbs/control exposed samples had the highest amount of activity by far, with more than 2x the amount of thrashes at the 3:00 mark for aldicarb/pbs control. 
+
+- There was a significant drop-off in thrashes for both aldicarb, metaborate, and boric acid after the 03:00 mark of the observation period. However, boric acid is exceptional in that its the only sample whose observed thrashes dropped to 0.
+
+- The *C. elegans* in the boric acid sample stopped visibly moving between the 00:30 and 03:00 mark, however, the author couldn't visually confirm pharyngal paralysis.
+
+### Mean observed thrashes of *C. elegans* per exposed sample substance
+
+```{python}
+#| label: fig-ce-tm-chart
+#| lst-label: lst-ce-tm-chart
+
+# make the chart
+alt.Chart(th, height=60,width=480).mark_bar(innerRadius=60).encode(
+    alt.X("mean(observations):Q").title("Mean Observed Thrashes of C. elegans"),
+    alt.Row("sample").title("Sample Substance"),
+    color=alt.Color("mean(observations):Q").scale()
+)
+```
+
+- Pbs/Control, aldicarb, boric acid, and metaborate were respectively ranked 1st, 2nd, 3rd, and 4th after in terms of number of observed thrashes during the observational period.
+
+- It's important to note that despite boric acid having a higher average number of thrashes compared to metaborate, the *C. elegans* in that sample were paralyzed after the 00:30 mark.
+
 # Interpretation & Discussion
+
+Unexpectedly, the results in @fig-ce-m-chart do not align with the results n @fig-ce-t-chart. Aldicarb in the migration experiment far outpaced the observed number of *C. elegans* thrashes in the second experiment. While there is no exact correlation between foraging distance versus thrashing activity, there is an intuitive understanding that the depression of the central nervous system (CNS) by these different substances would produce a uniform ranking between these two movement based experiments.
+
+The observed ranking of the effect of each of the substances from least damaging to most damaging is 1) pbs/control, 2) aldicarb, 3) metaborate, 4) boric acid. The reason for suggesting that metaborate is "less" damaging than boric acid is because of the rapid drop-off in movement at the 00:30 for boric acid during the thrashing experiment, while movement was semi-consistent for metaborate.
+
+A potential explanation for the discrepancy between the thrashing and foraging experiment for the pbs/control group could be how "hungry" the *C. elegans* in the prepared sample were. It's unclear when exactly the last time the *C. elegans* were fed such that we could confirm whether hunger played the role in the observations as hypothesized above. Likewise, the hunger level of the aldicarb exposed samples could be a stress response after exposure to a semi-harmful substance. 
+
+Further experimentation would be required to reconcile the two sets of results between the experiments. Specifically, there would need to be a "timing" between feedings to ensure that the *C. elegans* "hunger" levels were consistent between both experiments and both sets of samples to eliminate that variable of uncertainty.
 
 # References
 

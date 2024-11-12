@@ -1,0 +1,47 @@
+---
+title: Virus Study Questions
+subtitle: Lab Session 9
+date: 2024-10-21
+---
+# Virus Study Questions
+
+## Virus Research
+
+HIV, the virus responsible for Acquired Immunodeficiency Syndrome (AIDS), has been a major focus of public health efforts for decades. HIV is an enveloped virus with a spherical shape and a size of about 120 nanometers.
+
+![Diagram of HIV virus with labelled sections of interest. Credit to Thomas Splettstoesser CC BY-SA 4.0[^hiv_diagram]](images/virus/hiv_diagram.png){width=3in}
+
+- The HIV virus is an RNA based virus labelled in the diagram as "Viral RNA Genome".
+- HIV is also an enveloped virus, surrounded by the env-glycoprotein complex, with the primary enveloping protein "gp120" labelled as mentioned on the diagram.
+- Finally, the HIV virus has a lipid membrane extending around the env-glycoprotein complex- and is demarked in grey above.
+
+## Living vs. Non-Living Characteristics of Viruses
+
+| Living Characteristics of Viruses| Nonliving Characteristics of Viruses|
+| :------| :-----|
+| Carry genetic material (DNA or RNA)|requires a host cell to reproduce|
+| Reproduce (but only inside a host cell)| Lack their own metabolism|
+| Evolve through mutations and natural selection|Do not have a cellular structure|
+| Exhibit specificity in targeting host cells|Exist as inert particles outside of host cells|
+
+## Each year the flu costs the US economy billions in sick days and lost productivity and endangers many of our most vulnerable citizens. Outline three treatment approaches
+
+- **Public Health & Santitaion**: This includes practicing good hygiene like handwashing, monitoring food safety, and using safe sex practices.
+
+- **Vaccination:** Vaccines contain weakened or inactive forms of the virus, stimulating the body's immune response without the same severity of the illness, thus allowing the immune system to quickly recognize and destroy the real virus upon encounter.
+
+- **Antiviral Drugs:** These drugs disrupt the viral replication cycle, but must be carefully designed to avoid harming the host cells. They are often prescribed in combinations to combat viral resistance.
+
+## Why is it important to create several different dilutions of a patient’s sample before preforming a plaque assay?
+
+Creating several dilutions of a patient's sample is crucial in a plaque assay because:
+
+- **Wide Range of Viral Concentrations:** The concentration of virus particles in a patient's sample can vary greatly. Dilutions ensure that at least some plates will have a countable number of plaques (between 30 and 300) for accurate titer calculation.
+
+- **Avoiding Overcrowding:** Without dilutions, high viral concentrations could lead to too many plaques forming, making them impossible to count individually.
+
+- **Verifies Experimental Protocol:** The serial dilution process allows for verification of protocol by ensuring that the counted number of plaques decreases as the dilution factor increases; allowing scientists to verify their conclusions.
+
+# References
+
+[^hiv_diagram]: Thomas Splettstoesser (www.scistyle.com), CC BY-SA 4.0 "https://creativecommons.org/licenses/by-sa/4.0", via Wikimedia Commons

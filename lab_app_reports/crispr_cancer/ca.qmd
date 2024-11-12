@@ -6,7 +6,7 @@ date: 2024-10-21
 
 # Objective
 
-This experiment has three components: 1) knock-out a gene-of-interest in *E. coli* using the CRISPR-CAS9 technique, 2) quantify the viral load of two patient samples using the plaque assay, and finally 3) analyze the morphology of cancer cells from stained, rehydrated slides using a compound microscope.
+This experiment has three components: 1) knock-out a gene-of-interest in *E. coli* using the CRISPR-CAS9 technique, 2) collect results necessary to quantify the viral load of two patient samples using the plaque assay, and finally 3) collect images detailing the morphology of cancer cells from stained, rehydrated slides using a compound microscope.
 
 # Background
 
@@ -32,25 +32,25 @@ flowchart TD
 
 ### Principles of CRISPR-CAS9
 
-CRISPR/Cas9 is a naturally occurring immune system in bacteria with two primary components: a CAS9 Protein: A nuclease that cuts DNA like a pair of "molecular scissors", with Cas9 being the most commonly used type in genome editing; and a Short Guide RNA (sgRNA): A small RNA molecule that guides the CAS9 nuclease to cut a specific nucleotide sequence.
+CRISPR/CAS9 is a naturally occurring immune-response in bacteria for eliminating foreign/viral DNA. This immune-response to foreign viral DNA which has been repurposed for genetic engineering and research activity. CRISPR-CAS9 has two primary components: a CAS9 nuclease that cuts DNA, and a Short Guide RNA (sgRNA) molecule which guides the CAS9 nuclease to a specific nucleotide sequence.[^la_9]
 
 ### Experimental Application of CRISPR-CAS9
 
 The experiment uses an sgRNA which targets the *lacZ* gene in *E. coli*, which encodes the β-galactosidase enzyme. The knockout of the *lacZ* gene allows for a visual test verifying the genetic edit:
 
-$\beta$-galactosidase cleaves the lactose analog X-gal, producing a blue precipitate and indicates the presence of a functional *lacZ* gene. White colonies, on the other hand, indicate the *lacZ* gene has been successfully knocked out.
+$\beta$-galactosidase cleaves the lactose analog X-gal, producing a blue precipitate and indicates the presence of a functional *lacZ* gene. White colonies, on the other hand, indicate the *lacZ* gene has been successfully knocked out because they can no longer cleave X-gal and produce a blue coloration.
 
-*E. coli* bacteria used in the experiment don't naturally contain the CAS9 protein. As a result, 
+*E. coli* bacteria used in the experiment don't naturally contain the CAS9 protein. For this experiment, *E. coli* has had a CRISPR-CAS9 gene encoded with two different variations on the inserted gene. The two samples have plasmids with the following:
 
-- **pKO Plasmid:** Contains the *cas9* gene and instructions for a guide RNA that's complementary to the *lacZ* gene
+- **pKO Plasmid:** Contains the *cas9* gene and instructions for a  sgRNA that's complementary to the *lacZ* gene
 
 - **pCtrl Plasmid:** Contains the *cas9* gene and instructions for a sgRNA with a random sequence. 
 
 The bacteria are grown on plates containing X-gal. The color of the resulting bacterial colonies helps determine if the CAS9 protein successfully disabled the *lacZ* gene:
 
-- Blue colonies indicate that the *lacZ* gene is functional, implying the Cas9 protein didn't disable the *lacZ* gene.
+- Blue colonies indicate that the *lacZ* gene is functional, implying the CAS9 protein didn't disable the *lacZ* gene.
 
-- White colonies indicate that the *lacZ* gene has been disabled, implying the CAS9 protein, guided by the *lacZ*-specific sgRNA, cut the *lacZ* gene, knocking  out its ability to produce $\beta$-galactosidase.
+- White colonies indicate that the *lacZ* gene has been disabled, implying the CAS9 protein, guided by the *lacZ*-specific sgRNA, disabled the *lacZ* gene, knocking  out its ability to produce $\beta$-galactosidase.
 
 ## Quantifying viral load using the Plaque Assay
 
@@ -66,22 +66,19 @@ The experiment uses the plaque assay to simulate measuring the viral load of two
 
 - **Serial dilution of the suspected infected blood sample:** This is done because the viral concentration can vary significantly, and dilutions help ensure at least some plates will have a countable number of plaques.
 
-- **Inoculation of host cell culture with each dilution:** This provides a suitable environment for the virus to infect cells.
-
-- **Incubation period:** Allows time for the virus to attach to and infect the host cells.
-
 - **Addition of an agar layer:** The agar restricts the vertical movement of the virus, ensuring that infection spreads only to neighboring cells in a horizontal plane.
-
-- **Second incubation period:** This allows for the formation of plaques, which appear as circular zones of infected, dead cells.
 
 - **Calculation of viral load:** **The viral load is expressed as plaque-forming units (PFU) per milliliter**. Only plates containing between 30 and 300 plaques are considered for calculations to ensure accuracy and account for variations in counting.[^la_9]
 
-- **Incorporation of the dilution factor:** The final PFU/ml value is adjusted based on the dilution factor of the specific sample used.
-
-By comparing the viral load before and during treatment, the experiment simulates how doctors evaluate the effectiveness of the antiviral therapy.  **The shared results and analysis in the classroom setting provide a comprehensive understanding of the treatment outcomes for both patients**. 
-
+- **Incorporation of the dilution factor:** The final PFU/ml value is adjusted based on the dilution factor of the specific sample used to ensure that results are consistent with the standard curve.
 
 ## Analyzing the morphology of cancer cells
+
+The morphology of cancer cells is contrasted to the growth patterns and behavior of "normal" cells. Cancer cells lose many of the regulatory elements which dictate the same patterns and behaviors of normal cells, and as a result, we visually categorize the cells based on whether they follow the associated regulatory traits observed in normal cells.[^la_9]
+
+The most prominent of the different patterns in "Contact Inhibition"[^la_9], where the cells will not divide while in contact, or close proximity, to other "normal" cells. So much so that normal cells will contort themselves into long, spindle-like structures to maximize the amount of distance, while minimizing the amount of travel required to divide.
+
+Cancer cells, on the other hand, will divide regardless of the degree of contact with other cells; exhibiting a distinct aggregation pattern where cells are forced into contact with one another due to the surrounding pressure.
 
 # Results
 
@@ -89,32 +86,131 @@ By comparing the viral load before and during treatment, the experiment simulate
 
 ### Comparing Control vs. Knock-Out Plates
 
-![Plates containing the control and knock-out reactions using the CRISPR-CAS9 technique.](images/knockout/l_all_final.jpg)
+![Full color image capture of plates containing the control and knock-out reactions using the CRISPR-CAS9 technique.](images/knockout/l_all_final.jpg){#fig-r-c-both}
 
-### High-Contrast Black and White Images of Reaction Plates
+- Singular white colony in the center of the "K" dish evinces that the CRISPR-CAS9 complex disabled the *lacZ* gene in the plasmid.
 
-#### Control Plate - High Contrast
-![Black and white image of the control plate from the CRISPR-CAS9 experiment.](images/knockout/l_cntl_bw_final.jpg)
+- Complete absence of colonies in the Control plate which contained the CRISPR-CAS9 complex encoded with random sgRNA.
 
-#### Knock-Out Reaction Plate - High Contrast
-![Black and white image of the reaction plate from the CRISPR-CAS9 experiment.](images/knockout/l_ko_bw_final.jpg)
+### High-Contrast Black and White Image Capture of Plates Post-Transformation
 
-## Plaque Assay Quantifying Viral Load
+:::{layout-ncol=2}
+![Black and white image of the reaction plate from the CRISPR-CAS9 experiment.](images/knockout/l_ko_bw_final.jpg){width=3in #fig-r-k-bw}
 
+![Black and white image of the control plate from the CRISPR-CAS9 experiment.](images/knockout/l_cntl_bw_final.jpg){width=3in #fig-r-c-bw}
+:::
 
+- Images were collected in black and white make the visual-contrast sufficient to confirm the presence of either blue or white colonies on the plates. Condensation, shadows, and light artifacts were observed to have made other image captures too indistinct for accurate counting.
+
+## Plaque Assay Quantification of Viral Load
+
+![Full color image capture of all four plates (labelled Ps, P1->P4 from bottom left to top right) used in the plaque assay.](images/virus/v_all_final.jpg){width=4in #fig-r-v-all}
+
+- Viral assay plates were collected, with most-to-least diluted plates being listed in order as: Patient Samples (PS), Plate 1 (P1), Plate 2 (P2), and Plate 3 (P3). Similar to @fig-r-k-bw, the plates' condensation makes counting difficult given other factors like light artifacts in the image.
+  
+::: {layout-nrow=2}
+
+![Black and white image capture of patient sample plate. (14) Plaques are demarked by a red "X" within 1 cm from the perimeter of the plauqe.](images/virus/v_ps_bw_final.jpg){width=3in #fig-r-v-ps}
+
+![Black and White image capture of plate with first serial dilution. (8) Plaques are demarked by a red "X" within 1 cm from the perimeter of the plauqe.](images/virus/v_p1_bw_final.jpg){width=3in #fig-r-v-p1}
+
+![Black and white image capture of plate with second serial dilution. This sample did not evince any plaque formation, but had 7 bubbles form.[^bubbles]](images/virus/v_p2_bw_final.jpg){width=3in #fig-r-v-p2}
+
+![Black and white image capture of plate with third and final serial dilution. This sample also did not evince any plaque formation.](images/virus/v_p3_bw_final.jpg){width=3in #fig-r-v-p3}
+:::
+
+- 14 separate plaques were counted in the patient sample (@fig-r-v-ps), and 8 plaques were counted in the first serial dilution (@fig-r-v-p1). All subsequent serially diluted samples did not contain any plaques.
 
 ## Cancer Cell Morphology 
 
+- Images from both samples were collected via Amscope compound microscope in conjunction with a iPhone Pro 2022 used for image capture. @fig-r-c3 applied the 3x magnification in addition to the 400x magnification of the microscope, thus allowing for the exceptional photo.
+
+### Image Capture of Cancer Cells
+
+::: {layout-nrow=1}
+![400x magnification of cells under compound microscope.](images/cancer/cancer_1_final.jpg){width=3in #fig-r-c1}
+
+![100x magnification of cells using the compound microscope.](images/cancer/cancer_4_far_final.jpg){width=3in #fig-r-c4}
+
+![40x magnification of cells using the compound microscope.](images/cancer/cancer_5_farthest_final.jpg){width=3in #fig-r-c5}
+:::
+
+#### Close-up image capture of cancer Cells
+
+![1200x magnification of cells with Amscope compound microscope and the 2022 iPhone Pro for additional magnification and image capture.](images/cancer/cancer_3_close_final.jpg){width=3in #fig-r-c3}
+
+### Image Capture of Non-Cancerous Cells
+
+::: {layout-nrow=1}
+![100x magnification of cells under compound microscope.](images/normal/normal_3_close_final.jpg){width=3in #fig-r-n3}
+
+![40x magnification of cells under compound microscope.](images/normal/normal_4_farthest_final.jpg){width=3in #fig-r-n4}
+:::
+
+#### Close-up image capture of Non-Cancerous Cells
+
+![400x magnification of cells under compound microscope.](images/normal/normal_0_closest_final.jpg){width=3in #fig-r-n0}
+
 # Interpretation & Discussion
 
-# Study Questions
+## CRISPR-CAS9 Reaction
 
+### Absence of Control Reaction Bacteria {#sec-i-no-control}
+
+In @fig-r-c-bw, there's no distinct artifacts or coloration suggesting the presence of blue bacterial colony(ies) described in the protocol (see @sec-bg-cr-pcd). Without those bacterial colonies, a key control of the overall experiment is missing and, as a result, the validity of the singular bacterial colony containing the CRISPR insertion is questionable.
+
+Potential explanations for the missing control colonies include: 1) the "random" sgRNA provided to the CAS9 protein guided the nuclease to one or more genes vital to the bacteria, thus killing off the colonies, 2) the colonies in the plates were killed due to adverse conditions during incubation, potentially being to hot/cold or perhaps asphyxiated, or 3) the number of viable bacteria in the original samples were low/non-existent, such that while the protocol was properly executed, there were no viable bacteria to execute them on.
+
+These results thus require further experimentation in order to verify where the source of error came from. Working backwards, the experiment would have to be amended such the results of *3* plates are recorded: knock-out reaction, random sgRNA, and *E. coli* without any CRISPR-CAS9 complex, thus allowing for the verification of viable *E. coli* colonies. Then, the experiment would have to be amended for multiple incubator units to be allowed, and their various environmental data analyzed. And finally, the random sgRNA would also have to be recorded and compared against the *E. coli*'s plasmid to ensure that the sgRNA doesn't disable vital genes within the *E. coli* colonies.
+
+### Presence of a singular colony in the knock-out reaction plate
+
+A singular white colony is visibly present in @fig-r-k-bw, suggesting it underwent the CRISPR-CAS9 knock-out reaction; disabling the *lacZ* gene, and preventing the *E. coli* colony from cleaving X-gal into its blue precipitate. However, the lack of other colonies within the knock-out reaction, and the absence of a complementary colony of *E. coli* in the control reaction prevent us from making a confident assertion that the experiment was successful.
+
+While reasons for having so few viable colonies have already been explored in @sec-i-no-control, such as colony death during incubation for example, the most interesting potential explanation for the lack of colonies could be that the sgRNA programmed to disable the *lacZ* gene instead disabled some other vital gene as a result of improper ligation during the sample preparation. To confirm the viability of this explanation, both the plasmid and the sgRNA would have to be examined for point-mutations which could have occurred, and what, if any, vital genes in the plasmid that point-mutation would have programmed the CAS9 protein to cut.
+
+Further information would have to be gathered before experimentation verifying that hypothesis could be justified. Not only verifying the assumption that the sgRNA could, in some probability, experience a point-mutation which targets a vital gene, but also verifying the likelihood that common environmental conditions would be sufficient to trigger such a mutation in *E. coli* sgRNA in the first place.
+
+In the end, the most likely explanations for the lack of colonies is similar to those of @sec-i-no-control: 2) the colonies were incubated in adverse conditions, and thus the majority died after plating, and/or 3) the number of viable bacteria in the original samples were low/non-existent, such that while the protocol was properly executed, there were no viable bacteria to execute them on.
+
+# Study Questions
 ## Name the stages of the virus life cycle.
+
+The five stages of the virus life cycle are: 
+
+- **Attachment:** The virus binds to a host cell, which causes the viral and cellular membranes to fuse. Viruses often target one or two host organisms and specific cells within these organisms because this binding is highly specific. 
+
+- **Penetration:** The virus either enters the cell and releases its genetic material, or it injects its genetic material into the cell while its exterior shell remains outside. 
+
+- **Replication:** The virus either:
+
+    - Uses the host cell machinery to produce viral RNA, proteins and additional genome copies (active replication)
+
+    - Integrates its genome with the host genome to become a provirus (inactive replication). A provirus is copied and passed to daughter cells each time a cell divides.
+  
+- **Assembly:** Newly synthesized viral parts self-assemble into new virions. 
+
+- **Release:** The new virions are released by the host cell either via lysis (which kills the cell) or by budding, where the cell survives but a membrane-capsule of virions is released to lyse elsewhere.
 
 ## Describe how a viral plaque is formed on a plate.
 
+In a plaque assay, a sample that potentially contains a virus is serially diluted and added to a host cell culture. The host cell culture is a single layer of cells at the bottom of the plate.[^la_9]
+
+- Any virions present in the sample will then attach to the host cells layered at the bottom.
+  
+- A layer of agar is then poured over the host cells and the virions, which prevents the virus from moving vertically. Therefore, a virus can only spread by infecting neighboring cells.
+
+- As the virus infects a cell, it will replicate, assemble, and release new virions that can then infect nearby cells. This creates a circular zone of infected (and then dead) cells radiating from any centers where active virus was released onto the plate.
+
+- The circular zones of dead cells, which can be observed without assistance, are called "plaques" which are then quantified to find the "plaque forming units" per unit volume or "viral load" of the sample.
+
 ## Describe two methods of treatment for viral infections (pick a specific action for each).
 
+Here are two methods of treatment for viral infections, with a specific action for each, based on the sources you provided:
+
+- **Prevention** - Limiting the spread of viruses via different public health and sanitary practices such as: such as quarantine, wearing masks, washing hands, monitoring foods, using safe sex practices (in the case of HIV), and using bug spray (in the case of Malaria).[^edvotek]
+
+- **Antiviral Drugs** - Disrupting the viral replication cycle is another method for treating viral infections. Antiviral drugs limit the virus's ability to attach to cells, incorporate its genetic material into the host, or synthesize new genetic material. The drug's target in the viral life-cycle is dependent on the drug itself.[^edvotek]
 
 
 # References
@@ -126,3 +222,5 @@ By comparing the viral load before and during treatment, the experiment simulate
 [^adesh]: Suchit Adesh, M.S.c (2024). Conservations on CRISPR-CAS9.
 
 [^la_9]: Donohue Robert, M.S.c, Gimenez Naroa, Phd. Lab Applications of Biotechnology; Lecture Session #9 "Gene Targeting (CRISPR), Virus, Infection, Morphology of Cancer Cells.".
+
+[^bubbles]: This factoid is only interesting in so far that it's also labelled "Figure 7", which is an fun coincidence.
