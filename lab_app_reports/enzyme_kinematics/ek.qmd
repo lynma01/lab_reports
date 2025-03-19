@@ -27,4 +27,7 @@ The laboratory experiment in the sources uses the enzyme cellobiase. Cellobiase 
 
 ## What is one practical, industrial application of this enzyme?
 
-One practical, industrial application of cellobiase is in the creation of ethanol for fuel. This process involves breaking down cellulose from plants into sugar, which can then be fermented to produce ethanol. 
+One industrial application of cellobiase is in the creation of ethanol for fuel. This process involves breaking down cellulose from plants into sugar, which can then be fermented to produce ethanol.
+
+# Experimental Data
+

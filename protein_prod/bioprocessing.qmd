@@ -1,0 +1,27 @@
+---
+title: Protein Production & Bioprocessing 
+subtitle: Lab Report 2 - Bioprocessing
+---
+
+# Abstract
+
+# Introduction
+
+## Literature Review
+
+## Scientific Rationale
+
+## Objective
+
+# Materials & Methods
+
+# Results
+
+# Discussion & Conclusion
+
+- Give an interpretation of your results. 
+- Propose possible reasons for any deficiencies in your data. 
+- Complete the Purification Table. 
+- Propose possible steps to enhance the overall yield.
+
+# References

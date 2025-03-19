@@ -1,0 +1,105 @@
+---
+title: Reverse Transcriptase PCR 
+subtitle: Lab Session 14
+date: 2024-12-13
+---
+
+# Objective
+### The Objective of the Experiment
+
+The objective of the experiment is to 1) extract RNA from cells and then use reverse transcription PCR (RT-PCR) and agar gel electrophoresis to visualize the expressed genes, and 2) measure the concentration of the RNA sample to be amplified via RT-PCR via Nanodrop spectrophotemetry, analyzing the A260/A230 ratio to indicate the RNA purity, while the A260/A280 ratio indicates whether it's DNA, protein, or RNA.[^edvotek]
+
+# Background
+
+## The Role of RNA in Gene Expression
+
+RNA is key to the central dogma of molecular biology because it allows cells to synthesize the proteins encoded in DNA. This process begins with transcription, where the DNA sequence is copied into RNA.
+
+Gene expression is a tightly regulated process, influenced by factors like the cell's life cycle, environment, and signals from other cells. In eukaryotes, the initial mRNA transcript undergoes processing, including the removal of introns or the rearrangement of sections, before it becomes mature mRNA.
+
+## Reverse Transcriptase
+
+Reverse transcriptase is an enzyme that can synthesize DNA from an RNA template, essentially reversing the typical flow of genetic information. This enzyme was first discovered in retroviruses, like HIV, which have RNA genomes. During the injection of the viral RNA into the host cell, these viruses also inject reverse transcriptase to convert their RNA genome into DNA, integrating their genes into the host cell's chromosome.
+
+## Analyzing mRNA Using RT-PCR
+
+Reverse transcriptase is used to study gene expression by converting mRNA to cDNA before PCR amplification.[^la_14] This allows for various analyses:
+
+- Determine the mRNA sequence: Sequencing the cDNA provides insights into the mature mRNA sequence, which may differ from the original DNA sequence due to processing in eukaryotes.
+
+- Clone the protein-coding sequence: The cDNA can be inserted into vectors and introduced into cells to express the corresponding protein, facilitating further study.
+
+- Quantify the amount of mRNA: Quantitative PCR (qPCR) allows for measuring the amount of mRNA in a sample, analyzing gene expression levels.
+
+## RNase
+
+The primary challenge associated with RNA is its susceptibility to degradation by RNases. RNases are common environmental contaminants which can be introduced during extraction and handling. RNase-free techniques and dedicated Rnase-free reagents prevent potential contamination and ensure reliable results.
+
+# Results
+
+## Purity of the extracted RNA sample
+![Nanodrop reading of the RNA purity of the Reverse Transcriptase extracted sample.](images/nanodrop.jpeg){#fig-r-nd width=3in}
+
+- The concentration of RNA within the sample measured as "52.3 ng/$\mu$l"
+
+- The registered A260/A280 (nanometer) result was 2.15, suggesting the sample did in fact contain RNA molecules.
+
+- The A260/A230 reading was 0.55, suggesting the sample contained many contaminants.
+
+## Gel electrophoresis of the expressed genes
+
+![Image capture of the agar gel electrophoresis after the amplification step of the RT-PCR technique. The author's results are in the bottom-most gel.](images/rt_pcr_gel.jpg){#fig-r-ge width=4in}
+
+- DNA Ladder is contained in the left most well (Well #1), while the remaining wells contained serial dilutions of the RNA samples (Wells #2->#5). The final well on the right hand side was left empty.
+
+- Banding in samples #2 -> #5 are extremely faint relative to the DNA ladder in well #1.
+
+- Large shadows below the banding suggests large amounts of protein contamination. Protein contamination is greatest in well #5 as evinced by the opacity of the artifact.
+
+# Interpretation & Discussion
+
+> Expected 260/230 values are commonly in the range of 2.0-2.2. If the ratio is appreciably lower than expected, it may indicate the presence of contaminants which absorb at 230 nm.[^nd]
+
+Given that the results from the @fig-r-nd suggest an very low purity sample, the concentration measurement listed at "52.3 ng/$\mu$l" may instead be measuring contaminants instead of actual RNA molecules. This suggests that confidence in the experimental results should be proportionately low.
+
+The impurity of the RNA sample explains the extremely faint banding within the author's agar electrophoresis gel in @fig-r-ge, and the concentration of protein as gel artifacts in the right-most well (Well #5). Ultimately, the impurity of the sample as evinced within @fig-r-nd naturally caused an extremely low-efficiency PCR. However, it's unknown what exactly caused the contamination of the sample in the first place.
+
+Potential explanations for the impurity/contamination of the sample include, 1) insufficient time for cell-lysis, where the amount of cytoplasmic contents available for purification and reverse transcription was severely limited, 2) poor binding efficiency between the column and molecules during centrifugation where RNA sample was eluted prematurely, and/or 3) contamination by mishandling reagents/supplies such that RNase present in the environment infiltrates the sample.
+
+While we can conclude that the reverse transcription of mRNA into cDNA and their ensuing amplification via PCR was successful, contamination/mishandling of the samples in the purification/preparatory steps stops us from making confident assumptions about which gene was expressed when analyzing the sample's banding in comparison to the DNA ladder.
+
+# Study Questions
+
+## What are the roles of mRNA, tRNA and rRNA in the cell?
+
+* **Messenger RNA (mRNA):** mRNA carries the genetic information from nucleic-DNA to the ribosomes. In prokaryotes, mRNA is a direct complement to the DNA sequence, but, in eukaryotes, the mRNA transcript undergoes processing, like intron removal, before it becomes mature mRNA.
+
+* **Transfer RNA (tRNA):** tRNA transports amino acids to the ribosomes. Each tRNA molecule carries a specific amino acid and has an anticodon that recognizes and binds to a complementary codon on the mRNA.
+
+* **Ribosomal RNA (rRNA):** rRNA is a major component of gene expression where it forms peptide bonds between amino acids during protein synthesis.
+
+## There are a class of viruses (retroviruses)  that use RNA as their genome. They invade the cell and insert their genome into the cells chromosome. How does the virus convert its RNA genome into DNA?
+
+Retroviruses, such as HIV, have an RNA genome which they integrate into the host chromosome by injecting the host with viral RNA, reverse transcriptase, and integrase: 
+
+- When a retrovirus infects a cell, it uses the enzyme reverse transcriptase to convert a double-stranded DNA copy of the viral RNA genome.
+
+- Integrase then inserts this double-stranded DNA copy into the host cell's chromosome. With HIV, the viral RNA integrated in the host genome can remain dormant for years before activating.
+
+## Which type of cell does the HIV virus attach to and invade?
+
+HIV primarily infects CD4+ T cells, a type of white blood cell crucial for the immune system by attaching to the CD4 receptor on the cell surface.
+
+## How can an expressed sequence of a gene from eucaryotic cells be cloned?
+
+The expressed sequence of a gene in eukaryotic cells refers to the mature mRNA transcript that encodes a protein. Cloning this sequence involves converting the mRNA into cDNA using reverse transcriptase.
+
+RT-PCR is the only method of cloning eukaryotic protein-coding mRNAs. First, the mRNA is isolated from the cells. Then, reverse transcriptase synthesizes a cDNA strand from the mRNA. The cDNA is then amplified using PCR before being inserted into a cloning vector.
+
+# References
+
+[^nd]: ThermoFisher Scientific, "T042‐TECHNICAL BULLETIN NanoDrop Spectrophotometers A260/280 and A260/230 Ratios" https://dna.uga.edu/wp-content/uploads/sites/51/2019/02/Note-on-the-260_280-and-260_230-Ratios.pdf
+
+[^edvotek]: Edvotek. (2008-2024). Biotechnolgoy Cirriculum Modules
+
+[^la_14]: Donohue Robert, M.S.c, Gimenez Naroa, Phd. Lab Applications of Biotechnology; Lecture Session #14 "Gene Expression Analysis: RNA Extraction And RT-PCR".

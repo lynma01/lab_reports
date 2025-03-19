@@ -8,39 +8,26 @@ date: 2024-10-28
 
 ## How does UV light damage DNA? How does UV light cause aging?
 
-**UV light damages DNA by causing the formation of pyrimidine dimers**, which are abnormal bonds between adjacent pyrimidine bases (thymine or cytosine) in the DNA strand. This disrupts the DNA structure and can lead to mutations during replication.
-
-While many biomolecules can be damaged by UV light, they are often repaired or replaced by cells. However, **DNA damage caused by UV light can lead to mutations and cancer if not repaired properly**.
+UV light damages DNA by causing the formation of pyrimidine dimers, which are abnormal bonds between adjacent pyrimidine bases (thymine or cytosine) in the DNA strand. This disrupts the DNA structure and can lead to mutations during replication.
 
 Cells have various DNA repair mechanisms, but they can be overwhelmed, inefficient, or damaged, making it difficult to repair the damage.
 
-
-**UV light is a significant contributor to skin aging.** While the sources provided don't explicitly describe the molecular mechanisms of UV-induced aging, it's widely understood that **UV damage accumulates over time, contributing to wrinkles, sagging, and other signs of aging**.
-
-This process is likely related to **UV light's ability to damage collagen and elastin**, which are proteins that provide skin structure and elasticity.
-
 ## Name two health benefits of sunlight exposure?
 
-It's generally known that **sunlight exposure is necessary for the production of vitamin D**, which is important for bone health and immune function.
+Sunlight exposure is necessary for the production of vitamin D, which is important for bone health and immune function.
 
 ## After a long day at the beach, you wake up the next morning with a sunburn. Describe what is happening at a molecular level.
 
-A sunburn is an inflammatory response triggered by **UV-induced damage to skin cells.** The sources don't detail the molecular events in sunburn, but generally, **UV radiation causes damage to DNA and other cellular components, leading to cell death**.
+A sunburn is an inflammatory response triggered by UV-induced damage to skin cells. The sources don't detail the molecular events in sunburn, but generally, UV radiation causes damage to DNA and other cellular components, leading to cell death.
 
-This triggers an inflammatory response, characterized by **redness, swelling, and pain**. The process involves the release of inflammatory mediators, dilation of blood vessels, and infiltration of immune cells to the affected area.
+This triggers an inflammatory response, characterized by redness, swelling, and pain. The process involves the release of inflammatory mediators, dilation of blood vessels, and infiltration of immune cells to the affected area.
 
 ## Choose a biotechnology (PCR, Comet Assay, transformation with fluorescently tagged plasmid DNA, plasmid DNA electrophoresis, etc.) that is used to help scientists observed DNA damage. Describe how scientists use this method to distinguish between damaged and undamaged DNA.
 
-**PCR genotyping** is a biotechnology that can be used to **observe DNA damage, particularly in the context of gene editing experiments using CRISPR/Cas systems**.
+The Comet Assay is a method of distinguishing DNA damage by analyzing images of stained nucleic acids migrated via electrophoresis across a microscopy slide. If the DNA has been damaged, it forms a "tail" behind plated droplets of nucleic acids as the degraded DNA trails behind.  
 
-**PCR amplifies specific regions of DNA, allowing scientists to detect the presence or absence of a target gene**. If the gene has been successfully knocked out by CRISPR/Cas, the PCR will not amplify the corresponding DNA fragment.
-
-In the context of the experiment, **scientists use PCR to confirm if the *lacZ* gene has been successfully disabled** by the CRISPR/Cas system.
-
-They design **primers that specifically target the *lacZ* gene**. If the gene is intact, PCR will generate a DNA fragment of approximately 750 base pairs. However, **if the gene is knocked out, this fragment will be absent**.
+Undamaged DNA would have a relatively shorter tail compared to the damaged DNA. Thus, scientists attempting to distinguish between damaged and undamaged samples would have to compare the length of the comet tail.
 
 ## What role do antioxidants play in protecting cells from UV damage?
 
-Antioxidants can neutralize free radicals, which are highly reactive molecules that can damage cellular components, including DNA.
-
-UV radiation can generate free radicals in the skin. Antioxidants, such as **vitamin C and E**, may help to protect cells from this damage. This information is not from the provided sources and may need independent verification. 
+Antioxidants can neutralize free radicals, which are highly reactive molecules that can damage cellular components, including DNA. UV radiation can generate free radicals in the skin. Antioxidants, such as vitamin C and E, may help to protect cells from this damage.

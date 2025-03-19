@@ -6,7 +6,12 @@ date: 2024-10-21
 
 # Objective
 
-This experiment has three components: 1) knock-out a gene-of-interest in *E. coli* using the CRISPR-CAS9 technique, 2) collect results necessary to quantify the viral load of two patient samples using the plaque assay, and finally 3) collect images detailing the morphology of cancer cells from stained, rehydrated slides using a compound microscope.
+This experiment has four components:
+
+1. knock-out the *lacZ* gene in *E. coli* using CRISPR-CAS9, 
+   1. PCR the resulting *E. coli* colonies, then visualize the presence/absence of the *lacZ* gene via gel electrophoresis.
+2. Collect results necessary to quantify the viral load of two patient samples using the plaque assay.
+3. Collect images detailing the morphology of cancer cells from stained, rehydrated slides using a compound microscope.
 
 # Background
 
@@ -24,9 +29,13 @@ flowchart TD
     B --> |pCtrl| F[CRISPR with random sgRNA]
     end
 
-    subgraph "Step 3: Verification"
+    subgraph "Step 3: Plating"
     C --> D["`*lacZ* gene disabled; white colonies shown`"]
     F --> G["`*lacZ* gene active; blue colonies shown`"]
+    end
+
+    subgraph "Step 4: Genotyping"
+    D & G --> E["`Gel electrophoresis testing *lacZ*/CRISPR-CAS9 presence via banding`"]
     end
 ```
 
@@ -34,7 +43,7 @@ flowchart TD
 
 CRISPR/CAS9 is a naturally occurring immune-response in bacteria for eliminating foreign/viral DNA. This immune-response to foreign viral DNA which has been repurposed for genetic engineering and research activity. CRISPR-CAS9 has two primary components: a CAS9 nuclease that cuts DNA, and a Short Guide RNA (sgRNA) molecule which guides the CAS9 nuclease to a specific nucleotide sequence.[^la_9]
 
-### Experimental Application of CRISPR-CAS9
+### Experimental Application of CRISPR-CAS9 {#sec-b-c}
 
 The experiment uses an sgRNA which targets the *lacZ* gene in *E. coli*, which encodes the β-galactosidase enzyme. The knockout of the *lacZ* gene allows for a visual test verifying the genetic edit:
 
@@ -46,11 +55,21 @@ $\beta$-galactosidase cleaves the lactose analog X-gal, producing a blue precipi
 
 - **pCtrl Plasmid:** Contains the *cas9* gene and instructions for a sgRNA with a random sequence. 
 
+#### Verification of CRISPR-CAS9 results via colony plating {#sec-b-c-p}
+
 The bacteria are grown on plates containing X-gal. The color of the resulting bacterial colonies helps determine if the CAS9 protein successfully disabled the *lacZ* gene:
 
 - Blue colonies indicate that the *lacZ* gene is functional, implying the CAS9 protein didn't disable the *lacZ* gene.
 
 - White colonies indicate that the *lacZ* gene has been disabled, implying the CAS9 protein, guided by the *lacZ*-specific sgRNA, disabled the *lacZ* gene, knocking  out its ability to produce $\beta$-galactosidase.
+
+#### Verification of CRISPR-CAS9 results via genotyping {#sec-b-c-gel}
+
+Finally, as a secondary method of confirming the presence/absence of the *lacZ* gene, we will conduct an agarose gel electrophoresis of the samples after PCR amplification. If the *lacZ* gene was disabled by the *CRISPR-CAS9* proteins encoded in the plasmid, then the *lacZ* gene will not be amplified during PCR because its primers would've been destroyed.
+
+When interpreting the gel results, banding in the ~750 base pair region suggests the presence of the *lacZ* gene while banding in the ~500 base pair region suggests the presence of the *CRISPR-CAS9* gene.
+
+In this experiment, we expect to see banding in the ~500 base pair region, and no banding in the ~750 base pair region for the *pKO* reaction. This implies that the *CRISPR-CAS9* gene was successfully inserted and the *lacZ* gene was disabled. On the other hand, we do expect to see two bands for both the ~750 and ~500 base pair regions for the *pCtrl* samples because the sgRNA was randomly encoded, thus the *lacZ* gene would *not* be disabled and both bands would be present.
 
 ## Quantifying viral load using the Plaque Assay
 
@@ -101,6 +120,19 @@ Cancer cells, on the other hand, will divide regardless of the degree of contact
 :::
 
 - Images were collected in black and white make the visual-contrast sufficient to confirm the presence of either blue or white colonies on the plates. Condensation, shadows, and light artifacts were observed to have made other image captures too indistinct for accurate counting.
+
+### Genotyping *E. coli* colonies for *lacZ* {#sec-r-c-gel}
+
+![Gel electrophoresis of colonies, wells numbered 1 -> 5 from left to right. The author's gel is the bottom-most gel section. Gel reaction time was 45 minutes.](images/gels/cr_ko_gel_bands.jpg){width=3in #fig-r-gel-bw}
+
+- The contents of each well from well # 1 -> 5, from left to right are:
+  1. DNA Base Pair Ladder
+  2. *lacZ* Visual Reference
+  3. *CRISPR-CAS9* Visual Reference
+  4. *pCtrl* PCR reaction from control colonies
+  5. *pKO* PCR reaction from Knock-out colonies
+
+- *PCtrl* exhibits banding in both the ~750 base pair region and the ~500 base pair region, while *pKO* exhibits banding in the ~500 base pair region only.
 
 ## Plaque Assay Quantification of Viral Load
 
@@ -159,59 +191,93 @@ Cancer cells, on the other hand, will divide regardless of the degree of contact
 
 In @fig-r-c-bw, there's no distinct artifacts or coloration suggesting the presence of blue bacterial colony(ies) described in the protocol (see @sec-bg-cr-pcd). Without those bacterial colonies, a key control of the overall experiment is missing and, as a result, the validity of the singular bacterial colony containing the CRISPR insertion is questionable.
 
-Potential explanations for the missing control colonies include: 1) the "random" sgRNA provided to the CAS9 protein guided the nuclease to one or more genes vital to the bacteria, thus killing off the colonies, 2) the colonies in the plates were killed due to adverse conditions during incubation, potentially being to hot/cold or perhaps asphyxiated, or 3) the number of viable bacteria in the original samples were low/non-existent, such that while the protocol was properly executed, there were no viable bacteria to execute them on.
+However, because of the confirmed presence of both the *lacZ* and *CRISPR-CAS9* genes in @fig-r-gel-bw we know that the intended genetic edits in the experiment were completed successfully: the *lacZ* gene was disabled by the *CRISPR-CAS9* in the *pKO* reaction, and both the *lacZ* and *CRISPR-CAS9* gene were inserted into the plasmid.
 
-These results thus require further experimentation in order to verify where the source of error came from. Working backwards, the experiment would have to be amended such the results of *3* plates are recorded: knock-out reaction, random sgRNA, and *E. coli* without any CRISPR-CAS9 complex, thus allowing for the verification of viable *E. coli* colonies. Then, the experiment would have to be amended for multiple incubator units to be allowed, and their various environmental data analyzed. And finally, the random sgRNA would also have to be recorded and compared against the *E. coli*'s plasmid to ensure that the sgRNA doesn't disable vital genes within the *E. coli* colonies.
+Thus, potential explanations for the missing control colonies include: 1) the colonies in the plates were killed due to adverse conditions during incubation, potentially being to hot/cold or perhaps asphyxiated, or 2) the number of viable bacteria plated were low/non-existent, such that while the PCR amplification was able to visualize the edits, there weren't enough viable bacteria available from either sample when plating.
+
+These results thus require further experimentation to verify where the source of error came from. An amendment to the experiment which would allow us to verify our above hypothesis is switching for PCR to qPCR. By quantifying the amount of nucleic acids present in starting sample, if the starting amount is too low, we can confirm point #2, and if not, we can confirm point #1. 
+
+Thus, the additional expense of using qPCR reagents instead of PCR would allow us to verify the results of our experiment and isolate potential sources of error by allowing us to quantify the viable population of our plated samples.
 
 ### Presence of a singular colony in the knock-out reaction plate
 
-A singular white colony is visibly present in @fig-r-k-bw, suggesting it underwent the CRISPR-CAS9 knock-out reaction; disabling the *lacZ* gene, and preventing the *E. coli* colony from cleaving X-gal into its blue precipitate. However, the lack of other colonies within the knock-out reaction, and the absence of a complementary colony of *E. coli* in the control reaction prevent us from making a confident assertion that the experiment was successful.
+A singular white colony is visibly present in @fig-r-k-bw, suggesting it underwent the CRISPR-CAS9 knock-out reaction; disabling the *lacZ* gene, and preventing the *E. coli* colony from cleaving X-gal into its blue precipitate.
 
-While reasons for having so few viable colonies have already been explored in @sec-i-no-control, such as colony death during incubation for example, the most interesting potential explanation for the lack of colonies could be that the sgRNA programmed to disable the *lacZ* gene instead disabled some other vital gene as a result of improper ligation during the sample preparation. To confirm the viability of this explanation, both the plasmid and the sgRNA would have to be examined for point-mutations which could have occurred, and what, if any, vital genes in the plasmid that point-mutation would have programmed the CAS9 protein to cut.
+Given the confirmed presence of both the *lacZ* and *CRISPR-CAS9* genes in @fig-r-gel-bw for the *pCtrl* reaction, the most likely explanations for the lack of colonies is similar to those of @sec-i-no-control: 1) the colonies were incubated in adverse conditions, and thus the majority died after plating, and/or 2) the number of viable bacteria in the original samples were low/non-existent, such that while the protocol was properly executed, there were no viable bacteria to execute them on.
 
-Further information would have to be gathered before experimentation verifying that hypothesis could be justified. Not only verifying the assumption that the sgRNA could, in some probability, experience a point-mutation which targets a vital gene, but also verifying the likelihood that common environmental conditions would be sufficient to trigger such a mutation in *E. coli* sgRNA in the first place.
-
-In the end, the most likely explanations for the lack of colonies is similar to those of @sec-i-no-control: 2) the colonies were incubated in adverse conditions, and thus the majority died after plating, and/or 3) the number of viable bacteria in the original samples were low/non-existent, such that while the protocol was properly executed, there were no viable bacteria to execute them on.
+So, while we can confirm that the genetic edit was successful as demonstrated by @fig-r-gel-bw, we cannot confidently confirm the successful implementation of this genetic editing technique because we could not efficiently produce viable colonies. 
 
 # Study Questions
-## Name the stages of the virus life cycle.
 
-The five stages of the virus life cycle are: 
+## What is genome editing?
 
-- **Attachment:** The virus binds to a host cell, which causes the viral and cellular membranes to fuse. Viruses often target one or two host organisms and specific cells within these organisms because this binding is highly specific. 
+Genome editing is the process of making targeted changes to an organism's DNA. This implemented as genetic engineering: modifying genes to achieve specific outcomes, such as correcting harmful mutations or introducing beneficial traits/phenotypes.
 
-- **Penetration:** The virus either enters the cell and releases its genetic material, or it injects its genetic material into the cell while its exterior shell remains outside. 
+## Why is the CRISPR / Cas genome editing system considered so revolutionary?
 
-- **Replication:** The virus either:
+The CRISPR-Cas9 genome editing system is considered revolutionary because it offers several advantages over previous gene editing technologies, primarily its adaptability and specificity.
 
-    - Uses the host cell machinery to produce viral RNA, proteins and additional genome copies (active replication)
+The CRISPR-Cas9 system, in theory, can target any DNA sequence in any organism. This allows scientists to edit the genomes of a wide range of organisms, not just commonly used lab organisms like fruit flies and mice. This versatility makes it a powerful tool for research and applications in various fields.
 
-    - Integrates its genome with the host genome to become a provirus (inactive replication). A provirus is copied and passed to daughter cells each time a cell divides.
-  
-- **Assembly:** Newly synthesized viral parts self-assemble into new virions. 
+## What are the two main components of the CRISPR / Cas genome editing system?
 
-- **Release:** The new virions are released by the host cell either via lysis (which kills the cell) or by budding, where the cell survives but a membrane-capsule of virions is released to lyse elsewhere.
+The CRISPR-Cas9 system relies on a short guide RNA (sgRNA) molecule to direct the Cas9 nuclease to a specific DNA sequence. The sgRNA contains a 20-base recognition sequence that determines the DNA sequence that Cas9 will cut. This specificity means that the chances of Cas9 cutting at an unintended location in the genome are extremely low. While off-target editing can still occur, the CRISPR-Cas9 system is significantly more precise than older techniques.
 
-## Describe how a viral plaque is formed on a plate.
+## The CRISPR / Cas system has been compared to a homing missile programmed to find and damage genes. Why is this analogy accurate?
 
-In a plaque assay, a sample that potentially contains a virus is serially diluted and added to a host cell culture. The host cell culture is a single layer of cells at the bottom of the plate.[^la_9]
+The comparison of the CRISPR-Cas9 system to a homing missile programmed to find and damage genes is accurate because of the system's targeted action and its ability to cleave DNA.
 
-- Any virions present in the sample will then attach to the host cells layered at the bottom.
-  
-- A layer of agar is then poured over the host cells and the virions, which prevents the virus from moving vertically. Therefore, a virus can only spread by infecting neighboring cells.
+Targeted Action: Just as a homing missile is programmed to seek out and strike a specific target, the CRISPR-Cas9 system uses a sgRNA molecule with a sequence of ~20 bases complementary to the target DNA to ensure the Cas9 nuclease cuts at the desired location.
 
-- As the virus infects a cell, it will replicate, assemble, and release new virions that can then infect nearby cells. This creates a circular zone of infected (and then dead) cells radiating from any centers where active virus was released onto the plate.
+Impact: Upon reaching the target DNA sequence, the Cas9 nuclease, disrupts the gene and initiates the cell's DNA repair mechanisms.
 
-- The circular zones of dead cells, which can be observed without assistance, are called "plaques" which are then quantified to find the "plaque forming units" per unit volume or "viral load" of the sample.
+Precision: The specificity of the sgRNA ensures that the Cas9 nuclease acts on the intended target, minimizing collateral damage.
 
-## Describe two methods of treatment for viral infections (pick a specific action for each).
+Impact: The cleavage of DNA by the Cas nuclease can have significant consequences, leading to gene disruption, mutations, or the introduction of specific changes through DNA repair mechanisms. This parallels the damage inflicted by a homing missile upon hitting its target.
 
-Here are two methods of treatment for viral infections, with a specific action for each, based on the sources you provided:
+## Why is it so important for scientists to target Cas9 with a high degree of specificity?
 
-- **Prevention** - Limiting the spread of viruses via different public health and sanitary practices such as: such as quarantine, wearing masks, washing hands, monitoring foods, using safe sex practices (in the case of HIV), and using bug spray (in the case of Malaria).[^edvotek]
+Ensuring high specificity is essential for scientists while minimizing the risks associated with genome editing. Off-target cutting can result in unintended mutations, potentially disrupting important genes or causing other problems. If Cas9 cuts at the wrong location, the desired edit may not insert, and the experiment could fail in unexpected and potentially expensive ways.
 
-- **Antiviral Drugs** - Disrupting the viral replication cycle is another method for treating viral infections. Antiviral drugs limit the virus's ability to attach to cells, incorporate its genetic material into the host, or synthesize new genetic material. The drug's target in the viral life-cycle is dependent on the drug itself.[^edvotek]
+## When Cas9 cuts DNA, the cell often introduces random mutations as DNA repair enzymes reattach the cut ends of the DNA back together. Explain why random mutations that inactivate a gene can still be useful to scientists.
 
+When the Cas9 enzyme cuts DNA as part of the CRISPR-Cas9 gene editing system, the cell attempts to repair the break. One repair pathway is non-homologous end joining (NHEJ), which could introduce random mutations as the cut ends of the DNA are reattached. While these mutations can disrupt a gene's function, this disruption can be valuable.
+
+While mutations are often harmful, they are useful for studying gene function. By disabling a gene, scientists can observe the resulting effects on the organism and isolate the gene's role in different biological processes. 
+
+The relative ease with which CRISPR-Cas9 can disable genes has made this approach a common use of the system. By introducing random mutations through NHEJ, scientists can effectively "knock out" a gene and study the consequences. This information can be crucial for understanding the gene's function and its role in various biological pathways.
+
+## When Cas9 cuts the DNA, this event is referred to as a “double strand break.” Why do you think this is the case?
+
+When the Cas9 nuclease cuts DNA, it creates a double strand break because the enzyme severs both phosphodiester bonds of the DNA molecule at the target site. This break completely disrupts the DNA helix, leaving two separate ends. This is theoretically the case because the active site of the Cas9 nuclease wraps around both phosphodiester bonds.
+
+## We could use the CRISPR / Cas9 system to disrupt any gene, but this lab focuses on the lacZ gene because it is easy to know where the CRISPR/Cas9 system has worked effectively. Summarize how you can tell whether the lacZ gene is functional.
+
+The *lacZ* gene encodes the protein $\beta$-galactosidase, which breaks down lactose. It can also break down the chemical X-gal (a lactose analog) and produce a blue pigment. Therefore, if the *lacZ* gene is functional, bacteria grown in the presence of X-gal will appear blue. If the CRISPR-Cas9 system successfully disrupts the lacZ gene, the bacteria will not be able to produce $\beta$-galactosidase, and the colonies will appear white.
+
+## Describe the phenotypic screening you used to infer whether you successfully disabled the lacZ gene.
+
+The lacZ gene encodes the protein β-galactosidase, which can break down a chemical called X-gal, producing a blue pigment. When bacteria are grown on agar plates containing X-gal:
+
+- Colonies with a functional *lacZ* gene will appear blue because β-galactosidase is produced and breaks down X-gal, releasing the blue pigment.
+
+- Colonies where the *lacZ* gene has been disrupted will appear white because the X-gal is not broken down.
+
+## What is multiplex PCR?
+
+Multiplex PCR is a technique that amplifies multiple target DNA sequences in a single PCR reaction. In a multiplex PCR reaction, multiple pairs of primers are used, with each pair designed to amplify a specific DNA sequence.
+
+The first pair of primers, the lacZ primers, are designed to amplify a ~750 base pair region of the *lacZ* gene. This amplification helps verify whether the *lacZ* gene was successfully disrupted by the Cas9 protein. If Cas9 cuts the *lacZ* gene, the *pLacZ* plasmid degrades and the *lacZ* band is not amplified during PCR.
+
+The second pair of primers, the Cas9 primers, amplify a ~500 bp region of the *cas9* gene. This amplification acts as a control to verify successful transformation with either the *pKO* or *pCtrl* plasmids, as both plasmids carry the *cas9* gene. Regardless of whether the *lacZ* gene was successfully disabled, the Cas9 primers should amplify a PCR product.
+
+## How many primer pairs are used in each PCR sample in today’s lab?
+
+There are two primer pairs used in the experiment: a *lacZ* and *cas9* primer.
+
+## What are the PCR products you expect to see (describe in bp and how these would look on a gel)?
+
+In this experiment, we expect to see banding in the ~500 base pair region, and no banding in the ~750 base pair region for the *pKO* reaction. This implies that the *CRISPR-CAS9* gene was successfully inserted and the *lacZ* gene was disabled. On the other hand, we do expect to see two bands for both the ~750 and ~500 base pair regions for the *pCtrl* samples because the sgRNA was randomly encoded, thus the *lacZ* gene would *not* be disabled and both bands would be present.
 
 # References
 

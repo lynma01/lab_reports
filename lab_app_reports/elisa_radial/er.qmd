@@ -1,0 +1,154 @@
+---
+title: ELISA & Radial Diffusion 
+subtitle: Lab Session 13
+date: 2024-12-13
+---
+
+# Objective
+
+The objective of this experiment is two part: 1) to use enzyme-linked immunosorbent assay (ELISA) techniques to detect the presence of whey protein in various food samples, preparing them for future quantification of the concentration with a standard curve. And, 2) use radial immunodiffusion (RID) to determine the concentration of an unknown antigen by comparing the diameters to antigen rings with known concentrations to create a standard curve.
+
+# Background
+
+## ELISA in Allergen Detection
+
+The enzyme-linked immunosorbent assay (ELISA) is a immunochemical technique for detecting and quantifying specific antigens (such as allergens) in complex solutions. The technique relies on the specific binding between antibodies and antigens, enabling identification and measurement of target molecules. Even trace amounts of the allergen can be detected due to the enzymatic amplification step. Finally, the ELISA technique allows for constructing a standard curve to determine the concentration of whey protein in unknown food samples.
+
+### Experimental Application of ELISA
+
+This experiment will visually measure the antibody-antigen complex formation of a serially diluted unknown sample via "Indirect ELISA". The, antigen, antibody, and secondary antibody with an enzyme conjugate, and substrate are sequentially added after a wash step. The wash step will prevent binding between non-antibody-antigen complexes.[^la_13]
+
+All ingredients will sequentially bind, with unbound ingredients being removed from the well during the wash steps. During the addition of the secondary antibody and enzyme conjugate, the microwells will change color in proportion to the amount of antibody-antigen complexes.
+
+### Antibodies
+Antibodies, also known as immunoglobulins, are Y-shaped proteins produced by B cells in response to antigen exposure. Each antibody is highly specific, designed to recognize and bind to a particular antigen based on the shape and chemical properties of the antigen’s binding site (or epitope). In ELISA, primary antibodies are used to specifically bind the target antigen, ensuring that only the antigen of interest is detected.
+
+### Antigens
+Antigens are foreign molecules that elicit an immune response. These can include proteins, polysaccharides, lipids, or nucleic acids from pathogens (e.g., bacteria, viruses), environmental allergens (e.g., pollen, dust), or even food substances (e.g., milk proteins). In this experiment, whey protein, a component of cow’s milk, serves as the antigen being detected to simulate real-world allergen identification.
+
+### Secondary Antibody & Enzyme Conjugate
+The secondary antibody is bound to an enzyme, which, when bound to the antigen of the unknown sample, will remain bound to the well while a final wash step is preformed. After removing all unbound secondary antibody, the enzyme conjugate will begin cleaving the substrate the microwell is filled with. 
+
+This catalytic reaction will cleave the substrate, whose precipitate will form a colored dye. The visual comparison of the colorimetric change in the microwells to a known sample concentration are then used to quantify the antigen concentration of the unknown sample via a standard curve.
+
+The color change in the ELISA is due to the reaction between the enzyme horseradish peroxidase (HRP) and the substrate TMB (3,3',5,5'-tetramethylbenzidine).[^edvotek]
+
+- When the secondary antibody, linked to HRP, binds to the antigen-primary antibody complex, it catalyzes a reaction that converts the colorless TMB substrate into a colored product.
+
+- The intensity of the color is proportional to the amount of HRP present, which reflects the amount of antigen in the sample.
+
+## Radial Diffusion Assay
+
+Radial Immunodiffusion (RID) is a immunological technique used to quantitatively measure the concentration of antigens in a sample. This technique leverages the specificity of antigen-antibody interactions to produce quantifiable results. RID measures the size of the perciptin rings where antigen-antibody complexes form according to a standard curve.
+
+### Antibody in Gel Matrix
+The agarose gel used in RID contains antibodies distributed uniformly throughout the matrix. These antibodies are specific to the antigen of interest.
+
+### Diffusion of Antigens
+Antigens diffuse radially outward from the wells into the agarose gel, which is infused with excess antibody. As the antigen diffuses, it binds to the antibodies present in the gel. When the antigen and antibody reach an optimal ratio, they form a stable, visible precipitin ring.
+
+### Formation of the Precipitin Ring
+At the equivalence zone, where the antigen and antibody concentrations are optimal for binding, a visible precipitin ring forms. The size of the ring is proportional to the concentration of the antigen in the well, as diffusion proceeds more extensively when higher concentrations of antigen are present. Inside the ring is where excess antibody congregates while outside the ring is where excess, unbound antigen remains.
+
+### Quantification Using a Standard Curve
+By comparing the diameters of the rings produced by samples with known antigen concentrations (standards), a standard curve can be created. The unknown antigen concentrations can then be calculated by measuring their ring diameters and referencing the standard curve.
+
+- Standard Antigen Solutions: Wells are loaded with known concentrations of the antigen to establish a baseline.
+
+- Unknown Samples: The diameter of the precipitin rings from unknown samples is measured and compared to the standard curve.
+
+- The squared diameter of the rings is plotted against the antigen concentration, providing a linear relationship for quantification.
+
+# Results
+
+## ELISA in Allergen Detection {#sec-r-e}
+
+:::{layout-ncol=2}
+![Eight step serial dilution of the known samples. The well with the highest concentration of the antigen is in well #1, while the lowest concentration is in well #8.](images/eight_set.jpg){#fig-r-ee fig-width=4in}
+
+![Four step serial dilution of the samples with unknown concentration.](images/four_set.jpg){#fig-r-ef fig-width=4in}
+:::
+
+The serial dilution in @fig-r-ef is visually consistent from left to right with the standard curve in @fig-r-ee. A standard curve can be generated from the visual comparisons against known samples in a future experiment.
+
+## Radial Diffusion Assay
+
+:::{layout-ncol=2}
+![Radial Diffusion Assay after incubation period; discoloration suggesting antigen/antibody complex formation is absent.](images/elisa_radial_2.jpeg){#fig-r-rd fig-width=3in}
+
+![Reference radial diffusion from provided lab results with serial dilutions in wells #1->#5, and the unknown sample in well #6.](images/reference_radial.png){#fig-r-rrd fig-width=3in}
+:::
+
+- Discoloration around wells is absent for all samples in the dish. This is consistent for the control sample within wells #1->#5, and the unknown sample in well #6.
+
+- When comparing the @fig-r-rd is compared against @fig-r-rrd, we can see what the discoloration of the results *should* look like. In contrast to @fig-r-rd, there is no evident discoloration suggesting the formation of the pectin rings suggesting antibody-antigen complex formation.
+
+- A large tear in the gel is present between wells #5, and #6, and directly above well #4. The tear was created by mishandling after the dish was returned post incubation period.
+
+# Interpretation & Discussion
+
+## ELISA in Allergen Detection
+
+As mentioned in @sec-r-e, the serial dilution in @fig-r-ef seems to decrease in concentration as expected from left to right. The observed decrease in coloration from sample 1 to sample 4 in the serial dilution suggests a decreasing concentration of whey protein in the samples. Sample 1 therefore had the highest concentration of whey protein, while sample 4 had the least.
+
+Because the color intensity in an ELISA is directly proportional to the amount of antigen present. The color change is due to the reaction between the enzyme (horseradish peroxidase) linked to the secondary antibody and the substrate (TMB). A darker color indicates a higher concentration of the target antigen, while a lighter color suggests a lower concentration.
+
+To determine the actual concentration of whey protein in each sample, the color intensity readings would be compared to a standard curve using the ImageJ tool. The standard curve would be generated using known concentrations of whey protein as seen in @fig-r-ee, plotting the signal intensity (color intensity) against the corresponding whey protein concentration.
+
+## Radial Diffusion Assay
+
+As seen in @fig-r-rd, percipitin rings did not form around any of the wells. Potential explanations for these results are as follows: 
+
+### Incorrect Antibody Incorporation
+One explanation would be incorrect incorporation of the antibody into the molten agarose during the preparation of the plates. Without even distribution of the antibody, or if the antibody is degraded, antibody-antigen complex formation would be impeded- potentially preventing the formation of any of the percipitin rings. 
+
+### Issues with Antigens
+
+Other explanations suggest issues with the antigens used in the experiment:
+
+**Insufficient Antigen Concentration**: If the antigen concentration is too low, it may not diffuse far enough to reach the equivalence zone where precipitation occurs. This would result no rings as seen in @fig-r-rd.
+
+**Antigen Degradation**: If the antigen samples were improperly stored or expired, the antigens might have been too degraded by the time the radial diffusion occurred. Degraded antigens would lose their ability to bind to the antibody, preventing the formation of precipitin rings.
+
+**Antigen Incompatibility**: The whey protein antigen used in the assay may have changed such that it's not compatible with the antibody present in the agarose. The antibodies might not recognize the specific epitopes on the antigen, leading to a lack of binding and no ring formation.
+
+# Study Questions
+## What do the circular precipitin rings represent?
+
+In the Radial Immunodiffusion (RID) experiment, the circular precipitin rings represent the equivalence zone where the concentration of the antigen (whey protein, in this case) and the antibody in the agarose gel are present in optimal proportions to form antigen-antibody complexes.
+
+## Why do the ring sizes change until equilibrium is reached?
+
+The changing ring size reflects the continuing diffusion of the antigen through the antibody infused gel until all possible antigen-antibody reactions occur. In other words, where the antigen and antibody concentration in/around the well reach equilibrium, and the precipitated antigen/antibody complexes stop the antibody from continuing to diffuse outward.
+
+## Predict the results if a very low concentration of antigen were loaded into a cell. What would happen if not enough antibody was incorporated into the agarose?
+
+Without enough antigen being incorporated into the agarose gel, the amount of antigen-antibody interaction would be disproportionately small. The percipitin rings would be extremely limited, and depending on how little antigen was loaded into the cell, perhaps indistinguishable from wall of the ring itself.
+
+## Compare and contrast Radial Immuno-diffusion with its close relative, the Ouchterlony plate technique.
+Radial Immunodiffusion (RID) and the Ouchterlony plate technique are both immunological methods that use antigen-antibody interactions to form visible precipitin lines in an agarose gel. Despite their similarities, they differ in purpose, setup, and interpretation.
+
+### Similarities
+- Principle: Both techniques rely on the formation of antigen-antibody complexes, which precipitate when the antigen and antibody are present in optimal proportions (equivalence zone).
+
+- Visualization: In both methods, the interaction results in visible precipitation lines or zones in the gel.
+
+- Applications: Both are used in diagnostics and research to study antigens and antibodies, their concentrations, and their interactions.
+
+### Differences
+
+|Feature|Radial Immunodiffusion (RID)|Ouchterlony Plate Technique|
+|---|---|---|
+|Purpose|Quantitative measurement of antigen concentration.|Qualitative comparison of antigen/antibody interaction.|
+|Setup|Antibody is uniformly incorporated into the agarose.|Separate wells contain antigen and antibody solutions.|
+|Diffusion Pattern|Antigen diffuses radially outward from cells.|Antigen and antibody diffuse horizontally toward each other.|
+|Precipitin Formation|Forms a precipitin ring around each well.|Forms a line where antigens/antibodies meet.|
+|Interpretation|Ring diameter correlates with antigen concentration.|Line patterns indicate identity, partial identity, or non-identity of antigens.|
+|Equivalence Zone|Circular equivalence zone around the antigen well.|Equivalence lines between antigen and antibody wells.|
+
+# References
+[^la_13]: Donohue Robert, M.S.c, Gimenez Naroa, Phd. Lab Applications of Biotechnology; Lecture Session #13 "Immunology And Diagnostics: Quantitative Milk Allergy Elisa, Radial Immunodiffusion".
+
+[^edvotek]: Edvotek. (2008-2024). Biotechnolgoy Cirriculum Modules
+
+

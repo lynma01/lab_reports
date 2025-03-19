@@ -1,0 +1,14 @@
+---
+title: Caspase Activity
+subtitle: Lab Session 12
+date: 2024-11-21
+---
+
+# Study Questions
+
+## Standard Curve Generated 
+![Standard Curve of samples.](images/pna_standard_curve.png){width=5in #fig-r-stc}
+
+## Estimated Samples nmoles PNA
+![Calculated concentration of nmoles PNA for each of the samples.](images/est_sample_pna.png){width=5in #fig-r-est-sample}
+

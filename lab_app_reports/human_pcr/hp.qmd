@@ -1,0 +1,131 @@
+---
+title: PCR Amplification of Human DNA
+subtitle: Lab Session 12
+date: 2024-11-21
+---
+
+# Objective
+
+The experiment aims to isolate DNA from human cheek cells, amplify it via PCR, and analyze the amplified nucleic acids using agarose gel electrophoresis. The results will identify Variable Number Tandem Repeats (VNTRs) and compare banding patterns against other students and a control sample.
+
+# Background
+
+## DNA Polymorphisms
+
+Although most of the genetic material is identical in every person, small differences or polymorphisms in the DNA sequence make each individual unique.
+
+Analyzing several different polymorphisms within a person's genome generates a unique DNA fingerprint, which can be used to distinguish individuals, determine paternity, maternity, and other familial relationships, and identify criminals in forensic science.
+
+## Polymerase Chain Reaction (PCR)
+
+Forensic scientists use the polymerase chain reaction (PCR) to amplify DNA and generate DNA fingerprints. PCR requires much less DNA than older methods and can be performed quickly, and allows researchers to create many copies of a specific region of DNA in vitro.
+
+## Types of DNA Analysis for Fingerprinting
+
+There's several regions of the genome that forensic scientists can use to create a DNA fingerprint:
+
+**Mitochondrial DNA (mtDNA)**: mtDNA is present in high copy numbers in cells and can be used when crime scene specimens are degraded or insufficient for nuclear DNA analysis. The D-loop of mtDNA has a high degree of variability between individuals and can be sequenced to demonstrate variations. mtDNA typing can be used to include or exclude suspects from further scrutiny but cannot conclusively link suspects to crime scenes.[^la_12]
+
+**Alu Insertion DNA Typing**: Alu elements are 300 base pair DNA sequences that are repeated hundreds or thousands of times throughout the human genome. While most Alu elements are fixed (present on both chromosomes), some are dimorphic (present on one or both homologous chromosomes). These dimorphic locations can be used to identify different people. For example, the presence or absence of an Alu insertion at the PV92 locus on chromosome 16 can be used to create a DNA fingerprint. Like mtDNA, Alu-insertion analysis cannot definitively identify a suspect but can be used to rule out certain individuals.[^la_12]
+
+**Variable Number Tandem Repeats (VNTRs)**: VNTRs are short, repetitive DNA sequences that occur at specific locations in the genome and vary in number from person to person. Examining several different VNTRs from the same individual allows investigators to obtain a unique DNA profile for that individual. One example is the D1S80 locus, where the sequence is repeated 14-40 times depending on the individual.[^la_12]
+
+## Homozygous vs. Heterozygous Traits 
+
+**Homozygous**: An individual is homozygous for a VNTR if they have the same number of repeats on both chromosomes. In this case, PCR amplification will produce a single band on the gel, as all the amplified fragments are the same size. Figure 12.6-A[^edvotek] visually demonstrates this, showing a single band representing the homozygous trait.
+
+**Heterozygous**: An individual who's heterozygous for a VNTR will have a different number of repeats on each chromosome. PCR amplification of a heterozygous individual will produce two bands on the gel, representing the two different-sized fragments. Figure 12.6-B in source depicts this scenario, where two bands indicate the presence of two different VNTR alleles.
+
+The number and position of bands on the gel reveal an individual's genotype for the VNTR being analyzed:
+
+- **One band**: indicates a homozygous genotype, meaning the individual inherited the same VNTR allele from both parents.
+
+- **Two bands**: indicates a heterozygous genotype, meaning the individual inherited different VNTR alleles from each parent.
+
+The VNTR locus is called D1S80, where the repeated sequence can occur 14-40 times depending on the individual. If an individual has 16 repeats on one chromosome and 22 repeats on the other, they are heterozygous for the D1S80 locus. Their PCR results would show two bands, one corresponding to the fragment with 16 repeats and the other to the fragment with 22 repeats.
+
+# Results
+
+## Gel of VNTR (D1S80)
+
+![Agarose gel electrophoresis of PCR amplified Human DNA samples.](images/gel_ladder_left.jpg){width=5in #fig-r-gel}
+
+- Wells numbered 1 -> 6 from left to right. Each well contains the following PCR amplified DNA samples from the following sources:
+  1. DNA Ladder
+  2. Henry Ware
+  3. Sophia Levitt
+  4. Matthew Lyn
+  5. Adesh Suchit
+  6. Control Sample
+
+# Interpretation & Discussion
+
+Samples from wells #3, #4 are the only samples which exhibit homozygous traits, while wells #2, #5, and control sample in well #6 exhibit heterozygous traits. The single banding indicates that the individuals are exhibiting homozygous VNTR alleles on both chromosomes at the D1S80 locus where both parents' had the same number of VNTR; while double-banding signifies that these individuals are exhibiting heterozygous VNTR alleles on their two chromosomes for the D1S80 locus where both parents had different numbers of VNTRs.
+
+The hetero/homozygous VNTRs can be further interpreted where heterozygous VNTRs have 16 repeats on one chromosome and 22 repeats on the other thus showing two bands. Conversely, homozygous VNTRs would have either 16, or 22 repeats on both chromosomes. Because the VNTRs are the same in terms of the number of base pairs, they would only yield one band during electrophoresis.
+
+To create a comprehensive DNA profile or fingerprint, forensic scientists typically examine multiple loci. By combining the results from multiple loci, the probability of two individuals having identical profiles becomes exceedingly small, strengthening the power of DNA fingerprinting for identification purposes.
+
+# Study Questions
+
+## If a crime scene sample is too degraded for normal DNA profiling, are any further analyses possible? If so, what assays could be performed?
+
+There's three potential alternative assays to perform if the sample is too degraded for normal DNA profiling:
+
+**mtDNA Analysis**: Cells contain numerous mitochondria, each harboring multiple copies of mtDNA, resulting in a higher abundance of mtDNA compared to nuclear DNA. This abundance increases the likelihood of obtaining usable mtDNA even from degraded samples.
+
+**Mini-STR Analysis**: This technique utilizes shorter DNA fragments (STRs) than traditional STR profiling, increasing the chances of successful amplification from degraded DNA.
+
+**Single Nucleotide Polymorphism (SNP) Analysis**: SNPs are single-base variations in the DNA sequence. Analyzing SNPs can provide information about ancestry and certain phenotypic traits, potentially aiding in narrowing down suspect pools or identifying remains.
+
+## What is selfish DNA? How are Alu elements thought to replicate? What is the functions of Alu elements?
+
+Selfish DNA, also called parasitic DNA, are repetitive DNA sequences that appear to have no function except for their own reproduction. These sequences make up over 20% of the human genome[^edvotek] and often exist in hundreds or thousands of copies.
+
+Alu elements, a specific type of selfish DNA, are approximately 300 base-pair sequences that were first identified in 1979. While the exact mechanism of their insertion into DNA sequences is not fully understood, the sources propose a replication process involving an RNA intermediate and a retrotransposon.
+
+Most Alu sequences are incapable of replication and that only a small number of "master genes" are duplicated to form new elements.
+
+Alu elements can have implications for human health and genetic diversity:
+
+- Disease: When Alu elements insert themselves into specific genes, they can disrupt gene function and lead to human diseases or other defects.
+
+- Genetic Markers: Some Alu element insertion sites are dimorphic, meaning they may or may not be present in an individual's genome. These dimorphic sites can be used as genetic markers to distinguish between individuals in DNA fingerprinting.
+
+While Alu elements are often considered "junk DNA" due to their repetitive nature and lack of direct protein-coding function, ongoing research continues to explore their potential roles in genome evolution and regulation.
+
+## What is polymorphic DNA and how is it used for identification purposes?
+
+Polymorphic DNA refers to variations in DNA sequences that occur among individuals within a population. Variations, also called polymorphisms, come from mutations inherited across generations. While the majority of the human genome is identical among individuals, small variations in DNA sequences make people genetically unique.
+
+By analyzing these polymorphisms, forensic scientists can generate DNA fingerprints to link suspects to crime scenes, exonerate the innocent, and resolve paternity disputes.[^edvotek]
+
+*   **Single Nucleotide Polymorphisms (SNPs):** These represent single base-pair changes in a DNA region.
+
+*   **Short Tandem Repeats (STRs) and Variable Number Tandem Repeats (VNTRs):** These are short, repetitive DNA sequences that occur at specific locations in the genome and vary in the number of repeats among individuals.
+
+*   **Alu Insertions:** Alu elements are repetitive DNA sequences that can be present or absent at specific locations in the genome, creating dimorphic markers.
+
+Analyzing multiple polymorphic loci is crucial for creating a reliable DNA fingerprint. Examining only a single locus may not provide sufficient discriminatory power, as the same alleles could be shared by unrelated individuals.
+
+## What is CODIS? How is it used to solve crimes?
+
+CODIS (Combined DNA Index System) is a database of DNA profiles established by the Federal Bureau of Investigation (FBI) in 1990. CODIS allows for the comparison of DNA profiles from crime scenes to DNA profiles stored in a database of convicted offenders and a separate database of forensic crime scenes.
+
+CODIS has significantly impacted criminal investigations since its inception. According to the sources, CODIS has been used to assist in over 400,000 criminal investigations. The odds of two individuals having identical DNA profiles at all 20 loci used in CODIS are less than one in a trillion.[^edvotek]
+
+# References
+
+- Edvotek. (2008-2024). Biotechnolgoy Cirriculum Modules. "Forensics and Human Gene Analysis: Human PCR Toolbox".
+
+- David L. Nelson; Michael M. Cox. (2021). Lehninger Principles of Biochemistry.
+
+- Donohue Robert, M.S.c, Gimenez Naroa, Phd. Lab Applications of Biotechnology; Lecture Session #12 "Forensics and Aging, Human PCR and Apoptosis".
+
+[^edvotek]: Edvotek. (2008-2024). Biotechnolgoy Cirriculum Modules. "Forensics and Human Gene Analysis: Human PCR Toolbox".
+
+[^lehn]: David L. Nelson; Michael M. Cox. (2021). Lehninger Principles of Biochemistry.
+
+[^adesh]: Suchit Adesh, M.S.c (2024). Conservations on PCR Amplification of Human DNA Samples.
+
+[^la_12]: Donohue Robert, M.S.c, Gimenez Naroa, Phd. Lab Applications of Biotechnology; Lecture Session #12 "Forensics and Aging, Human PCR and Apoptosis".
