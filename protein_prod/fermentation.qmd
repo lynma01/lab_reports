@@ -1,0 +1,334 @@
+---
+title: Protein Production & Bioprocessing
+subtitle: Lab Report 1 - Fermentation 
+---
+
+# Abstract
+
+The objectives of this two-part experiment were to analyze the growth of BL21(DE)-strain *E. coli* expressing the pET-28b-$\beta$-Gal plasmid in two vessel types: shake flasks and stirred tank bioreactors (STRs). For each vessel-experiment, the authors analyzed the effect of different growth parameters and preparation protocols informed by prior literature.
+
+The two vessels produced $\beta$-galactosidase-expressing *E. coli* cultures under different experimental conditions (e.g., aeration, media differences) for comparison and analysis. Growth rates were monitored by sampling and recording instrumentation measurements (e.g. pH, OD600 turbidity/OD600, dissolved oxygen) at different time-points. 
+
+Results were analyzed to conclude whether the "optimal" incubation conditions from prior research (see: @sec-sf-opt-gc) aligned with the results from both vessel-experiments as expected. These experiments will make a preliminary conclusion by measuring the turbidity/OD600 of the samples, and a definitive analysis will be reached in the second report: "Protein Production & Bioprocessing: Lab Report 2 - Bioprocessing".
+
+# Introduction {#sec-bg}
+
+Commercial production of recombinant proteins necessitates a comprehensive series of design decisions, each supported by scientific literature, to achieve efficient production yields. The design of the production system must simultaneously address several critical parameters:
+
+- The protein-expressing host
+- The incubation and/or production vessel
+- The growth media
+- The conditions within the vessel
+
+Alterations or limitations in of these parameters requires reassessing the preceding design decisions to return to an optimized production process. Therefore, selecting the appropriate host, vessel, and growth media is of critical scientific importance. Other considerable factors such as nutrient availability, dissolved oxygen concentration (DO), and pH requirements, cost efficiency, scalability, and the risk of contamination by other organisms are essential. Nutrient availability, DO concentration, and pH are especially important with fast-growing cultures of bacteria because of the smaller window for successful intervention when parameters deviate from acceptable ranges.
+
+## Hypothesis & Experimental Conditions {#sec-bg-exp-conditions}
+
+These experiments use the BL21 *E. coli* strain, which, when combined with a pET-28 plasmid, provides an efficient organism for producing $\beta$-galactosidase, an enzyme which cleaves galactose and its analogs along its $\beta$-glycosidic bond.[^wiki_bgal] This enzyme will act as our reporter-protein for measuring the yield and activity of our different growth conditions in the following lab report: "Protein Production & Bioprocessing: Lab Report 2 - Bioprocessing". These current experiments will utilize turbidity/OD600 readings to infer the growth rates of the different experimental conditions and make a preliminary conclusion.
+
+Our hypothesis is that of the conditions outlined in @tbl-exp-conditions, growth condition A1 and A2 will have the greatest yield of active $\beta$-galactosidase. 
+
+|ID|Experiment|*E. coli* Strain|Plasmid|Antibiotic|Production Vessel|Growth Conditions|
+|---|---|---|---|---|---|---|
+|01|Pt. 1|BL21|pET-28|Kanamycin|Shake Flask|Condition A1 (see @tbl-sf-gc)|
+|02|Pt. 1|BL21|pET-28|Kanamycin|Shake Flask|Condition B1 (see @tbl-sf-gc)|
+|03|Pt. 1|BL21|pET-28|Kanamycin|Shake Flask|Condition C1 (see @tbl-sf-gc)|
+|04|Pt. 1|BL21|pET-28|Kanamycin|Shake Flask|Condition E1 (see @tbl-sf-gc)|
+|05|Pt. 1|BL21|pET-28|Kanamycin|Shake Flask|Condition G1 (see @tbl-sf-gc)|
+|06|Pt. 1|BL21|pET-28|Kanamycin|Shake Flask|Condition H1 (see @tbl-sf-gc)|
+|07|Pt. 2|BL21|pET-28|Kanamycin|Bioreactor|Condition A2 (see @tbl-br-gc)|
+|08|Pt. 2|BL21|pET-28|Kanamycin|Bioreactor|Condition B2 (see @tbl-br-gc)|
+|09|Pt. 2|BL21|pET-28|Kanamycin|Bioreactor|Condition C2 (see @tbl-br-gc)|
+
+: Experimental Conditions {#tbl-exp-conditions .striped .hover}
+
+## Host Selection
+
+### Bacterial vs. Mammalian Cells {#sec-bg-host-comp}
+
+Several types of hosts are employed in recombinant protein production systems. Bacterial systems, for instance, are popular due to their rapid growth characterized by a short doubling time and high scalability at a low cost.[^hdc_ecoli] Bacteria are advantageous because they can be rapidly cultured and scaled up using both batch and fed-batch strategies. However, without genetic modification, they cannot enact post-translational modifications, which can be essential for the proper function of some proteins.[^ec_fold] Sterility with bacteria is an important consideration, however, the relatively short doubling-time and the straight-forward application of antibiotics makes the threat of contamination far less severe than the threat to mammalian cell cultures which have far longer incubation periods and are inimical to antibiotics.
+
+Mammalian cells, in contrast, offer the ability to perform complex post-translational modifications without genetic modifications[^ec_fold] and are thus highly valued to producing therapeutics[^leptin]. The drawbacks of mammalian systems include a longer doubling time, higher cost, lower resilience to shear-forces, and more stringent air and pH requirements, which complicate the overall production process. Likewise, because mammalian cell cultures can often take weeks, the risk of contaminating bacteria overtaking the culture is considered especially severe. Mammalian cell cultures therefore require stricter sterility protocols compared to bacteria.
+
+### Host Fragility & Anchorage Dependence {#sec-bg-host-fragility}
+
+Some final considerations depend on the shear-forces, and colony locations which host cells can best tolerate. For example, *E. coli* are free-floating organisms which can tolerate high shear-forces in culturing vessels, and are resilient to both too much *and* too little DO concentration.[^ec_ros] Animal cells, on the other hand, often require the presence of symbiotes to divide and are extremely susceptible to environmental factors like contamination or toxic byproducts:
+
+![Comparison between microbes and animal cells and their optimal growth conditions. Extracted from (Shiloach, DiVito Lecture 9)[^lec_cell_growth].](images/microbes_vs_animal_cells.png){#fig-cell-comparison width="4in"}
+
+These trade-offs and requirements become important as we consider the DO concentration vis-a-vis the fragility of the host, and where the host colonies are located within the vessel. Depending on the vessel type, DO is delivered and distributed either via: 
+
+1. **Bioreactors**: forced air delivered through a "sparger" apparatus and distributed throughout the vessel by the bioreactor impeller(s)'s mixing forces.
+
+2. **Shake Flasks**: baffles inside the flask (which when rotated by the incubator platform) cause liquid to repeatedly "splash", mix, and distribute air throughout the flask.
+
+The design-difficulty resides in the fact that greater distributions of DO requires greater shear-forces generated by the method of distribution. Unfortunately, even increasing the oxygen content of the forced air flow into the vessel doesn't equally, or efficiently increase the DO concentration of the vessel. This is such a ubiquitous problem that decades of fluid-dynamic research has been focused on optimizing impeller to deliver greater distribution while minimizing shear-force in the vessel as further described in @sec-do-dist.
+
+### Experimental Host {#sec-bg-exp-host}
+
+::: {layout-ncol=2}
+::: {#first_col}
+
+The BL21 strain of *E. coli* relies on the T7 promoter and lacUV5 promoter, with IPTG serving as the inducer to express $\beta$-galactosidase. These systems are highly efficient for producing enzymes like $\beta$-galactosidase and are optimized for conditions that ensure the delivery of essential nutrients and maintain a sterile environment.
+
+As described in @sec-bg-exp-conditions, we expect that because growth conditions A1, and A2 have complex media, aeration, and IPTG induction, they will have the greatest yield of $\beta$-galactosidase. Because as described in @sec-bg-host-fragility, these bacteria are robust, free-floating, facultative anaerobes, and reproduce quickly, growth condition A1 & A2 are extremely conducive to *E. coli* growth.
+
+:::
+::: {#second_col}
+```{mermaid}
+flowchart TD
+    A[BL21 E. coli with pET28-B-G plasmid] --> B[IPTG Induction]
+    B --> C[lacUV5 Promoter Activation]
+    C --> D[T7 RNA Polymerase Expression & Activation]
+    D --> E[Transcription of $\beta$-galactosidase mRNA]
+```
+:::
+:::
+
+## Vessel Selection
+
+The choice of vessel has a significant impact on the efficiency and consistency of recombinant protein production:
+
+### Shake Flasks vs. Bioreactors
+
+Shake flasks are typically used during the early stages of the production process. They offer a cost-effective and straightforward means to test various culture conditions, including the supply of nutrients and the maintenance of a sterile environment. However, shake flasks have limited control over parameters such as air and pH requirements, making them less ideal for large-scale production where precise regulation is critical.
+
+::: {layout-ncol=2}
+::: {vessel-fcol}
+Alternatively, bioreactors provide greater specific control over the culture environment: dissolved oxygen, temperature, and feed-rate of growth media (either batch or fed-batch) are crucial for maintaining optimal growth conditions. Bioreactors are especially versatile because of how the variety of impeller designs (@fig-impeller-types) allow for a greater number of production systems compared to shake flasks. This precise control enhances the overall yield and purity of the recombinant protein. The scalability offered by bioreactors makes them a preferred choice for commercial production processes, despite the higher initial cost.
+:::
+::: {vessel-scol}
+![Different types of bioreactor impellers described by the radial/axial flow and applicable organisms/substrates. Taken from (Shiloach, Divito Lecture 4-5)[^lec_ls_growth]](images/impeller_types.png){#fig-impeller-types}
+:::
+:::
+
+Finally, there's a limitation on the potential size of both Shake Flasks and Bioreactors, however, bioreactors can reach a greater volume than Shake Flasks. Bioreactors can reach sizes in excess of 2,000 liters, while shake flasks maximum volume is 500 milliliters. An important caveat about shake flasks is that generally only 1/5th of the volume is reserved for the culture to prevent spillage in the incubator during shaking.
+
+## Growth Media
+
+The growth media used in the production process plays a fundamental role in supporting cell growth and protein expression. Media are formulated to provide the necessary nutrients that drive cellular metabolism and protein synthesis.
+
+### Complex vs. Minimal Media
+
+Complex media like the modified Luria-Bertani (LB) broth used in this experiment contain a variety of nutrients and carbon sources which can lead to robust growth and higher yields of recombinant proteins. However, variable composition can sometimes introduce challenges in reproducibility and may increase the cost of production. 
+
+Excess nutrient concentrations in the growth media can inhibit, rather than promote, the growth of *E. coli* due to the formation of excess acetate.[^lec_media][^hdc_ecoli]
+
+Minimal media, with their defined composition, allow for more controlled experimental conditions and are useful when precise control over the production process is required. The selection between complex and minimal media often depends on the specific needs of the experiment, including the desired concentration of nutrients, the risk of contamination by other organisms, and the overall cost. 
+
+### Induction via IPTG {#sec-bg-iptg}
+
+Isopropyl $\beta$-D-1-thiogalactopyranoside (IPTG) is a synthetic analog of lactose commonly used to induce the lac operon in E. coli. Under normal conditions, the lac operon is repressed by the lac repressor (LacI), which binds to the operator region and prevents transcription of downstream genes such as lacZ, encoding $\beta$-galactosidase. IPTG enters the bacterial cell and binds to LacI, causing a conformational change that releases the repressor from the operator. This de-repression allows RNA polymerase to access the promoter and initiate transcription of the lac operon genes. Unlike natural inducers (e.g., allolactose), IPTG is not metabolized by the cell, which results in a sustained induction of $\beta$-galactosidase production.
+
+Introducing IPTG slightly before the exponential phase ensures that E. coli cells, emerging from the lag phase and actively upregulating their protein synthesis machinery, are optimally prepared for rapid β-galactosidase production. At this point, cells are poised for maximal metabolic activity—with abundant nutrients and energy fueling high transcription and translation rates—thereby maximizing yield. This timing also avoids the pitfalls of premature induction, which can overburden cells, or delayed induction, which may coincide with nutrient depletion and stress, while synchronizing protein production across the culture for consistent results in both shake flasks and bioreactors.
+
+# Materials & Methods (2 pages max)
+Key words: starter culture, agitation, volume, temperature, pH, media composition, OD600, glucose, glycerol, IPTG, DO, BioFlo115, cell harvesting, $\beta$-galactosidase activity.
+
+## Media Preparation & Growth Parameters
+- Describe the preparation and composition of different media and the different growth parameters used in both shake flask and benchtop fermentation.
+
+
+### Shake Flask Experiment {#sec-sf-opt-gc}
+
+For the shake flask experiment, the composition and preparation of the media and growth parameters were divided between three experimental variables: the carbon source, shake flask aeration via internal baffles, and induction via Isopropyl $\beta$-D-1-thiogalactopyranoside (IPTG).
+
+Modified Luria-Bertani (LB) broth, a mixture of tryptone, yeast extract, sodium chloride, and dipotassium sulfate, is considered the most referenced carbon source for *E. coli* incubation. In certain experimental conditions, an extra carbon source (glucose) was also added as an additional source of chemical energy for *E. coli* reproduction.
+
+|Vessel Type|Growth Condition|Growth Media|Carbon Source|Aeration|Induction|
+|---|---|---|---|---|---|---|
+|Shake Flask|A1|Modified LB Media|Glucose|Aeration|IPTG|
+|Shake Flask|B1|Modified LB Media|Glucose|No Aeration|IPTG|
+|Shake Flask|C1|Modified LB Media|No Glucose|Aeration|IPTG|
+|Shake Flask|E1|Minimal Media|Glucose|Aeration|IPTG|
+|Shake Flask|G1|Minimal Media|Glycerol|Aeration|IPTG|
+|Shake Flask|H1|Modified LB Media|Glycerol|Aeration|No Induction|
+
+: Shake Flask Growth Conditions {#tbl-sf-gc}
+
+### Bioreactor Experiment
+
+|Vessel Type|Growth Condition|Growth Media|Carbon Source|Supplements|Induction|
+|---|---|---|---|---|---|---|
+|Bioreactor|A2|Complex Media|Glucose|K2HPO4 + MgSO4 + trace metals|IPTG|
+|Bioreactor|B2|Complex Media|Glycerol|K2HPO4 + MgSO4 + trace metals|IPTG|
+|Bioreactor|C2|Minimal Media|Glucose|trace metals|IPTG|
+
+: Bioreactor Growth Conditions {#tbl-br-gc}
+
+## Culture Monitoring
+- Describe how the bacteria culture was monitored over time.
+- Describe how $\beta$-galactosidase activity was determined. 
+
+
+### Shake Flask
+
+### Bioreactor
+
+
+
+# Results (12 pages max)
+
+- Report in both tables and graphs the experimental data from each culture (e.g., optical density, pH, glucose concentration, DO, agitation, $\beta$-galactosidase activity) as a function of time. Make sure to plot the actual duration of time as each time point is not exactly 1 hour apart. 
+
+- Results from other groups are required to include as you are trying to compare different fermentation conditions. 
+
+- Each table and graph should be numbered and have legend and title. Each line and axis labeling needs to clearly spell out the condition or dilution.
+
+
+## Comparison of Shake Flask Results
+
+### Turbidity (OD600)
+
+```{python}
+#| label: fig-sf-od-comp
+#| fig-cap: "Comparison of Shake Flask Turbidity and pH across different experimental growth conditions listed in @tbl-sf-gc over time. Unexpectedly, growth condition H1 overtook condition A1 at T4."
+
+import polars as pd
+import altair as alt
+
+df = pd.read_excel('data/shakeflask.xlsx')
+width, height = 450, 250
+
+# Turbidity line chart
+chart_od = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('OD600 Reading:Q', title='Turbidity (OD600)')
+    , color=('Growth Condition')
+    , tooltip=['OD600 Reading']
+).properties(
+      title='Turbidity (OD600) Over Time'
+    , width=width
+    , height=height)
+
+chart_od.display()
+```
+
+### pH Comparison
+```{python}
+#| label: fig-sf-ph-comp
+#| fig-cap: "Comparison of Shake Flask pH. For Condition A1, period T3 exhibits a drop of 0.86 pH coinciding with @fig-sf-od-comp's spike in turbidity. Unexpectedly, Condition C1's pH increases overtime."
+
+chart_ph = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('pH:Q', title='pH').scale(zero=False)
+    , color=('Growth Condition')
+    , tooltip=['pH']
+).properties(
+      title='pH Over Time'
+    , width=width
+    , height=height)
+
+
+chart_ph.display()
+```
+
+### Analyzing Glucose Levels
+```{python}
+#| label: fig-sf-carbon-comp
+#| fig-cap: "Comparison of Shake Flask glucose levels over time. Interestingly, Growth Condition A1's glucose levels dropped precipitously between T2->T3 implying the exponential phase was during the same period."
+
+df = pd.read_excel('data/shakeflask.xlsx')
+
+# Turbidity line chart
+chart_carbon = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('Glucose:Q', title='Glucose (ng/dL)')
+    , color=('Growth Condition')
+    , tooltip=['Glucose']
+).properties(
+      title='Glucose (ng/dL) Over Time'
+    , width=width
+    , height=height)
+
+
+chart_carbon.display()
+```
+
+
+## Bioreactor Results
+
+### Turbidity (OD600)
+
+```{python}
+#| label: fig-br-od600
+#| fig-cap: "Turbidity (OD600) values over time taken from BioFlo/Celigen 115 Benchtop Bioreactor."
+
+df = pd.read_excel('data/benchtop.xlsx')
+
+width, height = 450,250
+
+# Turbidity line chart
+chart_bt_od600 = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('OD600:Q', title='Turbidity (OD600)')
+    , tooltip=['OD600']
+).properties(
+      title='Turbidity (OD600) Values Over Time'
+    , width=width
+    , height=height)
+
+chart_bt_od600.display()
+
+```
+
+### pH
+
+```{python}
+#| label: fig-br-pH
+#| fig-cap: "Comparison of pH values between Bioreactor instrumentation vs. secondary pH meter over time. Unexpectedly, the values between the two instruments continued to diverge over time."
+
+import polars.selectors as cs
+
+df = pd.read_excel('data/benchtop.xlsx')
+df = df.select(["Time", "pH (Benchtop)", "pH (Meter)"])
+df = df.unpivot(cs.numeric(), index="Time")
+
+# Turbidity line chart
+chart_bt_ph = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='pH Reading')
+    , color="variable"
+).properties(
+      title='Comparison of pH Values by Source over Time'
+    , width=width
+    , height=height)
+
+chart_bt_ph.display()
+```
+
+
+# Discussion & Conclusion
+- Include discussion of agitation, air control, pH, effects of carbon source, etc. 
+- Discuss data for all groups to compare different conditions. 
+- Include the major findings and significance of the results.
+
+
+## Growth Condition H1 Outperforming A1 at Time-point 3
+
+
+
+
+
+# Summary
+
+- Summarize the objectives, materials and methods and major findings.
+
+
+# References
+
+[^wiki_bgal]: 
+
+[^lec_media]: Joseph Shiloach, Ph.D. and Kyle DiVito, Ph.D. “Lecture 02 - Media.” Presented at the Biotechnology: Protein Production & Bioprocessing, Georgetown University, n.d. Accessed January 25, 2025.
+
+[^lec_ls_growth]: Joseph Shiloach, Ph.D. and Kyle DiVito, Ph.D. “Lecture 04-05 - Large Scale Growth.” Presented at the Biotechnology: Protein Production & Bioprocessing, Georgetown University, n.d. Accessed January 26, 2025.
+
+[^lec_cell_growth]: Joseph Shiloach, Ph.D. and Kyle DiVito, Ph.D. “Lecture 09 - Cell Culture Growth.” Presented at the Biotechnology: Protein Production & Bioprocessing, Georgetown University, n.d. Accessed February 9, 2025.
+
+[^hdc_ecoli]: Lee, Sang Yup. “High Cell-Density Culture of Escherichia Coli.” Trends in Biotechnology 14, no. 3 (March 1996): 98–105. https://doi.org/10.1016/0167-7799(96)80930-9.
+
+[^leptin]: Jeong, Ki Jun, and Sang Yup Lee. “High-Level Production of Human Leptin by Fed-Batch Cultivation of Recombinant Escherichia Coli and Its Purification.” Applied and Environmental Microbiology 65, no. 7 (July 1999): 3027–32. https://doi.org/10.1128/AEM.65.7.3027-3032.1999.
+
+[^ec_fold]: Sørensen, Hans Peter, and Kim Kusk Mortensen. “Advanced Genetic Strategies for Recombinant Protein Expression in Escherichia Coli.” Journal of Biotechnology 115, no. 2 (January 2005): 113–28. https://doi.org/10.1016/j.jbiotec.2004.08.004.
+
+[^ec_ros]: Baez, Antonino, and Joseph Shiloach. “Escherichia Coli Avoids High Dissolved Oxygen Stress by Activation of SoxRS and Manganese-Superoxide Dismutase.” Microbial Cell Factories 12, no. 1 (2013): 23. https://doi.org/10.1186/1475-2859-12-23.
