@@ -1,0 +1,23 @@
+Joseph Shiloach, Ph.D. and Kyle DiVito, Ph.D. “Lecture 01 - Introduction.” Presented at the Biotechnology: Protein Production & Bioprocessing, Georgetown University, n.d. Accessed January 24, 2025.
+
+Joseph Shiloach, Ph.D. and Kyle DiVito, Ph.D. “Lecture 02 - Media.” Presented at the Biotechnology: Protein Production & Bioprocessing, Georgetown University, n.d. Accessed January 25, 2025.
+
+Joseph Shiloach, Ph.D. and Kyle DiVito, Ph.D. “Lecture 03 - Growth Characteristics.” Presented at the Biotechnology: Protein Production & Bioprocessing, Georgetown University, n.d. Accessed January 25, 2025.
+
+Joseph Shiloach, Ph.D. and Kyle DiVito, Ph.D. “Lecture 04-05 - Large Scale Growth.” Presented at the Biotechnology: Protein Production & Bioprocessing, Georgetown University, n.d. Accessed January 26, 2025.
+
+Joseph Shiloach, Ph.D. and Kyle DiVito, Ph.D. “Lecture 06 - Sterilization.” Presented at the Biotechnology: Protein Production & Bioprocessing, Georgetown University, n.d. Accessed February 7, 2025.
+
+Joseph Shiloach, Ph.D. and Kyle DiVito, Ph.D. “Lecture 07 - Production of Biologics.” Presented at the Biotechnology: Protein Production & Bioprocessing, Georgetown University, n.d. Accessed February 7, 2025.
+
+Joseph Shiloach, Ph.D. and Kyle DiVito, Ph.D. “Lecture 08 - Introduction Biologic Recovery.” Presented at the Biotechnology: Protein Production & Bioprocessing, Georgetown University, n.d. Accessed February 9, 2025.
+
+Joseph Shiloach, Ph.D. and Kyle DiVito, Ph.D. “Lecture 09 - Cell Culture Growth.” Presented at the Biotechnology: Protein Production & Bioprocessing, Georgetown University, n.d. Accessed February 9, 2025.
+
+Lee, Sang Yup. “High Cell-Density Culture of Escherichia Coli.” Trends in Biotechnology 14, no. 3 (March 1996): 98–105. https://doi.org/10.1016/0167-7799(96)80930-9.
+
+Jeong, Ki Jun, and Sang Yup Lee. “High-Level Production of Human Leptin by Fed-Batch Cultivation of Recombinant Escherichia Coli and Its Purification.” Applied and Environmental Microbiology 65, no. 7 (July 1999): 3027–32. https://doi.org/10.1128/AEM.65.7.3027-3032.1999.
+
+Sørensen, Hans Peter, and Kim Kusk Mortensen. “Advanced Genetic Strategies for Recombinant Protein Expression in Escherichia Coli.” Journal of Biotechnology 115, no. 2 (January 2005): 113–28. https://doi.org/10.1016/j.jbiotec.2004.08.004.
+
+Baez, Antonino, and Joseph Shiloach. “Escherichia Coli Avoids High Dissolved Oxygen Stress by Activation of SoxRS and Manganese-Superoxide Dismutase.” Microbial Cell Factories 12, no. 1 (2013): 23. https://doi.org/10.1186/1475-2859-12-23.
