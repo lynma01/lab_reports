@@ -25,7 +25,10 @@ format:
     toc: true
     number-sections: true
     colorlinks: true
-    linestretch: 1.5
+    linestretch: 1.25
     font-size: 12
+    tbl-colwidths: auto
+    lof: true
+    lot: true
     mermaid:
       theme: neutral

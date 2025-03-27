@@ -1,0 +1,504 @@
+---
+title: Protein Production & Bioprocessing 
+subtitle: Lab Report 2 - Bioprocessing
+---
+
+# Abstract
+
+In this two part experiment, we compared yield, concentration, and activity between recombinant $\beta$-galactosidase from BL21(DE) E. coli (transfected with pET28-$\beta$-Gal) and lysozyme extracted from *Gallus Gallus Domesticus* ova. The $\beta$-galactosidase was synthesized from a previous experiment ("Protein Production: Report 2 - Fermentation") using both shake flasks and bioreactors. The resulting fractions were purified via affinity chromatography, while lysozyme was isolated using ion-exchange chromatography before assessing yield and purity via Bradford Assay, SDS-PAGE, and Western Blot.
+
+# Introduction
+
+From the production fractions and data presented in "Protein Production: Lab Report 1 - Fermentation", this study aims to further investigate the protein expression profiles under varying growth conditions. In the previous report, recombinant $\beta$-galactosidase produced in BL21(DE) *E. coli* and lysozyme extracted from commercial eggs were generated under distinct fermentation conditions. Here, we extend that work by focusing on a comprehensive analysis of protein yield, concentration, and activity across these conditions, with the goal of determining which growth environment resulted in the greatest expression of protein.
+
+## Objective
+
+The primary objective of this experiment is to analyze the data from the previous report: "Protein Production: Report 1 - Fermentation" to identify the optimal growth condition for maximal protein expression.
+
+By evaluating specific metrics such as protein concentration, enzymatic activity, specific activity, fold purification, and percent yield, we aim to provide a conclusive comparison that will guide future improvements in protein production protocols.
+
+## Protein Purification {#sec-i-pp}
+
+$\beta$-galactosidase was purified using affinity chromatography, where a 6x-Histidine tag allows the enzyme to selectively bind to metal ion–charged resins (e.g., cobalt-agarose), facilitating its separation from host cell proteins. This method uses specific ligand–protein interactions selectively elute the protein from the column, although binding efficiency and resin must be optimized to ensure maximal recovery of the active enzyme.
+
+Lysozyme is often isolated from natural sources (e.g., egg white) using techniques such as precipitation and ion-exchange chromatography. In ion-exchange, lysozyme’s net positive charge at a specific pH enables it to bind to negatively charged resins (e.g., SP Sephadex). Subsequent elution with a salt gradient disrupts these electrostatic interactions, allowing the enzyme to be separated from other proteins. The method relies on careful pH and ionic strength control to achieve high purity and retain enzyme activity.
+
+## Protein Concentration {#sec-i-pc}
+
+Protein concentration for $\beta$-galactosidase is commonly determined by methods such as photospectrometry and Bradford assays. These assays quantify total protein content but must be carefully calibrated to account for potential interference from buffer components and contaminants. Accurate determination is critical for calculating enzyme yields and ensuring that subsequent activity assays reflect the enzyme’s purity.
+
+For lysozyme, protein concentration is similarly assessed using colorimetric assays like the Bradford assay. Given that lysozyme is purified from complex biological fluids, it is essential to account for background proteins that must be purified out of solution (by using methods described in @sec-i-pp, for example) to ensure that the calculated concentration accurately reflects lysozyme content.
+
+## Calculating Yield & Activity {#sec-i-ea}
+
+$\beta$-galactosidase activity is typically measured using colorimetric substrates such as o-nitrophenyl-$\beta$-D-galactopyranoside (ONPG), which releases a chromophore upon hydrolysis. The rate of absorbance change at a specific wavelength provides a quantitative measure of enzyme kinetics, reflecting both the catalytic efficiency and the effect of purification on enzyme functionality.
+
+Lysozyme activity is determined by its ability to hydrolyze bacterial cell walls, often monitored as a decrease in turbidity of a suspension of *Micrococcus lysodeikticus*. The rate of cell wall lysis, observed as a reduction in absorbance, directly correlates with the enzyme’s activity. This assay is sensitive to both the purity and the integrity of lysozyme, serving as a robust measure of its catalytic performance.
+
+### Specific Activity {#sec-i-sa}
+
+Specific activity for both lysozyme and $\beta$-galactosidase are defined as the enzyme activity units per milligram of total protein. This parameter is essential to evaluate the efficiency of the purification process, as an increase in specific activity indicates successful removal of contaminating proteins while retaining enzymatic function.
+
+High specific activity values post-purification confirm that the isolation procedure effectively enriched lysozyme relative to other proteins present in the crude extract, reflecting an efficient purification strategy.
+
+### Fold Purification {#sec-i-fp}
+
+Fold purification for $\beta$-galactosidase is calculated as the ratio of the specific activity in the purified fraction to that in the crude extract. This metric indicates the extent to which the purification process has increased the concentration of active enzyme relative to total protein content, and serves as a measure of the purification’s success.
+
+In the case of lysozyme, fold purification similarly represents the enrichment of active enzyme achieved during purification. By comparing the specific activity before and after purification, researchers can assess how effectively the isolation process has separated lysozyme from other proteins, with higher fold purification values signifying a more selective and efficient procedure.
+
+Percent yield for $\beta$-galactosidase, and lysozyme are determined by comparing the total enzyme activity recovered in the purified fractions to the activity present in the initial crude extract. The primary difference is in how the enzymatic activity assays are analyzed to determine Specific Activity.
+
+# Materials & Methods
+
+## Protein Samples
+
+$\beta$-galactosidase samples were extracted from the growth conditions and vessels described in "Protein Production: Report 1 - Fermentation" and were used throughout this experiment. The samples were labeled with the originating group, and the time-point at which the sample was collected.
+
+![$\beta$-Galactosidase Fractions sampled from bioreactors used in this experiment. Sample from time-point 5 was stored but not pictured.](images/ferm/reactor_samples_01.JPG){#fig-i-bt-samples width=4in}
+
+Lysozyme-containing albumen was sampled directly from commercially-sourced *Gallus gallus domesticus* ova. The samples were first purified via mechanical separation of albumen from the vitellus before undergoing a secondary purification protocol as outlined in @sec-mm-le-pp.
+
+After purification as described in either @sec-mm-bgal-pp, or @sec-mm-le-pp, sample fractions were collected and labelled I->IV depending on the purification step they were aliquoted from. These fractions were then used in used in further analysis, notably @sec-mm-ba, and @sec-mm-pi. Finally, after the analytical procedures outlined in @sec-mm-ba, @sec-mm-pi were completed the resptive yields and activity were calculated as described in @sec-i-ea.
+
+## $\beta$-Galactosidase Purification via Affinity Chromatography {#sec-mm-bgal-pp}
+
+A cobalt-agarose column was prepared to purify $\beta$-galactosidase from 6X-histidine tagged *E. coli* used in the previous report ("Protein Production: Report 1 - Fermentation"). The column slated for use in this experiment was first equilibrated to remove storage before before a mixture of cobalt-agarose slurry and Fraction I were incubated on ice with periodic inversion to allow batch absorption.
+
+The batch adsorption step was used to promote binding between the cobalt ions to the 6x histidine tag on $\beta$-galactosidase. The mixture was centrifuged, and the supernatant, labelled as Fraction II, was then aliquoted into two 1mL tubes for storage at -20C.
+
+The $\beta$-galactosidase and cobalt-resin slurry was poured into the column with sequential washing steps where Buffer A was added to remove non-target proteins. To elute the $\beta$-galactosidase proteins, Buffer B containing the histidine-mimic imidazole was applied, and 20 sub-fractions were collected. 
+
+Absorbance at 280 nm was measured for each sub-fraction and visualized in @fig-r-bg-aex. The fractions with the highest absorbance (sub-fractions 20 and 23) were pooled to form Fraction III (4 mL total), and one 1 mL aliquot was stored at -80°C.
+
+After removing the aliquot, the remaining Fraction III was divided equally (~1.2 mL per portion), and one half was mixed with an equal volume of 100% glycerol to yield Fraction IV, a 50% glycerol storage solution (2.4 mL total), which was stored at -80°C.
+
+## Lysozyme Purification via Ion Exchange Chromatography {#sec-mm-le-pp}
+
+An Ion Exchange Chromatography protocol using SP Sephadex C-25 resin was used to purify lysozyme from the ova albumin. The albumin was mixed with Buffer C (0.1M glycine-NaOH) before centrifugation. The supernatant was collected as Fraction I.
+
+Fraction I was combined with the SP Sephadex in a batch absorption step in preparation for purification via ion exchange chromatography. The mixture was then centrifuged at 4,000 rpm for 10 minutes at 4°C, and the supernatant was collceted as Fraction II. An important note: because the lysozyme has bound to the SP Sephadex resin, no lysozyme activity is expected from Fraction II.
+
+Fraction II was added into the column before washing with both Buffer C and Buffer D (20 mM potassium phosphate, pH 7.0), before being eluted with Buffer E (20 mM potassium phosphate 500 mM NaCl).
+
+Each fraction was analyzed at 280 nm in a 96-well plate, using dH2O, Buffer E, a positive control, and BSA as references. 
+
+After removing the aliquot, the remaining ~7.5 mL of Fraction III was divided equally. One half was mixed with an equal volume of 100% glycerol to yield Fraction IV—a 50% glycerol storage solution (7.5 mL total)—which was then stored at -80°C.
+
+## Bradford Assay {#sec-mm-ba}
+
+After purification, all four $\beta$-galactosidase and Lysozyme fractions were plated on a 96-well plate in triplicate serial dilutions of 1:1, 1:10, 1:100. Each well was diluted with sodium phosphate buffer and potassium phosphate buffer for a total volume of 50 $\mu L$ per well. 
+
+As the enzymatic reactions occurred, a NanoDrop photospectrometer took absorbance readings at one minute intervals for 15 minutes. The absorbance readings, after removing the net background absorbance and plotted against the dilution of each fraction. Along side the samples, was Bovine Serium Albumin (BSA) which was used to construct a standard curve/linear regression. The resulting linear equation (see: @fig-r-ba) was used to calculate activity units, specific activity, fold purification and percent yield of the $\beta$-galactosidase and lysozyme included in the 96-well plate.
+
+In the $\beta$-galactosidase samples, 
+
+In the Lysozyme samples, net absorbance identified fractions 10, 11, 12 as the highest; these were pooled to form Fraction III (12 mL total), from which a 1 mL aliquot was stored at -80°C.
+
+With the BSA standard curve, protein concentration, total protein in each fraction, and enzymatic activity units were used to calculate specific activity, fold purification, and percent yield. Finally, the protein concentration data was used to determine determine the sample load required in the SDS-PAGE, Coomassie Blue, and Western blot assay.
+
+## Activity Assay
+
+### Fermentation Fractions
+
+|Column|Time Point|01|02|03|04|05|06
+|---|---|---|---|---|---|---|---|
+|A|T 0|${BT_1}$|${BT_2}$|$SF_{A1}$|$SF_{A2}$|$SF_{B1}$|$SF_{B2}$|
+|B|T 1|${BT_1}$|${BT_2}$|$SF_{A1}$|$SF_{A2}$|$SF_{B1}$|$SF_{B2}$|
+|C|T 2|${BT_1}$|${BT_2}$|$SF_{A1}$|$SF_{A2}$|$SF_{B1}$|$SF_{B2}$|
+|D|T 3|${BT_1}$|${BT_2}$|$SF_{A1}$|$SF_{A2}$|$SF_{B1}$|$SF_{B2}$|
+|E|T 4|${BT_1}$|${BT_2}$|$SF_{A1}$|$SF_{A2}$|$SF_{B1}$|$SF_{B2}$|
+|F|T 5|${BT_1}$|${BT_2}$|$SF_{A1}$|$SF_{A2}$|$SF_{B1}$|$SF_{B2}$|
+|H|N/A|Blank|Blank|Blank|Blank|Blank|Blank|
+
+: $\beta$-Galactosidase Fermentation Fractions Map {#tbl-m-bg-aa-ferm .striped}
+
+@tbl-m-bg-aa-ferm is the map of the well-plates analyzed in 1 minute intervals for 15 minutes total in the NanoDrop photospectrometer. This table was used to filter and analyze the data produced in @fig-r-bg-aa-sfa, @fig-r-bg-aa-sfb, and @fig-r-bg-aa-bt.
+
+### Purified Fractions
+
+|Column|Dilution|01|02|03|04|05|06
+|---|---|---|---|---|---|---|---|
+|A|1:10|F01|F01|F01|F03|F03|F03|
+|B|1:100|F01|F01|F01|F03|F03|F03|
+|C|1:1000|F01|F01|F01|F03|F03|F03|
+|D|1:10|F02|F02|F02|F04|F04|F04|
+|E|1:100|F02|F02|F02|F04|F04|F04|
+|F|1:1000|F02|F02|F02|F04|F04|F04|
+|H|N/A||||Blank|Blank|Blank|
+
+: $\beta$-Galactosidase Purification Fractions Map {#tbl-m-bg-aa-purf .striped}
+
+
+|Column|Dilution|01|02|03|04|05|06
+|---|---|---|---|---|---|---|---|
+|A|1:10|F01|F01|F01|F03|F03|F03|
+|B|1:50|F01|F01|F01|F03|F03|F03|
+|C|1:100|F01|F01|F01|F03|F03|F03|
+|D|1:10|F02|F02|F02|F04|F04|F04|
+|E|1:50|F02|F02|F02|F04|F04|F04|
+|F|1:100|F02|F02|F02|F04|F04|F04|
+|H|N/A||||Blank|Blank|Blank|
+
+: Lysozyme Purification Fractions Map {#tbl-m-le-aa-purf .striped}
+
+@tbl-m-le-aa-purf is the map of the well-plates analyzed in 1 minute intervals for 15 minutes total in the NanoDrop photospectrometer. This table was used to filter and analyze the data produced in @fig-r-le-aa, and @fig-r-le-conc.
+
+## Protein Identification Assays {#sec-mm-pi}
+
+Based on the Bradford assay results, we calculated the volume of each fraction required per lane for SDS-PAGE analysis for both Coomassie Blue staining and Western blotting.
+
+### SDS-PAGE {#sec-mm-pi-sds-page}
+ 
+Pre-cast 4–20% gradient polyacrylamide gels with MOPS buffer were used. Each lane was loaded with 20 μg protein, loading dye (1–5 $\mu L$), and dH2O to a final volume of 36 $\mu L$; to account for ~75% volume loss during boiling, the effective loading volume was increased to 144 $\mu L$ per lane. For the Coomassie assay, Lane 1 contained a protein ladder, Lanes 2–5 contained β-galactosidase Fractions I–IV, and Lanes 6–9 contained lysozyme Fractions I–IV. For the Western blot, Lane 1 contained a ladder and Lanes 2–5 contained β-galactosidase Fractions I–IV. Gels were run at 90 V for 10 minutes followed by 110 V for 50 minutes. Post-electrophoresis, gels were washed three times (5 minutes each) with dH₂O, stained overnight with SimplyBlue SafeStain (0.1% Coomassie Blue in 50% methanol and 10% acetic acid), washed four times (5 minutes each) with dH₂O, and then imaged.
+
+### Western Blot {#sec-mm-pi-wb}
+
+Following electrophoresis, gels were equilibrated in 1X Rapid Transfer Buffer for 5 minutes and proteins were transferred to nitrocellulose membranes using a BioRad TransBlot Turbo (~30 minutes). Membranes were washed with 30 mL 1X PBST (1 minute) and blocked with 10 mL Blocking Solution (1X PBST, 10 mg/mL milk, 10 mM EDTA) for 1 hour. The membranes were then incubated with 5 $\mu L$ rabbit anti-β-Gal primary antibody (1:2000 dilution in 10 mL Blocking Solution) for 2 hours, washed three times with 20 mL 1X PBST (5 minutes each), and incubated with 1.875 $\mu L$ goat anti-rabbit IgG-HRP (1:8000 dilution in 15 mL Blocking Solution) for 2 hours at room temperature. After three additional 5-minute washes with 1X PBST, membranes were treated with a 1:1 mixture of Reagents A and B (750 $\mu L$  each) for 1 minute, blotted to remove excess solution, and imaged using a UVP ChemiDoc-It Imager with an overlaid protein ladder.
+
+# Results
+
+## Purification
+
+### Affinity Exchange Chromatography (see: @fig-r-bg-aex)
+
+![Affinity Exchange Chromatography fraction visualization.](images/biop/bgal_affinity_fractions.png){#fig-r-bg-aex}
+
+**Volatile Absorbance in Early Fractions**
+In @fig-r-bg-aex, the early fractions exhibit erratic or even negative readings. This volatility is attributed to the depleted cobalt-agarose resin, which compromises the column’s binding capacity. As a result, the baseline correction becomes unstable, leading to inconsistent absorbance values rather than a well-defined elution profile.
+
+**Minimal Protein Binding in Depleted Resin**
+The low and fluctuating absorbance across most fractions in the first chart suggests limited retention of the target protein. When cobalt-agarose resin is no longer fully functional, a significant portion of protein may pass through the column without binding, causing the elution pattern to appear scattered and preventing clear identification of peak fractions.
+
+### Ion Exchange Chromatography (see: @fig-r-le-iex)
+
+![Ion Exchange Chromatography fraction visualization.](images/biop/bgal_ionexc_fractions.png){#fig-r-le-iex}
+
+**Distinct Peak in @fig-r-le-iex**:
+
+In contrast to @fig-r-bg-aex, @fig-r-le-iex shows a pronounced peak spanning fractions 11–14, with fraction 14 reaching the highest absorbance. This indicates that the bulk of the target protein eluted in a relatively narrow range, likely following a specific elution step (e.g., imidazole or salt gradient). The sharp decline in absorbance after fraction 14 suggests that most of the protein was recovered within these few fractions.
+
+**Peak Definition and Column Performance**:
+
+The well-defined peak in fractions 11–14 highlights the column’s ability (in this particular run or condition) to concentrate the target protein into a smaller volume, in contrast to @fig-r-bg-aex’s broader and more erratic pattern. This difference underscores how resin quality and proper column regeneration are critical for achieving a clear, high-yield elution peak.
+
+## Activity Assay
+
+### $\beta$-Galactosidase
+
+Across all three growth conditions—Shake Flask A1 (aerated), Shake Flask B1 (non-aerated), and the Benchtop bioreactor (aerated), the OD600 measurements over time illustrate distinct profiles of $\beta$-galactosidase activity in the collected fractions:
+
+![data](images/biop/chart_bgal_kin_ferm.png){#fig-r-bg-aa-bt}
+
+![Actual data](images/biop/chart_bgal_kin_sfA.png){#fig-r-bg-aa-sfa}
+
+![Also data](images/biop/chart_bgal_kin_sfB.png){#fig-r-bg-aa-sfb}
+
+
+**Shake Flask A1 (Glucose, IPTG, Complex Media, Aeration):**
+
+- Fractions A5 and A6 exhibit the most pronounced increase in OD600, reaching values of approximately 0.40 by the 15-minute mark.
+  
+- The steep slopes in these fractions suggest robust $\beta$-galactosidase activity under aerated shake flask conditions, likely reflecting improved oxygen transfer that supports higher levels of protein expression.
+
+**Shake Flask B1 (Glucose, IPTG, Complex Media, No Aeration):**
+
+- Fractions B3 and B4 show the greatest rise in OD600 for this set, though their final values are noticeably lower than those observed in the aerated A1 condition.
+
+- The reduced slope and overall lower absorbance suggest that limited oxygen availability in the non-aerated flask may have constrained $\beta$-galactosidase production or stability.
+
+**Benchtop Bioreactor (glucose, iptg, complex media, aeration):**
+
+- Fraction B1 stands out with an exceptionally steep increase in OD600, surpassing 2.0 within 15 minutes—far exceeding any other fraction across all conditions.
+
+- The markedly higher absorbance implies that the benchtop reactor’s controlled aeration and mixing regime facilitated optimal cell growth and $\beta$-galactosidase expression, resulting in substantially elevated enzyme activity compared to either shake flask setup.
+
+Taken together, these data indicate that aeration and mixing enhances $\beta$-galactosidase production. While Shake Flask A1 shows clear benefits from aeration over the non-aerated B1, the Benchtop bioreactor outperforms both shake flask conditions by almost 5x final OD600 reading. 
+
+The differentiating factor appears to be that by providing more consistent oxygen transfer, markedly higher enzyme activity levels in the resulting fractions ensues.
+
+### Lysozyme
+
+![lysozyme activity data](images/biop/chart_le_activity.png){#fig-r-le-aa}
+
+## Yield & Concentration Calculations
+
+### Bradford Assay 
+
+![Bradford Assay - 96 well plate](images/biop/bgal_activity_ithink.JPG){#fig-r-ba}
+
+![Bovine Serum Albumin - Standard Curve](images/biop/bgal_bradford_sc.png){#fig-r-bsa-sc}
+
+![$\beta$-Galactosidase Concentrations calculated via @fig-r-bsa-sc](images/biop/chart_bgal_conc.png){#fig-r-bgal-conc}
+
+![Lysozyme Concentration calculated via @fig-r-bsa-sc](images/biop/chart_le_conc.png){#fig-r-le-conc}
+
+The protein concentration data for both $\beta$-galactosidase and lysozyme fractions show a common trend in which Fractions I and II—the crude extract and the post-binding supernatant—generally exhibit the highest total protein levels. 
+
+**$\beta$-Galactosidase Protein Concentraction:**
+
+In @fig-r-bgal-conc, this is another visual suggestion that the $\beta$-galactosidase did not bind to the cobalt-agarose resin, leaving a considerable amount of protein in Fraction II. Consequently, Fractions III and IV, which are expected to contain purified $\beta$-galactosidase, display much lower total protein readings than anticipated. This pattern implies incomplete column binding as a result of diminished resin capacity, implying that much of the protein eluted prematurely as evinced in @fig-r-bg-aex's highly variable data.
+
+**Lysozyme Protein Concentration:**
+
+The lysozyme-containing fractions in @fig-r-le-conc largely follow expected purification outcome: Fraction I contains the unpurified mixture with substantial background protein, whereas Fraction II, though higher than anticipated in some cases, indicates that not all lysozyme bound to the ion-exchange resin. Fraction III consistently displays a clear enrichment of lysozyme, reflecting successful ion-exchange chromatography. Fraction IV, stored in 50% glycerol, exhibits the lowest total protein. 
+
+### SDS-PAGE
+
+![Coomassie Blue Stain](images/biop/coomasie_01.JPG){#fig-r-bg-cb}
+
+In the SDS-PAGE gel shown @fig-r-bg-cb, well 1 contained a protein ladder, whereas wells 2–5 were loaded with $\beta$-galactosidase fractions 1–4, and wells 6–9 contained lysozyme fractions 1–4. 
+
+**Excessive Protein Loading**:
+
+A substantially larger-than-intended amount of protein was added to each of these lanes, but most severely in the lysozyme fractions, resulting in oversaturated and diffuse bands that limited reliable interpretation of molecular weight by direct comparison with the ladder.
+
+Consequently, the gel does not provide clear evidence of purification levels for either $\beta$-galactosidase or lysozyme. Instead, it highlights the need for sample dilution or more conservative loading volumes to improve band resolution and enable accurate comparisons with the ladder markers.
+
+**$\beta$-Galactosidase Fractions**:
+
+Wells 2–5 each show intense staining toward the upper region of the gel, consistent with the higher molecular weight of this enzyme. However, the excessive sample load caused the bands to broaden and overlap, making it difficult to distinguish minor contaminant proteins or degradation products. 
+
+Within fractions 2, and 3, given the number bands below the 116 kDa ladder implies a vast amount of contaminating protein. Specifically, the region of the 75 kDa marker (yellow circle in @fig-r-bg-cb) and below sees the majority of the banding within the $\beta$-galactosidase fractions.
+
+**Lysozyme Fractions**:
+
+Similarly, the lower region of wells 6–9 is heavily stained, indicative of abundant protein near the expected 14–15 kDa range. Despite this, the overall banding pattern is blurred, preventing accurate resolution of potential sub-bands or minor contaminants.
+
+### Western Blot
+
+![Western Blot assay with markings and ladder.](images/biop/bgal_wt_blt_marker.jpg){#fig-r-bg-wb}
+
+**Strong Banding from Fractions I & II**:
+
+In @fig-r-bg-wb, well 1 served as the protein ladder reference, while wells 2–5 contained $\beta$-galactosidase Fractions 1, 2, 3, and 4, respectively. The red marker in the protein ladder denotes the 75 kDa position, thus, the strong well-defined bands at approximately 116 kDa, consistent with the expected size of $\beta$-galactosidase.
+
+**Faint Banding from Fractions III & IV**:
+
+The bands in wells 4 and 5 were extremely faint, as indicated by the red arrows. These faint signals suggest that while Fractions 3 and 4 did contain protein, these bands are far smaller than the 116 kDa range, implying these proteins are not $\beta$-galactosidase. 
+
+The marked differences in band intensity between the early fractions (1 and 2) and later fractions (3 and 4) further imply variations in protein recovery or stability during the purification process.
+
+# Discussion & Conclusion
+
+- Give an interpretation of your results. 
+- Propose possible reasons for any deficiencies in your data. 
+- Complete the Purification Table. 
+- Propose possible steps to enhance the overall yield.
+
+An analysis of protein concentration, enzyme activity, and purification is provided for each of β-galactosidase and lysozyme. The summary section then provides an overall discussion of these results. 
+
+## Protein concentration
+
+Expected results are that Fractions I and II will have the highest total protein because they contain the bulk of all proteins present in the crude extract and the supernatant after the chromatography column slurry binding step. The Bradford assay, which binds to all proteins non-specifically, confirms that these early fractions should register high protein levels. In contrast, Fractions III and IV—resulting from affinity or ion exchange chromatography—are expected to show lower total protein as non-target proteins are removed. Fraction III should initially be more concentrated than Fraction IV, since Fraction IV is diluted with 50% glycerol; however, over time, the glycerol may help preserve protein structure and apparent concentration.
+
+For $\beta$-galactosidase, experimental results indicated that Fractions I and II indeed contained most of the protein, while Fractions III and IV had very low levels. Different dilutions were required for the assay to fit within the standard curve, reinforcing that the early fractions held much higher protein content. The unexpectedly low protein in Fractions III and IV suggests that the cobalt-agarose column did not function properly—most of the target enzyme remained in Fraction II and was subsequently lost. This interpretation is supported by the low enzyme activity observed in these later fractions and by the significant volume differences compared to Fractions I and II.
+
+For lysozyme, the protein levels generally followed expectations. Although Fraction II showed a higher than anticipated level—possibly because some lysozyme did not bind to the column—the purified Fraction III contained a substantial amount of the target protein. The crude Fraction I had a lower relative concentration due to the presence of cell debris and a larger overall volume, and Fraction IV exhibited the lowest measured protein. 
+
+Overall, the lysozyme data aligned with expectations, with Fraction II slightly elevated and Fraction III confirming effective purification.
+
+## Purification & Activity
+
+Expected results are that Fractions I and II—the crude extract and the post-binding supernatant—will register the highest total protein by the Bradford assay, which binds non-specifically to all proteins. Fraction I, containing all proteins, should be the highest, while Fraction II, although high overall, should have minimal target $\beta$-galactosidase due to effective binding to the chromatography column. In contrast, Fractions III and IV, resulting from affinity or ion exchange chromatography, should show lower total protein since non-target proteins are removed. Initially, Fraction III is expected to be more concentrated than Fraction IV; however, the 50% glycerol in Fraction IV may better preserve protein integrity over time.
+
+For $\beta$-galactosidase, the measurements confirmed that Fractions I and II contained substantially more protein than Fractions III and IV. Different dilution factors (1:100 for Fractions I and II versus undiluted for Fractions III and IV) were required to fit the standard curve, and the very low protein levels in Fractions III and IV suggest that the cobalt-agarose column did not perform properly.
+
+For lysozyme, the overall protein levels were within the expected range. Fraction II was higher than anticipated—likely due to incomplete binding—while Fraction III demonstrated that a substantial amount of lysozyme was captured during purification. The crude Fraction I had lower levels because of additional cell debris and volume, and Fraction IV showed the lowest levels, possibly due to pipetting inconsistencies. Overall, lysozyme protein levels followed expectations, with Fraction II slightly elevated and Fraction III confirming effective purification.
+
+# Appendix {.appendix}
+
+## Bioprocessing Visualizations
+
+```{python}
+import polars as pd
+import polars.selectors as cs
+import altair as alt
+
+width, height = 450, 450
+ppi=200
+
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group A")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("1$|2$"))
+
+# Turbidity line chart
+chart_bt_kin_ferm = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Benchtop Fermentation Fractions OD600 Readings over Time'
+    , width=width
+    , height=height)
+
+chart_bt_kin_ferm.save("images/chart_bgal_kin_ferm.png", ppi=ppi)
+chart_bt_kin_ferm.display()
+```
+
+
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group A")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("3$|4$"))
+
+# Turbidity line chart
+chart_bt_kin_sfA = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Shake Flask B1 Fractions OD600 Readings over Time'
+    , width=width
+    , height=height)
+
+chart_bt_kin_sfA.save("images/chart_bgal_kin_sfB.png", ppi=ppi)
+chart_bt_kin_sfA.display()
+```
+
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group A")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("5$|6$"))
+
+# Turbidity line chart
+chart_bt_kin_sfB = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Shake Flask A1 Fractions OD600 Readings over Time'
+    , width=width
+    , height=height)
+
+chart_bt_kin_sfB.save("images/chart_bgal_kin_sfA.png", ppi=ppi)
+chart_bt_kin_sfB.display()
+```
+
+### Group B
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group B")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("1$|2$"))
+
+# Turbidity line chart
+chart_bt_kin_ferm = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Benchtop Fermentation Fractions OD600 Readings over Time'
+    , width=width
+    , height=height)
+
+# chart_bt_kin_ferm.save("images/chart_bgal_kin_ferm.png", ppi=ppi)
+chart_bt_kin_ferm.display()
+```
+
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group B")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("3$|4$"))
+
+# Turbidity line chart
+chart_bt_kin_sfA = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Shake Flask E1 Fractions OD600 Readings over Time'
+    , width=width
+    , height=height)
+
+# chart_bt_kin_sfA.save("images/chart_bgal_kin_sfA.png", ppi=ppi)
+chart_bt_kin_sfA.display()
+```
+
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group B")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("5$|6$"))
+
+# Turbidity line chart
+chart_bt_kin_sfB = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Shake Flask H1 Fractions OD600 Readings over Time'
+    , width=width
+    , height=height)
+
+# chart_bt_kin_sfB.save("images/chart_bgal_kin_sfB.png", ppi=ppi)
+chart_bt_kin_sfB.display()
+```
+
+### Group C
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group C")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("1$|2$"))
+
+# Turbidity line chart
+chart_bt_kin_ferm = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Benchtop Fermentation Fractions OD600 Readings over Time'
+    , width=width
+    , height=height)
+
+# chart_bt_kin_ferm.save("images/chart_bgal_kin_ferm.png", ppi=ppi)
+chart_bt_kin_ferm.display()
+```
+
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group C")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("3$|4$"))
+
+# Turbidity line chart
+chart_bt_kin_sfA = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Shake Flask C1 Fractions OD600 Readings over Time'
+    , width=width
+    , height=height)
+
+# chart_bt_kin_sfA.save("images/chart_bgal_kin_sfA.png", ppi=ppi)
+chart_bt_kin_sfA.display()
+```
+
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group C")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("5$|6$"))
+
+# Turbidity line chart
+chart_bt_kin_sfB = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Shake Flask G1 Fractions OD600 Readings over Time'
+    , width=width
+    , height=height)
+
+# chart_bt_kin_sfB.save("images/chart_bgal_kin_sfB.png", ppi=ppi)
+chart_bt_kin_sfB.display()
+```
+
+
+## References
