@@ -20,7 +20,7 @@ format:
       theme: neutral 
     theme:
       light: flatly
-      dark: darkly
+      dark: solar 
   pdf:
     toc: true
     number-sections: true

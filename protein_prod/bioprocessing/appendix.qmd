@@ -1,0 +1,193 @@
+# Appendix {.appendix}
+
+## Bioprocessing Visualizations
+
+```{python}
+import polars as pd
+import polars.selectors as cs
+import altair as alt
+
+width, height = 450, 450
+ppi=200
+
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group A")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("1$|2$"))
+
+# Turbidity line chart
+chart_bt_kin_ferm = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Benchtop Fermentation Fractions A405 Readings over Time'
+    , width=width
+    , height=height)
+
+chart_bt_kin_ferm.save("images/chart_bgal_kin_ferm.png", ppi=ppi)
+chart_bt_kin_ferm.display()
+```
+
+
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group A")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("3$|4$"))
+
+# Turbidity line chart
+chart_bt_kin_sfA = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Shake Flask B1 Fractions OD600 Readings over Time'
+    , width=width
+    , height=height)
+
+chart_bt_kin_sfA.save("images/chart_bgal_kin_sfB.png", ppi=ppi)
+chart_bt_kin_sfA.display()
+```
+
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group A")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("5$|6$"))
+
+# Turbidity line chart
+chart_bt_kin_sfB = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Shake Flask A1 Fractions A405 Readings over Time'
+    , width=width
+    , height=height)
+
+chart_bt_kin_sfB.save("images/chart_bgal_kin_sfA.png", ppi=ppi)
+chart_bt_kin_sfB.display()
+```
+
+### Group B
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group B")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("1$|2$"))
+
+# Turbidity line chart
+chart_bt_kin_ferm = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Benchtop Fermentation Fractions A405 Readings over Time'
+    , width=width
+    , height=height)
+
+# chart_bt_kin_ferm.save("images/chart_bgal_kin_ferm.png", ppi=ppi)
+chart_bt_kin_ferm.display()
+```
+
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group B")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("3$|4$"))
+
+# Turbidity line chart
+chart_bt_kin_sfA = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Shake Flask E1 Fractions A405 Readings over Time'
+    , width=width
+    , height=height)
+
+# chart_bt_kin_sfA.save("images/chart_bgal_kin_sfA.png", ppi=ppi)
+chart_bt_kin_sfA.display()
+```
+
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group B")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("5$|6$"))
+
+# Turbidity line chart
+chart_bt_kin_sfB = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Shake Flask H1 Fractions A405 Readings over Time'
+    , width=width
+    , height=height)
+
+# chart_bt_kin_sfB.save("images/chart_bgal_kin_sfB.png", ppi=ppi)
+chart_bt_kin_sfB.display()
+```
+
+### Group C
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group C")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("1$|2$"))
+
+# Turbidity line chart
+chart_bt_kin_ferm = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Benchtop Fermentation Fractions A405 Readings over Time'
+    , width=width
+    , height=height)
+
+# chart_bt_kin_ferm.save("images/chart_bgal_kin_ferm.png", ppi=ppi)
+chart_bt_kin_ferm.display()
+```
+
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group C")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("3$|4$"))
+
+# Turbidity line chart
+chart_bt_kin_sfA = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Shake Flask C1 Fractions A405 Readings over Time'
+    , width=width
+    , height=height)
+
+# chart_bt_kin_sfA.save("images/chart_bgal_kin_sfA.png", ppi=ppi)
+chart_bt_kin_sfA.display()
+```
+
+```{python}
+df = pd.read_csv('data/bgal_kinetic_ferm.csv')
+df = df.filter(pd.col("Group") == "Group C")
+df = df.unpivot(cs.numeric(), index="Time")
+df = df.filter(pd.col("variable").str.contains("5$|6$"))
+
+# Turbidity line chart
+chart_bt_kin_sfB = alt.Chart(df).mark_line(point=True).encode(
+      x=alt.X('Time', title='Time')
+    , y=alt.Y('value:Q', title='Reading')
+    , color=alt.Color("variable").scale(scheme="tableau20")
+).properties(
+      title='Shake Flask G1 Fractions A405 Readings over Time'
+    , width=width
+    , height=height)
+
+# chart_bt_kin_sfB.save("images/chart_bgal_kin_sfB.png", ppi=ppi)
+chart_bt_kin_sfB.display()
+```
