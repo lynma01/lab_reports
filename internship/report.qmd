@@ -1,0 +1,50 @@
+---
+title: Policy Analysis on Incorporating A.I. into Academic Institutions for Research Commercialization 
+subtitle: M.S. Biotechnology Program - Fall 2024
+bibliography: ref.bib
+---
+
+# Abstract
+
+This research project, undertaken on behalf of the Georgetown University Office of Technology Commercialization (OTC), analyzed both 1) scholarly literature on the adoption of Artificial Intelligence (AI) into academic institutions and 2) an organizationally circulated survey assessing preconceptions of AI, and the complexity of tasks for which AI could be productively applied. Finally, this project offers several policy recommendations for the safe, sustainable, and productive use of Artificial Intelligence (AI) in the commercialization of academic research.
+
+# Introduction {#sec-intro}
+
+This project specifically examines the policy issues present at the intersection of academic institutions and the technology commercialization offices which assists researchers in creating contractually licensable/purchasable Intellectual Property (IP) from academic research. The creation of, and adherence to policies governing the safe and effective usage of AI in biotechnology is a matter of increasing international importance: the U.S. Senate's National Commission on Emerging Biotechnology suggests a *minimum* investment by Congress of $15 billion dollars over five years, specifically targeting the intersection of biology and AI [@young_executive_2025].
+
+However, without policy guidance or a method of measuring compliance, the regulatory, economic, and public-facing risks multiply, rather than decrease [@pricewaterhousecoopers_managing_nodate]. Higher Education (HE) institutions (like Georgetown itself [@noauthor_initiative_nodate]) and publishing organizations (like Nature [@noauthor_artificial_nodate]), have generally delegated authority to the individual level. Thus, the discourse on effective AI policy at these key intersections has been largely unexplored. 
+
+# Results & Conclusion
+
+## Significance
+
+The application of AI in research commercialization would 1) definitively align with numerous legislative activities for fast-tracking the transmutation of biotech research into economic value, and 2) follow the widespread adoption of AI in biotechnology research in general [@kim_discovering_2025]. AI's ability to form miniature "literature review committees" within multi-agent LLM paradigms has led to significant productivity improvements in AI's capability as a "co-scientist": identifying both the genes responsible for; and formulating organic compounds for effectively mitigating; anti-microbial resistance in bacteria [@gottweis_towards_2025], [@penades_ai_2025].
+
+But these gains in AI's information synthesis and reasoning capabilities are yet to be proportionately applied in business domains as they have been in biotechnology research [@kim_discovering_2025], representing a key bottle-neck (or "knowledge filter" [@acs_growth_2012]) in translating publicly funded research into economic value creation [@aldridge_bayh-dole_2011]. The application of AI in research commercialization offices is well suited given the density of expert-level, domain specific information vital to the successful transition of research into economically viable and publicly accessible IP.
+
+## Results
+
+Examining Figure 1, the most popularly discussed policy topics in [@hughes_reimagining_2025] meta-review are listed for (n=49) sources with potential overlap for each source. From Figure 1, the ranked order of key topics is 1) Academic Integrity, 2) Ethical, Governance, and Security Concerns, and 3) Widening Inequity. 
+
+Examining Figures 2 & 3, there appears to be a general, positive disposition of student analysts towards trusting, and frequently using AI in technology commercialization settings, however, a similar disposition towards rating that a greater amount of effort is required to completing their respective tasks to the clients' satisfaction. Full-Time OTC staff, on the other hand, recorded a greater cognitive and temporal requirement of their tasks, but less effort required to meet their clients satisfaction.
+
+## 
+
+# Methods & Materials
+
+## Literature Review
+
+Scholarly articles on the current state of organizational policy on the safe, effective, and productive use of AI at the intersection of biotechnology and higher education was collected via the Georgetown University Dahlgren Memorial Library online services. Articles were selected based on their relevance for literature review before being sorted into three major categories:
+
+1. Current Policy Guidance
+2. Adoption of AI in Biotechnology Research
+3. Risk, Safety, and Compliance Policy on AI
+
+A preliminary review screened these articles for inclusion or removal, with specific emphasis on including 1) AI-related articles submitted with corporate co-authors for their proximity and insight into the design, creation, and improvement of generative AI models, 2) Policy papers submitted by congressional, think-tank, and/or university departments for their respective proximity to the issues outlined in @sec-intro, and 3) management consulting companies with "well-regarded" risk, safety, and compliance practices.
+
+## Organizational Survey
+
+An organizational survey (n=6) was circulated among stakeholders at the Georgetown University - Office of Technology Commercialization to assess existing attitudes on generative AI, as well as the existing office tasks best-suited for AI automation. Survey answer format was a modified Likert Scale [@joshi_likert_2015], while survey question format for task complexity was formulated using a modified NASA Task Load Index [@hoonakker_measuring_2011], and AI attitudes using Net Promoter Score [@noauthor_net_nodate].
+
+# References
+
