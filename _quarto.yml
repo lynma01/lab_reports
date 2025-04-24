@@ -16,6 +16,8 @@ format:
     colorlinks: true
     linestretch: 1.5
     font-size: 12
+    mainfont: "Atkinson Hyperlegible Next"
+    sansfont: "Newsreader 36pt"
     mermaid: 
       theme: neutral 
     theme:
