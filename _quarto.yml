@@ -7,14 +7,13 @@ code-fold: true
 page-layout: article 
 author: 
   - name: Matthew Lyn 
-    id: 835822093
-    email: mml167@georgetown.edu 
+    email: mml167@georgetown.edu
 format:
   html:
     toc: true
     number-sections: true
     colorlinks: true
-    linestretch: 1.5
+    linestretch: 1.15
     font-size: 12
     mainfont: "Atkinson Hyperlegible Next"
     sansfont: "Newsreader 36pt"
@@ -27,7 +26,7 @@ format:
     toc: true
     number-sections: true
     colorlinks: true
-    linestretch: 1.25
+    linestretch: 1.15
     font-size: 12
     mainfont: "Atkinson Hyperlegible Next"
     sansfont: "Newsreader 36pt"
