@@ -1,0 +1,18 @@
+
+$if(subtitle)$
+\title{$title$\\[2.0ex]\large $subtitle$}
+$else$
+\title{$title$}
+$endif$
+
+$for(by-author)$
+\author$if(it.metadata.affil-id)$[$it.metadata.affil-id$]$endif${$it.name.literal$}
+$endfor$
+
+$if(by-affiliation)$
+$for(by-affiliation)$
+\affil[$it.id$]{$it.name$ $it.address$}
+$endfor$
+$endif$
+
+\date{$date$}
