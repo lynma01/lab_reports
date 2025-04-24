@@ -15,6 +15,8 @@ This research paper (Ozkan et al. 2024[@ozkan_inflammatory_2024]) investigates t
 
 The paper demonstrates IBD fibroblasts are key drivers of multiple IBD symptoms, and described their interplay with several other cellular phenomena: 1) inflammation, 2) mechanical stimulation, 3) cytochrome P450 down-regulation, 4) diminished height and efficacy of goblet cells, 5) fibrillar collagen, 6) pregnancy hormones, and 7) carcinogen sensitivity. Overall, the research demonstrates the utility of the human Organ Chip technology in recapitulating IBD pathology and demonstrates how fibroblasts are an intriguing organic system for preventing cellular in/ex-filtration.
 
+{{< pagebreak >}}
+
 # Significance
 
 ## Mechanical Stimulation of Cell Function & Disease Progression
@@ -29,7 +31,7 @@ This is intriguing because cyclic deformations appear to have significant impact
 
 To conclude, these findings build on a large body of organ-on-chip research in mechanical methods of increasing cell function and/or disease progression via increased inflammatory response and/or cytochrome P450 disregulation[@abdelmegeed_critical_2012] in similar organs.[@freag_human_2021; @huang_generation_2021]  
 
-Future research could also incorporate the application of mechanical *and* electrical stimulation similar to (Le Floch et al. 2022)[@le_floch_stretchable_2022], where particularly complex scenarios, like sleeping human hypothalamus, could be effectively modeled for drug testing and/or physiological states like stress, REM sleep, etc.. However, significant improvements to the ease-of-use of organ-on-chip assays should be completed first to improve reproducibility; specifically, improvements to microfluidic dynamics like preventing air-bubbles from being introduced into the tubules.
+Future research could also incorporate the application of mechanical *and* electrical stimulation similar to (Le Floch et al. 2022)[@le_floch_stretchable_2022], where particularly complex scenarios, like sleeping human hypothalamus, could be effectively modeled for drug testing and/or physiological states like concussions, REM sleep, etc.. However, significant improvements to the ease-of-use of organ-on-chip assays should be completed first to improve reproducibility; specifically, improvements to microfluidic dynamics like preventing air-bubbles from being introduced into the tubules.
 
 {{< pagebreak >}}
 
