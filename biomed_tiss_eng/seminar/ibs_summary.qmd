@@ -1,0 +1,37 @@
+---
+title: Inflammatory Bowel Disease Drivers Revealed in Human Organ Chips
+subtitle: Research Seminar - Biomedical Tissue Engineering - Spring 2025
+bibliography: ref.bib
+csl: cell.csl
+toc: false
+lot: false
+lof: false
+linestretch: 1.10
+---
+
+# Background
+
+This research paper (Ozkan et al. 2024[@ozkan_inflammatory_2024]) investigates the underlying mechanisms of Inflammatory Bowel Disease (IBD) progression using human organ-chips lined with patient-derived colon epithelial cells and fibroblasts. The study successfully replicates several symptoms of IBD, including compromised intestinal barrier function, decreased mucus accumulation, and intestinal-tissue stiffening.
+
+The paper demonstrates IBD fibroblasts are key drivers of multiple IBD symptoms, and described their interplay with several other cellular phenomena: 1) inflammation, 2) mechanical stimulation, 3) cytochrome P450 down-regulation, 4) diminished height and efficacy of goblet cells, 5) fibrillar collagen, 6) pregnancy hormones, and 7) carcinogen sensitivity. Overall, the research demonstrates the utility of the human Organ Chip technology in recapitulating IBD pathology and demonstrates how fibroblasts are an intriguing organic system for preventing cellular in/ex-filtration.
+
+# Significance
+
+## Effect of Cyclic Deformations on Cell Function & Disease Progression
+
+A quote from the article which particularly interested me was examining the interplay between mechanical deformation of the organ-chip and cellular development:
+
+> *Peristalsis-like cyclic deformations also increased barrier function in both Healthy and IBD Chips... Mechanical stimulation also enriched expression of inflammation associated genes in epithelial cells and fibroblasts in both Healthy and IBD Chips...*[@ozkan_inflammatory_2024]
+
+This is intriguing because cyclic deformations appear to have significant impact on "developing" cellular function- similar to what was discussed in Dr. Roberts' second lecture[@roberts_lecture_2025]; the differentiation of induced pluripotent stem-cells into alveolar cells by introducing growth factors *and* cyclic deformation of the organ-chip's vacuum channel. "Developing" is used loosely in the sense that while barrier function is increased in healthy organoids, it also caused inflammation and disease progression in IBD chips:
+
+> *Importantly, further pathway analysis of this transcriptomic dataset demonstrated that **peristalsis-like deformations activate pathways associated with IBD progression and exacerbation* in the epithelium...***[@ozkan_inflammatory_2024]
+
+To conclude, these findings build on a large body of organ-on-chip research in mechanical methods of increasing cell function and/or disease progression via increased inflammatory response and/or cytochrome P450 disregulation[@abdelmegeed_critical_2012] in similar organs.[@freag_human_2021; @huang_generation_2021]  
+
+Future research could also incorporate the application of mechanical *and* electrical stimulation similar to (Le Floch et al. 2022)[@le_floch_stretchable_2022], where particularly complex scenarios, like sleeping human hypothalamus, could be effectively modeled for drug testing and/or physiological states like stress, REM sleep, etc.. However, significant improvements to the ease-of-use of organ-on-chip assays should be completed first to improve reproducibility; specifically, improvements to microfluidic dynamics like preventing air-bubbles from being introduced into the tubules.
+
+{{< pagebreak >}}
+
+# References
+
