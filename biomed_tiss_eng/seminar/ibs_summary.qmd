@@ -25,7 +25,7 @@ A quote from the article which particularly interested me was examining the inte
 
 This is intriguing because cyclic deformations appear to have significant impact on "developing" cellular function- similar to what was discussed in Dr. Roberts' second lecture[@roberts_lecture_2025]; the differentiation of induced pluripotent stem-cells into alveolar cells by introducing growth factors *and* cyclic deformation of the organ-chip's vacuum channel. "Developing" is used loosely in the sense that while barrier function is increased in healthy organoids, it also caused inflammation and disease progression in IBD chips:
 
-> *Importantly, further pathway analysis of this transcriptomic dataset demonstrated that **peristalsis-like deformations activate pathways associated with IBD progression and exacerbation* in the epithelium...***[@ozkan_inflammatory_2024]
+> *Importantly, further pathway analysis of this transcriptomic dataset demonstrated that **peristalsis-like deformations activate pathways associated with IBD progression and exacerbation in the epithelium...***[@ozkan_inflammatory_2024]
 
 To conclude, these findings build on a large body of organ-on-chip research in mechanical methods of increasing cell function and/or disease progression via increased inflammatory response and/or cytochrome P450 disregulation[@abdelmegeed_critical_2012] in similar organs.[@freag_human_2021; @huang_generation_2021]  
 
