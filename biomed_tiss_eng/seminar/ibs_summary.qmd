@@ -17,7 +17,7 @@ The paper demonstrates IBD fibroblasts are key drivers of multiple IBD symptoms,
 
 # Significance
 
-## Effect of Cyclic Deformations on Cell Function & Disease Progression
+## Mechanical Stimulation of Cell Function & Disease Progression
 
 A quote from the article which particularly interested me was examining the interplay between mechanical deformation of the organ-chip and cellular development:
 

@@ -27,6 +27,8 @@ format:
     colorlinks: true
     linestretch: 1.25
     font-size: 12
+    mainfont: "Atkinson Hyperlegible Next"
+    sansfont: "Newsreader 36pt"
     tbl-colwidths: auto
     lof: true
     lot: true
