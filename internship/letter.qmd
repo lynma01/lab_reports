@@ -1,0 +1,15 @@
+---
+title: Strategy for A.I. Adoption in Research Commercialization
+---
+
+# Introduction
+
+## Argument in Brief
+
+This memo posits that if the Georgetown University Office of Technology Commercialization (OTC) wished to incorporate "Enterprise Grade A.I." into its existing IT infrastructure, the third-party provider of choice would be Google.
+
+## Necessity of This Document
+
+This document is necessary if only to provoke a conversation on *how* A.I. might be best adopted into the OTC given 1) the significant time-demand relative to the number of team-members *and* the specialties unique to each team-member, 2) the density of the technical information required to understand each project.
+
+Given the above mentioned time-demands, this document endeavors to take upon itself the most difficult step: the first one. The difficulty of coherently approaching the topic should not be underestimated given the diversity of the "Enterprise A.I."" ecosystem, and speed with which the ecosystem  

@@ -1,0 +1,57 @@
+---
+title: Cytotoxicity & Invasion Studies in HT-1080 Fibrosarcoma Cell Lines
+subtitle: Biomedical Tissue Engineering Lab Report - Spring 2025
+date: 2025-05-06
+---
+
+# Abstract
+
+# Introduction
+
+## Objective
+This experiment has two objectives; analyzing the rate of infiltration into nutrient rich media between cancer spheroids with and without invasion matrixes; and analyzing the effect of chemotherapeutic drugs at increasing concentrations on cancer spheroids. 
+
+This research is significant because it seeks to study the mechanisms of highly migratory tumor cells, and their increased risk of metastasis, as well investigating the effect on tumor morphology by chemotherapeutic drugs. Greater insight into both of these mechanisms would provide greater support in developing new drug combinations for mitigating or eliminating solid tumors in the human body.
+
+## Background
+
+Cancer spheroids are multi-cellular aggregates, which can serve as simple 3D models for solid tumor growth and metastasis studies. 3D spheroid culture models resemble the tumor in vivo environment in different aspects, including cell-cell interaction, cell-extracellular matrix (ECM) interaction, and diffusion gradients of nutrients and wastes. In addition, a 3D tumor spheroid is made of cell populations proliferating at different rates: actively proliferating cells on the outer shell of the spheroid, necrotic cells in the center core, and quiescent cells in between. The more physiologically relevant cellular architecture makes cancer spheroids a good model system to test gene expression and drug responses.
+
+Cancer spheroids can form with or without a scaffold. Adherent cells have the tendency to aggregate when cultured in suspension without a support. On the other hand, commercially available extracellular matrix extract is a commonly-used scaffold to form cancer spheroids. ECM-embedded scaffolding tumor spheroids are first formed through cell-ECM interaction via the cell surface receptor integrin, followed by cell-cell interaction through the E-cadherin protein. The main components of ECM are laminins, collagens, proteoglycans, growth factors, and proteases. ECM is generally extracted from Engelbreth-Holm-Swarm tumors and is marketed under different trade names, including Basement Membrane Extract (BME) and Matrigel™. ECM extract can also be modified to reduce the amount of growth factors and to alter stiffness.
+
+The 3D invasion assay is used to assess the ability of a tumor spheroid to break down ECM through Matrix Metalloprotease (MMP) activity, and migrate to a different location through formation of invadopodia, a membrane protrusion formed through a dynamic actin cytoskeleton (Benton, 2014). This assay can be used to evaluate the efficacy of invasion-modulating compounds in the drug discovery process.
+
+### Concepts
+Tumors, recruit, blood vessels to siphon oxygen and nutrients in VIVO generally speaking, the rim of the tumor has more oxygen nutrients than the center of the tumor which becomes necrotic with CO2 and other wastes accumulating. The rates of diffusion is the bottleneck to making oxygen and nutrients infiltrate the center of any cancer spirit Where analyzing the cell cell interaction via cat heroine and cell ECM interaction via integrin cell surface receptors.
+
+Indian invasion. I say we will play the cell suspension in an upper chamber within a 96 microplate. These cancers will eventually migrate into the media, and we will analyze those highly migratory cells. These have research value in their characterization and understanding what allows for highly micro Tory cancerous steroids to move and proliferate so quickly. The serum free media in the upper chamber presents false positive and two incentivizes the cells to migrate.
+
+If the upper chamber contains ECM, it becomes a 3-D invasion essay and cells must degrade the ECM to migrate. An essay without ECM is just a 2-D invasion essay. 
+
+# Material & Methods
+
+## Reagents
+1.    HT-1080 fibrosarcoma cell line
+2.    EMEM + 10% FBS + 1% Pen/Strep (complete growth medium for HT-1080 cells)
+3.    Trypsin-EDTA
+4.    1X DPBS
+5.    Ultra-low attachment, round-bottom 96-well plate
+6.    EZSPHERE® 96-well plate - (not available)
+7.    10X Spheroid Formation ECM (or GFR-Matrigel)
+8.    Invasion Matrix (Std. Matrigel plus 1ml/mL rat-tail collagen 1)
+9.    Trypan Blue Dye
+10.     Countess I| FL Counting Slide
+11.     5-Fluorouracil Stock Solution (100 mM in DMSO)
+12.     G418 Working Solution (1000 mg/ml)
+
+## Methods
+(Lim, G.J., Kang, SJ. & Lee, J.Y. Sci Rep 10, 718 (2020). https://doi.org/10.1038/s41598-020-57517-6)
+
+# Results
+
+# Discussion
+
+# References
+
+
+

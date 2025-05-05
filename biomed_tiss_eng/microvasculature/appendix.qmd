@@ -1,0 +1,49 @@
+```{python}
+ 
+import polars as pl
+import altair as alt
+
+d = pl.read_csv("data/vasc.csv")
+
+d = d.sql("""
+SELECT DISTINCT
+      time_point
+    , vascular_tier
+    , treatment
+    , COUNT(DISTINCT well_plate) as well_plates
+
+FROM self
+
+GROUP BY
+      time_point
+    , vascular_tier
+    , treatment
+
+ORDER BY
+      time_point DESC
+    , treatment
+    , vascular_tier
+""")
+
+# Create bar chart
+chart = (
+    alt.Chart(d)
+    .mark_bar(size=40)
+    .encode(
+          x=alt.X("time_point", title="Time Point")
+        , y=alt.Y("well_plates:Q", title="Count of Wells")
+        , color=alt.Color("vascular_tier:N", title="Vascular Tier")
+        , column=alt.Column("treatment:N", title="Treatment")
+    )
+    .properties(
+          title=alt.Title(
+              "Quantitative Analysis of Microvasculature Formation"
+            , anchor="middle"
+        )
+        , width=250
+        , height=225
+    )
+)
+
+chart.save("images/analysis.png", ppi=200)
+```

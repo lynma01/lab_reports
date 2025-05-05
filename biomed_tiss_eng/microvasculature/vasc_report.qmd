@@ -1,0 +1,169 @@
+---
+title: Microvasculature Formation in SVEC4-10 Mouse Immortalized Endothelial Cell Line
+subtitle: Biomedical Tissue Engineering Lab Report - Spring 2025
+date: 2025-05-06
+bibliography: ref.bib
+csl: cell.csl
+---
+
+# Abstract
+
+Angiogenesis, the de novo formation of vasculature from pre-existing endothelial cells, is a key process in both normal physiology and tumor progression. In this study, we assessed the anti-angiogenic potential of sulforaphane on the SVEC4-10 mouse immortalized endothelial cell line using a three-hour in vitro microvasculature assay. SVEC4-10 cells were seeded onto basement membrane extract in a 96-well plate with one experimental group exposed to sulforaphane. 
+
+Images of each SVEC4-10 culture were captured at 0 h and 3 h post-seeding, and cultures were classified into three tiers based on network complexity: Tier 1, densely interconnected tubular networks; Tier 2, partial sprouting without full interconnection; Tier 3, minimal to absent differentiation. 
+
+In untreated wells, the majority of cultures exhibited Tier 1 morphology, characterized by robust capillary-like structures, whereas sulforaphane-treated cultures predominantly fell into Tier 2 or 3, displaying scant cellular elongation and no network formation. These results demonstrate that sulforaphane inhibits early angiogenic sprouting in SVEC4-10 cells. 
+
+Although the visual tiering system provided qualitative distinctions, this presents issues experimental reproducibility as researchers select portions of the microwell to evince their own classification. Future studies should incorporate automated image analysis for quantitative measurement of vasculature networks. 
+
+Collectively, our findings support sulforaphane as a effective inhibitor of endothelial tube formation and underscore its potential utility in anti-angiogenic cancer therapies.
+
+# Introduction
+
+## Objective
+
+The objective of this experiment was to culture SVEC 4–10 mouse endothelial cells, and validate the inhibitory effect of sulfuraphane on angiogenesis. This experiment is significant because it seeks to further analyze preventive measures for ensuring that solid tumors are unable to recruit healthy vasculature to receive a greater concentration of oxygen and other vital nutrients.
+
+We hypothesize that sulforaphane's inhibitory effect on angiogensis, when targeted at the solid tumors’ microbiome, will diminish their capability to recruit blood vessels to feed oxygen and nutrients, as well as metastasize into the rest of the body.
+
+## Background
+
+Angiogenesis, the formation of new blood vessels from pre-existing vasculature, is a vital physiological process critical for embryonic development, tissue growth, and wound healing. Dysregulation of angiogenesis is implicated in numerous diseases and/or disorders, including tumorigenesis, rheumatoid arthritis, and inflammation.[@alkim_angiogenesis_2015] 
+
+Angiogensis is related to several molecules, such as Vascular Endothelial Growth Factor (VEGF) and its receptor VEGFR2, Matrix Metalloproteinases (MMPs), Delta-Like Ligand-4 (DLL4), and Hypoxia-Inducible Factor 1-Alpha (HIF-$1\alpha$).[@michaelis_mechanisms_2014; @magar_molecular_2024] These molecules are key coordinators of "Tip" and "Stalk" cell differentiation, which when bound together begin the formation of vasculature.[@armulik_endothelialpericyte_2005]
+
+### Solid Tumors & Hypoxic Angiogensis
+
+Hypoxic angiogensis begins with a hypoxic cell environment where an absence of oxygen prevents the efficient degradation of HIF-$1\alpha$.[@magar_molecular_2024] The proliferation of HIF-$1\alpha$ up-regulates VEGF secretion in neighboring cells, as well as proteolytic degradation around the tumor microbiome by MMPs so that new vasculature can begin "sprouting". The VEGF gradient activates endothelial cells, with the highest VEGF exposure promoting Tip Cell differentiation via up-regulation of Dll4.[@mayo_driving_2015]
+
+The Tip Cell's Dll4 then activates Notch signaling in neighboring cells (lateral inhibition), suppressing their Tip Cell potential and directing them to become proliferative Stalk Cells.[@wang_molecular_2020] Jagged-1, often expressed by Stalk Cells, further modulates Notch signaling, causing sprout elongation, stability, and potentially branching. Tip Cells are then further guided by the VEGF gradient, causing the "sprout" of Tip and Stalk cells to continue growing towards the hypoxic area while recruiting further Stalk cells behind them.[@armulik_endothelialpericyte_2005]
+
+As these "sprouts" of Tip and Stalk cells continue to form, pericytes are recuited via the secretion of chemokine Platelet-Derived Growth-Factor $\beta$ (PDGF-$\beta$). Pericytes then bind with stalks cells to increase the stability, and decrease the "leakiness" of the newly formed vascular-tubule by forming a shared basement membrane.[@armulik_endothelialpericyte_2005; @mayo_driving_2015] 
+
+This hypoxic cell signal is particularly relevant to solid tumors, whose necrotic interior allows for a artificial over-production of HIF-$1\alpha$. This causes healthy tissue around solid tumors to begin forming vasculature to transport oxygen and nutrients into the tumor's necrotic center. This has the added consequence of increasing the risk of cancerous metastasis, as tumor cells infiltrate the lymphatic vessels surrounding the newly formed blood-vessel before being transported throughout the body.[@liu_sulforaphane_2017]
+
+### Sulforaphane's Mechanism of Inhibiting Angiogensis
+
+The primary chemical mechanism by which sulforaphane inhibits angiogenesis in endothelial cells involves the disruption of the VEGF/VEGFR2 signaling axis.[@liu_sulforaphane_2017] Sulforaphane disrupts the phosphorylation of the VEGFR2 receptor and endothelial microtubule formation. The result is decreased endothelial cell proliferation, migration, and vascular-tubule formation, while also decreasing the viability of endothelial cells in a dose-dependent manner.[@jackson_sulforaphane_2007] 
+
+# Material & Methods
+
+## Materials and Reagents
+
+1. Mouse immortalized endothelial cell line, SVEC4-10
+2. Basement Membrane Extract (BME) Growth Factor Reduced without Phenol Red (Trevigen, Cat. No. 3433-005-01) or Standard Matrigel.
+3. Sulforaphane Stock Solution (1mM)
+4. DMEM + 10% FBS + 1% Pen/Strep + 2mM L-glutamine
+5. 1X DPBS
+6. Trypsin-EDTA
+7. 96-well tissue culture-treated plate
+8. Trypan Blue dye
+9. Cell Counting slide
+
+## Culture Preparation & Incubation
+
+SVEC4-10 cells were incubated overnight to promote cell proliferation during the experiment. A 96-well plate was seeded with 200 $\mu L$ of DPBS, and 50 $\mu L$ of BME in columns 2 -> 7, and rows B -> C before surrounding wells were filled with 250 $\mu L$ of DPBS to inhibit evaporation while in the incubator. In columns 2 -> 7, Row B contained the SVEC4-10 cells without sulforaphane treatment, while Row C contained SVEC4-10 cells treated with sulforaphane.
+
+The SVEC4-10 cells were exposed to Trypsin-EDTA for suspension into two "master mixes" which contained the derived concentration of 10,000 live cells per microwell. Correct concentration of cells per unit volume was calculated via cell counter as seen in @fig-m-cell-count. Master Mix 1 contained SVEC4-10 cells without sulforaphane treatment, while Master Mix 2 contained SVEC4-10 cells treated with sulforaphane. The total volume of each master mix was 1,500 $\mu L$, with the volumetric difference between Master Mix 1 & 2's sulforaphane treatment offset by the addition of DMEM into Master Mix 1.
+
+![Cell Counter profile of Live/Dead SVEC4-10 suspended for use in Master Mix 1 or 2. Calculations for the correct volume of cells to reach the targeted concentration used the above shown number of live cells.](images/sample_count_02.jpeg){#fig-m-cell-count width=4in}
+
+100 $\mu L$ of Master Mix 1 was added to each well in columns 2 -> 7 in Row B, while 100 $\mu L$ of Master Mix 2 was added to each well in columns 2 -> 7 in Row C. Image capture via EVOS compound microscope of each experimental well was taken at different intervals to visually record the degrees of vascularization in each culture (as defined in @sec-m-classification), beginning at 11:31AM (T0) before concluding at 2:31PM (T2) for (n=3) total recording periods.
+
+## Method of Categorization and Analysis {#sec-m-classification}
+
+This experiment used an visual criteria to categorize the image capture of the cultures at each time-point for further analysis. Examining the (n=36) total images of each experimental treatment ("Sulforaphane", "Untreated") at each of the 3 time-points, each of the cultures was classified into one of three "Tiers" based on the following criteria:
+
+Cultures which appeared to have densely packed *networks* of inter-connected vasculature fell into the **Tier 1** category; cultures which appeared to contain cells in the process of differentiation, but without the interconnection between cell clusters fell into the **Tier 2** category; finally, cultures in which cellular differentiation was minimal to absent fell into the **Tier 3** category.
+
+# Results
+
+## Image Capture of SVEC4-10 Cultures at post-3 Hour Incubation {#sec-r-visual}
+
+### Sulforaphane Treated Cultures - @fig-r-sulf {#sec-r-sulf-top}
+
+![Image capture of SVEC4-10 cells with sulforaphane treatment after 3 hour incubation in microwell plate C6. This cell culture exhibits minimal to no cellular differentiation- and is thus categorized under Tier 3 of the visual schema.](images/sulf_t2_c6.jpeg){#fig-r-sulf width=5in}
+
+- From @fig-r-sulf, it appears cells treated with sulforaphane displayed minimal to no cellular differentiation which would demonstrate the formation of vasculature networks between cell clusters.
+
+- While cell clusters are appearing, and lines of cells are beginning to migrate and arrange themselves between the largest of those clusters- there are no solid lines of interconnecting cells between them.
+
+#### Development of Sulforaphane-Treated Well C4 {#sec-r-sulf-dev}
+
+![](images/sulf_t0_c4.jpeg){#fig-r-sulf-t0c4 width=2in}
+![](images/sulf_t1_c4.jpeg){#fig-r-sulf-t1c4 width=2in}
+![](images/sulf_t2_c4.jpeg){#fig-r-sulf-t2c4 width=2in}
+
+- The above three image captures are of the same microplate well (C4) of SVEC4-10 cells treated with sulforaphane at increasing observational time-points from T0 -> T2 from different positions in the well.
+
+- We can observe the behavior of the cells is a three stage process where cells 1) cluster into discrete groups, 2) cluster begin to arrange where individual cells migrate between the clusters to begin forming tip/stalk cells, and 3) vasculature networks solidly link between the clusters.  
+
+### Untreated Cultures - @fig-r-svec {#sec-r-svec-top}
+
+![Image capture of SVEC4-10 cells, without sulforaphane treatment, after 3 hour incubation in microwell plate B2. This culture exhibits clusters of cells interconnected by networks vascular-tubules, and is thus categorized as a Tier 1 culture.](images/svec_t2_b4.jpeg){#fig-r-svec width=5in}
+
+- From @fig-r-svec we observe significant vasculature network formation between discrete clusters of cells, with multiple linkages between the same cluster of cells to other clusters forming a "web" like arrangement.
+
+- While quantitative analysis of tip/stalk cells is not provided in this experiment, there's a significant visual difference in the maturation of these vascular networks compared to @fig-r-sulf.
+
+#### Development of Experimental Control Well B2 {#sec-r-svec-dev}
+
+![Well B2 at T0](images/svec_t0_b2.jpeg){#fig-r-svec-t0b2 width=2in}
+![Well B2 at T1](images/svec_t1_b2.jpeg){#fig-r-svec-t1b2 width=2in}
+![Well B2 at T2](images/svec_t2_b2.jpeg){#fig-r-svec-t2b2 width=2in}
+
+- The above three image captures are of the same microplate well (B2) of SVEC4-10 cells cultured without sulforaphane treatment at increasing observational time-points from T0 -> T2 from different positions in the well.
+
+- Compared to the figures in @sec-r-sulf-dev, we can observe increased formation of immature vascular networks between cell clusters at T1 in the right hand portion of this image capture.
+
+- Likewise compared to @sec-r-sulf-dev, we can observe a more interconnected and/or mature network of vascular-tubules at T2 suggesting that the absence of sulforaphane treatment allowed for greater vasculature development over time.
+
+## Quantative Analysis {#sec-r-quant}
+
+![Count of cultures which were classified into each of the Tiers defined in @sec-m-classification at each observation time point for both the sulforaphane treated, and untreated SVEC4-10 cultures.](images/analysis.png){#fig-r-quant}
+
+The above plot was created from the images collected in @sec-r-visual, which were then labelled and classified according to the schema outlined in @sec-m-classification. 
+
+We observe that the sulforaphane treated cultures exhibitied a significant inhibition of angiogensis, wherein only 50% of the treated wells were able to reach low levels of vasculature network formation ("Tier 2") at T1 compared to 40% of the untreated wells being able to reach Tier 1, and 10% of wells able to reach Tier 2.
+
+However, sulforaphane treated wells were able to make significant progress by Time Point 2- with 50% of wells reaching Tier 1 classification compared to 60% of wells in the untreated wells. However, untreated wells continued to exhibit a much greater degree of Tier 2 vasculature network formation compared to sulforaphane-treated wells (30% untreated vs. 10% sulforaphane-treated). 
+
+# Discussion
+
+## Sulforaphane Inhibited Angiogenesis in Cell Cultures {#sec-d-angiogenesis}
+
+From both the images displayed in @sec-r-visual, and measured in @sec-r-quant, we observe that sulforaphane did have significant effect inhibiting angiogensis and the formation of vasulcature between cell clusters. We further observe that the sulforaphane did *not* impede the cells from arranging themselves between the cell clusters, rather, it appears that sulforaphane prevented the cellular differentiation and adhesion between cell clusters which we associate with Tip/Stalk cells.
+
+This is intruiging insofar that a chemokine such as sulforaphane's inability to impede the self-organization of cells would imply it's "safer" molecule for preventing angiogensis compared to a chemokine which would disorganize or destabalize the self-organization of surrounding cells. Such a molecule would potentially destabalize the surrounding tissue/membrane fibers which allow organs to coalesce.
+
+A potential avenue for new research would be investigating molecules which destabalize surrounding tissue in the tumor microbiome; thus preventing angiogensis given the absence of organized tissue from which vasculature neworks could form and attach to a given solid tumor. A primary aspect of that research would be quantifying the "gradient" at which destabalization of those cellular networks occur, and whether that effect can be effectively localed to the tumor microbiome. 
+
+### Vascular Network Development Plateued for Untreated Cultures {#sec-d-plat}
+
+From @fig-r-quant, we can observe that the effect of sulforaphane seemed to delay the development of vasculature networks such that the difference between each experimental treatment reaching (n=3) wells with Tier 1 cultures was only a 1 hour difference: the sulforaphane treatment at T2 was (n=3) wells with Tier 1 classification, while the untreated wells at T1 was (n=3) wells with Tier 1 classification. This implies that while there is a significant difference in the development, the overall time-delay of that development is not neccessarily as significant.
+
+Both Jackson et al.[@jackson_sulforaphane_2007] and Liu et al.[@liu_sulforaphane_2017] suggest that sulforaphane has measurable effects on microvasculature formation for atleast 24 hours after introduction into the culture media. While quantative comparison between our experiment and Jackson et al. is not possible given different measurements per $\mu M$ sulforaphane, it does imply that we should be seeing continued inhibition of angiogensis for much longer than what's measured in @fig-r-quant.
+
+There's two potential soures of variability which could explain the differenes between our experiment and prior literature: 1) technician error is a likely explanation, wherein a smaller concentration of sulforaphane was introduced into the cellular media than what's called for in the protocol. Another source of variability, as further described in @sec-d-quant, is that the method of classifying the cultures into three separate tiers by classifying an image is highly subjective and therefore prone to both misclassification of the cultures, and reporoducibility issues.
+
+## Difficulty in Quantitative Analysis Between Cell Cultures {#sec-d-quant}
+
+Quantitative evaluation of vasculature network formation in this study is constrained by the reliance on a subjective, tier-based visual classification. To improve reproducibility and minimize observer bias, future experiments should adopt whole-well, high-resolution imaging combined with algorithimic quantification. For example, capturing tiled images of the entire culture surface via a motorized stage microscope, then reconstructing a mosaic for analysis in platforms such as Fiji/ImageJ or CellProfiler would enable objective segmentation of vessel-like structures.
+
+The above method of analysis would be a significant evolution over the current process in that only tiny selections of the culture plate were used to inform the classification of a well into a given tier. This presents significant difficulties not only in reproducing this study between scientists using the same culture plates used in this experiment, but also scientists at other labs attempting to choose which sections of the culture plate should be used for analysis. 
+
+# Conclusion
+
+This experiment demonstrates that sulforaphane inhibits early angiogenic sprouting in the SVEC4-10 endothelial cell line. These findings align with previously reported disruptions of the VEGF/VEGFR2 signaling axis and microtubule dynamics by sulforaphane, and further highlight the molecule’s potential as a modulatory agent in anti‐angiogenic cancer therapies.
+
+However, the reliance on a subjective tier‐based classification and the limited temporal window constrain this experiment's quantative analysis. Future investigations should implement whole‐well, high‐resolution imaging coupled with algorithms for objectively quantifing vasculature formation, and extend analyses across broader concentration gradients and longer time courses.
+
+In summary, sulforaphane significantly delays microvasculature formation in vitro, offering a promising avenue for targeted inhibition of tumor angiogenesis. The adoption of quantitative image analysis and mechanistic validation will be critical to translating these preliminary observations into robust preclinical models and, ultimately, clinical strategies for anti‐angiogenic intervention.
+
+{{< pagebreak >}}
+
+# References
+
+
+
+

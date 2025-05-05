@@ -1,0 +1,211 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "---\n",
+        "title: Nanoparticle Toxicity in Plants & Model Organisms\n",
+        "subtitle: Lab Report 4\n",
+        "date: 2024-10-12\n",
+        "---\n",
+        "\n",
+        "\n",
+        "# Objective\n",
+        "\n",
+        "The objective of this experiment is to assess if nanoparticle-toxicity impacts different cellular and organismal systems. The organisms being examined in the experiment are specifically, *C. elegans* and germinating Mung Bean seedlings.\n",
+        "\n",
+        "# Results\n",
+        "\n",
+        "## Effects of Nanoparticles on *C. elegans*\n",
+        "\n",
+        "*C. elegans* were exposed to several suspected toxic substances, and their thrashes were recorded during 30 second intervals with intervening 2 minute break periods for a total of 5 minutes total observation for each substance.\n",
+        "\n",
+        "The observations were recorded on different *C. elegans* for each sample, such that 3 individual *C. elegans* were observed during the 5 minute period. Thus, samples #1, #2, #3, are all referring to different *C. elegans* injected into the hemocytometer.\n",
+        "\n",
+        "### Total Thrashes per Nanoparticle Sample\n",
+        "\n",
+        "Data collected from the experiment can be found within @lst-ce-data. The resulting experimental data was used to create the following plot examining the number of thrashes for each of the samples.\n"
+      ],
+      "id": "cacc0b8e"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| label: fig-ce-chart\n",
+        "#| lst-label: lst-ce-chart\n",
+        "\n",
+        "import polars as pl\n",
+        "import altair as alt\n",
+        "\n",
+        "alt.renderers.enable(\"png\")\n",
+        "\n",
+        "ce=pl.read_csv(\"data/c_elgans.csv\")\n",
+        "\n",
+        "# make the chart\n",
+        "alt.Chart(ce, height=60,width=480).mark_bar().encode(\n",
+        "    alt.Y(\"sample_num:N\").title(\"Sample #\"),\n",
+        "    alt.X(\"thrashes:Q\").title(\"Observed Thrashes in C. Elegans\"),\n",
+        "    alt.Row('substance:N').title(\"Suspected Toxic Substance\"),\n",
+        "    color=alt.Color('thrashes:Q').scale(scheme=\"yellowgreenblue\")\n",
+        ")"
+      ],
+      "id": "fig-ce-chart",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "- Ranking the observed activity per sample in *C. elegans* thrashes from most thrashes to least, the order is: *TiO2*, *Ag*, *AlO2*, *pbs/control*, *bleach*. \n",
+        "\n",
+        "- *TiO2* had the greatest number of observed thrashes than all other samples; more than 4x the number of thrashes in Samples #1, and #3 for the *pbs/control* group.\n",
+        "\n",
+        "- Samples #1, #3 for both *Ag* and *AlO2* were greater than *pbs/control* for those same sample observations, but not to the same extent as the *pbs/control* group.\n",
+        "\n",
+        "- *C. elegans* exposed to *bleach* were paralyzed, and recorded 0 thrashes for all three samples. The author was unable to visually confirm laryngal paralysis.\n",
+        "\n",
+        "## Assessing Nanoparticles effects on Mung Beans {#sec-r-mb}\n",
+        "\n",
+        "The author \n",
+        "\n",
+        "### Plotting Impact of Nanoparticle Toxicity on Germination {#sec-r-mb-chart}\n"
+      ],
+      "id": "4e85c099"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| label: fig-mb-chart\n",
+        "#| lst-label: lst-mb-chart\n",
+        "\n",
+        "pl=pl.read_csv(\"data/mb_plant_data.csv\")\n",
+        "\n",
+        "alt.Chart(pl, height=60,width=480).mark_circle(size=80).encode(\n",
+        "    alt.Y(\"weight_g:Q\").title(\"Weight (g)\"),\n",
+        "    alt.X(\"root_length_cm:Q\").title(\"Root Length (cm)\"),\n",
+        "    alt.Row('substance:N').title(\"Suspected Toxic Substance\"),\n",
+        "    color=alt.Color('sample:N').scale(scheme=\"yellowgreenblue\"),\n",
+        "    tooltip=\"sample\"\n",
+        ")"
+      ],
+      "id": "fig-mb-chart",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "- *Bleach* had no measurable root length, with its results in centimeters being 0. An important note is the splitting of the seed as seen within @fig-r-mb-bleach, suggesting some *slight* germination activity before growth was halted.\n",
+        "\n",
+        "- *Pbs/control*, while having greater germination activity than *bleach*, had the least amount of measurable root length when compared to the heavy metal samples.\n",
+        "\n",
+        "- The *pbs/control* group had the tightest clustering of sample data when examining weight and root length, with the minimums and maximums for both variables all being within 1cm, or 0.05g of each other. The other samples (except *bleach*) all had minimum/maximum differentials in excess of 2cm, or 0.2g; more than 2x the spread in root length, and 4x the spread in seed weight.\n",
+        "\n",
+        "- *TiO2* and *Ag* nanoparticles had the greatest spread within their sample data; *TiO2* had the greatest minimum/maximum differential in seed weight (+/- 0.27g), while *Ag* and *TiO2* were tied for the greatest differential in root length (+/- 4.5cm).\n",
+        "\n",
+        "### Examination of Germinating Plant Samples {#sec-r-mb-pics}\n",
+        "\n",
+        "Each of the petri dishes below contained 10 Mung Bean samples which were coated in the same nanoparticles as the *C. elegans* experiment above. The root length, and sample weight were recorded for use in the analytical section for visualization (see section @sec-r-mb-chart).\n",
+        "\n",
+        "The samples were identified as samples 1 -> 10 from top left of the petri dish to bottom right. The collected data tables identify the samples based on their individual sample number and the nanoparticle substance they were exposed to.\n",
+        "\n",
+        ":::{layout-nrow=2}\n",
+        "\n",
+        "![Samples exposed to Titanium Dioxide (TiO2) nanoparticles.](images/mb_tio2_dish.JPG){#fig-r-mb-tio2}\n",
+        "\n",
+        "![Samples coated in PBS acting as the experimental control.](images/mb_pbs_dish.JPG){#fig-r-mb-pbs}\n",
+        "\n",
+        "![Samples coated in Aluminum Dioxide (AlO2) nanoparticles.](images/mb_alo2_dish.JPG){#fig-r-mb-alo2}\n",
+        "\n",
+        "![Samples exposed to silve (Ag) nanoparticles.](images/mb_ag_dish.JPG){#fig-r-mb-ag}\n",
+        "\n",
+        "![Samples exposed to bleach acting as secondary control. Samples had no measurable root length, but had minor germination activity evinced in the seed splitting.](images/mb_bleach_dish.JPG){#fig-r-mb-bleach}\n",
+        ":::\n",
+        "\n",
+        "# Interpretation & Discussion\n",
+        "\n",
+        "## Observed Effects of Nanoparticle-Toxicity on *C. elegans* {#sec-i-ce}\n",
+        "\n",
+        "Counter intuitively, *C. elegans* exposed to nanoparticle samples had the greatest number of thrashes by far compared to the pbs/control sample. This is unexpected in that TiO2's effects are documented to \"*Induce DNA Damage and Genetic Instability In vivo in Mice*\"[^tio2_mice]. While this experiment does not quantify the genotoxic effects of metal nanoparticles on *C. elegans* via proven methods such as the comet assay[^mt_4], central nervous system depression would be an intuitive symptom of genotoxicity.\n",
+        "\n",
+        "A potential explanation for the discrepancy could be that the heavy metals are inducing a stress response in the *C. elegans* while the pbs/control sample represents the number of thrashes *C. elegans* has in it's natural environment.\n",
+        "\n",
+        "This is partially corroborated in observations with TiO2 exposure (see @fig-ce-chart), where the number of thrashes appears to be drastically decreasing between samples as the period of exposure increases.\n",
+        "\n",
+        "Further experimentation would be required to prove the above hypothesis. Modifications to the experiment would include both 1) a longer observation period than the original 5 minute period, and 2) creating benchmark observations of *C. elegans* taken directly from their natural habitat to compare the effects of pbs exposure on *C. elegans*.\n",
+        "\n",
+        "## Observed Effects of Nanoparticle-Toxicity on Mung Bean Seeds {#sec-i-mb}\n",
+        "\n",
+        "Similar to the analysis of observed effects on *C. elegans* (see @sec-i-ce), mung bean samples exposed to metallic nanoparticles exhibited a *greater* amount of germination activity (quantified by measurements of seed weight and root length) than the pbs/control sample (see @fig-mb-chart). However, unlike *C. elegans*, there was a greater observed dispersal of the data within samples Ag, and AlO2 than there was in *C. elegans* activity.\n",
+        "\n",
+        "Similar to the above interpretation, this observed \"chaotic\" behavior exhibited by the samples could be a stress-response by the seeds to survive more adverse conditions than their natural environment simulated by the pbs/control group.\n",
+        "\n",
+        "This is partially corroborated in that the pbs/control sample had no observed samples with 0cm root length, unlike both Ag, and TiO2. While another reasonable explanation for the phenomena could be that the samples were not uniformly treated with the metal nanoparticles described in the protocol, the uniform behavior of the bleach-exposed samples suggests uniform treatment across samples.\n",
+        "\n",
+        "Similar to @sec-i-ce, further experimentation is required to prove the above hypothesis. The original protocol would have to be modified such that 1) a greater number of treated samples are tested to determine whether the observed dispersion of germination activity was random chance or replicable impact of the metal nanoparticles, and 2) other biomarkers of plant health are measured to determine whether the plant is in a \"stressed\" state between and across samples.\n",
+        "\n",
+        "# Appendix\n",
+        "\n",
+        "## Exposure data tables by organism\n",
+        "### *C. elegans*"
+      ],
+      "id": "bc5be492"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| lst-label: lst-ce-data\n",
+        "\n",
+        "ce"
+      ],
+      "id": "7e0f8ce5",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Mung Bean seeds"
+      ],
+      "id": "b862f91f"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "#| lst-label: lst-mb-data\n",
+        "\n",
+        "pl"
+      ],
+      "id": "ec832369",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "[^mt_4]: Donohue Robert, M.S.c, Ascione Richard, M.D. Phd. Medical Toxicology; Experimental Manual \"Nanoparticle Toxicity No. 4\" pages 51-62.\n",
+        "\n",
+        "[^tio2_mice]: Benedicte Trouiller, Ramune Reliene, Aya Westbrook, Parrisa Solaimani, and Robert H. Schiestl. Cancer Res. November 15, 20009. \"Titanium Dioxide Nanoparticles Induce DNA Damage and Genetic Instability In vivo in Mice\"; 8784."
+      ],
+      "id": "7fa4e6f6"
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}
