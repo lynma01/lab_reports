@@ -1,57 +1,169 @@
 ---
 title: Cytotoxicity & Invasion Studies in HT-1080 Fibrosarcoma Cell Lines
 subtitle: Biomedical Tissue Engineering Lab Report - Spring 2025
+bibliography: ref.bib
+csl: cell.csl
 date: 2025-05-06
+lot: false
 ---
-
-# Abstract
 
 # Introduction
 
 ## Objective
-This experiment has two objectives; analyzing the rate of infiltration into nutrient rich media between cancer spheroids with and without invasion matrixes; and analyzing the effect of chemotherapeutic drugs at increasing concentrations on cancer spheroids. 
+This experiment had two objectives: 1) validate our laboratory technique in preparing a invasion assay containing HT-1080 Fibrosarcoma cancer cell-line derived spheroids with, and without, invasion matrixes; and 2) investigate the effect of a potentially chemotherapeutic molecule, 5-Fluorouracil, at increasing concentrations on cancer spheroids.
 
-This research is significant because it seeks to study the mechanisms of highly migratory tumor cells, and their increased risk of metastasis, as well investigating the effect on tumor morphology by chemotherapeutic drugs. Greater insight into both of these mechanisms would provide greater support in developing new drug combinations for mitigating or eliminating solid tumors in the human body.
+Experiment pt. 1, or preparing a Transwell-based/Boyden Chamber Invasion Assay sought to validate our laboratory technique in preparing an experiment analyzing the number of cancer spheroids able to "invade" through an ECM layer seeded at the bottom of one nutrient-deprived chamber to reach a serum/nutrient rich chamber. By isolating those "invasive" cancer spheroids and comparing them to "non-invasive" cancer spheroids, we would potentially be able to separate unusually "invasive" cancer cells and isolate the the genes responsible for increasing the risk of metastasis via invasion.[@vinci_three-dimensional_2015; @kunz-schughart_use_2004; @lim_novel_2020] 
+
+Experiment pt. 2 visually analyzed the differences between cell culture morphology after treatment with/without 5-Fluorouracil to examine its effectiveness as a chemotherapeutic. Geneticin (G418) was used as an experimental control for visual comparison with a completely disintegrated cancer spheroid. Prior research has demonstrated the 5-Fluorouracil is an effective, dose-dependent chemotherapeutic with potentially cardiotoxic side-effects.[@focaccetti_effects_2015] We hypothesize that increasing concentrations of 5-Flurouracil will significantly effect the morphology of the HT-1080 cell cultures over time, potentially causing complete disruption of the tumor morphology.
 
 ## Background
 
-Cancer spheroids are multi-cellular aggregates, which can serve as simple 3D models for solid tumor growth and metastasis studies. 3D spheroid culture models resemble the tumor in vivo environment in different aspects, including cell-cell interaction, cell-extracellular matrix (ECM) interaction, and diffusion gradients of nutrients and wastes. In addition, a 3D tumor spheroid is made of cell populations proliferating at different rates: actively proliferating cells on the outer shell of the spheroid, necrotic cells in the center core, and quiescent cells in between. The more physiologically relevant cellular architecture makes cancer spheroids a good model system to test gene expression and drug responses.
+3D cancer spheroid cell-cultures are useful *in-vitro* models in mimicking key features of solid tumors *in-vivo* including 3D cellular-organization, gradients of nutrients and oxygen, and extracellular matrix (ECM) interactions that are absent in conventional two-dimensional cultures.[@vinci_three-dimensional_2015; @kunz-schughart_use_2004] In cancer spheroids, cells at the outer rim remain proliferative, while cells in the core become quiescent or necrotic as diffusion limits the penetration of oxygen, nutrients, and therapeutic agents.[@divito_lecture_2025] This diversity of proliferative, quiescent, and necrotic cells closely mimics in-vivo solid tumors, making them particularly valuable for efficient/effective research.[@fitzgerald_life_2015; @ascione_gradient-induced_2024]
 
-Cancer spheroids can form with or without a scaffold. Adherent cells have the tendency to aggregate when cultured in suspension without a support. On the other hand, commercially available extracellular matrix extract is a commonly-used scaffold to form cancer spheroids. ECM-embedded scaffolding tumor spheroids are first formed through cell-ECM interaction via the cell surface receptor integrin, followed by cell-cell interaction through the E-cadherin protein. The main components of ECM are laminins, collagens, proteoglycans, growth factors, and proteases. ECM is generally extracted from Engelbreth-Holm-Swarm tumors and is marketed under different trade names, including Basement Membrane Extract (BME) and Matrigel™. ECM extract can also be modified to reduce the amount of growth factors and to alter stiffness.
+Both experimental sections, the Boyden chamber invasion assay and the dose‐response analysis of 5-FU in HT-1080 spheroids, provide important perspectives for analyzing the growth and inhibition of cancer spheroids. Insights gained from these two approaches can guide and inform the development of anti‐invasive strategies and chemotherapeutic regimens.
 
-The 3D invasion assay is used to assess the ability of a tumor spheroid to break down ECM through Matrix Metalloprotease (MMP) activity, and migrate to a different location through formation of invadopodia, a membrane protrusion formed through a dynamic actin cytoskeleton (Benton, 2014). This assay can be used to evaluate the efficacy of invasion-modulating compounds in the drug discovery process.
+### Experiment pt. 1: Invasion Assay {#sec-bg-inv}
 
-### Concepts
-Tumors, recruit, blood vessels to siphon oxygen and nutrients in VIVO generally speaking, the rim of the tumor has more oxygen nutrients than the center of the tumor which becomes necrotic with CO2 and other wastes accumulating. The rates of diffusion is the bottleneck to making oxygen and nutrients infiltrate the center of any cancer spirit Where analyzing the cell cell interaction via cat heroine and cell ECM interaction via integrin cell surface receptors.
+The Boyden chamber (or Transwell) assay provides a quantitative framework for assessing cellular invasiveness by measuring the ability of cells to migrate through a porous membrane, often coated with ECM components such as Matrigel or collagen to simulate the basement membrane barrier.[@lim_novel_2020; @vinci_three-dimensional_2015] In the upper chamber, serum-free medium establishes a nutrient-deprived environment that drives spheroid to migrate toward a serum-rich lower chamber. Cells that degrade and infiltrate the ECM via secretion of matrix metalloprotease (MMP) proteins are counted as "invasive" reflecting their increased risk for metastatic infiltration of the blood-stream. By seeding spheroids in Transwell inserts, one can compare the propensity of ECM-embedded versus scaffold-free spheroids to invade, elucidating mechanisms underlying enhanced migratory phenotypes in highly invasive cancer cell populations.[@lim_novel_2020; @divito_lecture_2025]
 
-Indian invasion. I say we will play the cell suspension in an upper chamber within a 96 microplate. These cancers will eventually migrate into the media, and we will analyze those highly migratory cells. These have research value in their characterization and understanding what allows for highly micro Tory cancerous steroids to move and proliferate so quickly. The serum free media in the upper chamber presents false positive and two incentivizes the cells to migrate.
+### Experiment pt. 2: Chemotherapeutic {#sec-bg-chem}
 
-If the upper chamber contains ECM, it becomes a 3-D invasion essay and cells must degrade the ECM to migrate. An essay without ECM is just a 2-D invasion essay. 
+5-Fluorouracil (5-FU) is a pyrimidine analog which, once metabolized intracellularly, incorporates into RNA and DNA and inhibits thymidylate synthase: impairing DNA synthesis and induces apoptosis in rapidly dividing cells.[@focaccetti_effects_2015] In 3D spheroid cultures, increasing concentrations of 5-FU not only reduce spheroid viability but also induce spheroid rupture with the appearance of apoptotic bodies that reflect disruption of cell–cell and cell–ECM binding. These disruptions of the cancer spheroid morphology can provide insight into the drug’s efficacy and penetration within a tumor‐like microenvironment.[@fitzgerald_life_2015; @divito_lecture_2025]
 
 # Material & Methods
 
 ## Reagents
-1.    HT-1080 fibrosarcoma cell line
-2.    EMEM + 10% FBS + 1% Pen/Strep (complete growth medium for HT-1080 cells)
-3.    Trypsin-EDTA
-4.    1X DPBS
-5.    Ultra-low attachment, round-bottom 96-well plate
-6.    EZSPHERE® 96-well plate - (not available)
-7.    10X Spheroid Formation ECM (or GFR-Matrigel)
-8.    Invasion Matrix (Std. Matrigel plus 1ml/mL rat-tail collagen 1)
-9.    Trypan Blue Dye
-10.     Countess I| FL Counting Slide
-11.     5-Fluorouracil Stock Solution (100 mM in DMSO)
-12.     G418 Working Solution (1000 mg/ml)
+1. HT-1080 fibrosarcoma cell line
+2. EMEM + 10% FBS + 1% Pen/Strep (complete growth medium for HT-1080 cells)
+3. Trypsin-EDTA
+4. Dimethyl Sulfoxide (DMSO)
+5. 1X DPBS
+6. Ultra-low attachment, round-bottom 96-well plate
+7. 10X Spheroid Formation ECM (or GFR-Matrigel)
+8. Invasion Matrix (Std. Matrigel plus 1ml/mL rat-tail collagen 1)
+9. Trypan Blue Dye
+10. Countess I| FL Counting Slide
+11. 5-Fluorouracil Stock Solution (100 mM in DMSO)
+12. Geneticin (G418) Working Solution (1000 mg/ml)
+13. Calcein AM Stain
+14. Pl Red stain
 
 ## Methods
-(Lim, G.J., Kang, SJ. & Lee, J.Y. Sci Rep 10, 718 (2020). https://doi.org/10.1038/s41598-020-57517-6)
+
+### Culture Preparation {#sec-m-culture-prep}
+
+HT-1080 cells were cultured overnight before being washed, *then* trypsinized[^final], before further incubation and then centrifugation to isolate the HT-1080 cells. An automated cell counter was used to estimate the concentration of viable cells per unit volume to obtain well volumes with 1,000/8,000 viable cells per well depending on the "Master Mix":
+
+Two "Master Mix" were prepared for the respective experiments: Master Mix 1 was prepared for the Transwell Invasion Assay (see @sec-bg-inv), while Master Mix 2 was prepared for the Chemotherapeutic Analysis (see @sec-bg-chem). Thus, Master Mix 2 was provided with "HT-1080 complete growth media" at a concentration of 200 $\mu l$ per well, with a concentration of 8,000 viable cells per well. Master Mix 1, because of its introduction into a "serum-free" environment was not provided growth media.
+
+### Invasion Assay Preparation {#sec-m-inv-assay}
+
+Master Mix 1 was plated into a 96 well Ultra-low Attachment (ULA) plate with two experimental conditions: 1) wells plated *without* an invasion matrix (loaded in Row B columns 2 -> 6), and 2) wells (that will be) plated *with* an invasion matrix to test the chemotactic properties of these cancer spheroids (loaded in Row B columns 7 -> 11). All surrounding wells were loaded with DPBS to prevent undue evaporation while in incubation.
+
+Cells were placed in a swinging-bucket centrifuge to isolate the cells in the bottoms of the ULA well plates before 3 day incubation. At the end of this 3 day incubation period, the invasion matrix was loaded into Row B columns 7 -> 11 to complete the invasion assays' preparatory phase before final analysis two hours later. 
+
+**Method of Validation:** We validated our successful preparation of the Transwell Invasion Assay via 1) image capture of developing cancer spheroids and 2) measuring an significant number of viable cells via an automated cell counter. By ensuring the spheroid morphology was visually similar to those of proliferating cancer spheroids, we were able to qualitatively confirm the successful preparation of the Invasion Assay for future research and experimentation.  
+
+### Chemotherapeutic Assay Analyzing 5-Fluorouracil {#sec-m-chemo}
+
+Master Mix 2 was plated into a 96 well ULA plate with increasing dosages of 5-Fluorouracil: (0 $\mu M$, 1 $\mu M$, 10 $\mu M$, 50 $\mu M$, 500 $\mu M$, G418 [Control]). DMSO and HT-1080 complete growth media were used as diluents to derive the desired concentrations listed above. The final volume of each ULA well 200 $\mu l$ per well.
+
+The wells were arranged such that the increasing dosages corresponded to the descending order of row where Row B (columns 2 -> 6) = 0 $\mu M$ 5-Fluorouracil until ending at Row F (columns 2 -> 6) = 500 $\mu M$ 5-Fluorouracil. The final row, G (columns 2-> 6) contained isolated HT-1080 cells treated with 200 $\mu l$ of Geneticin (G418) at a concentration of 1000 $\mu g / ml$.
 
 # Results
 
+## Invasion Assay (@fig-r-cell-count, @fig-r-master-mix-1) {#sec-r-inv-assay}
+
+![Automated Cell Counter profile estimating the number of viable/dead HT-1080 cells contained within the cell suspension for incubation.](images/cell_count.jpeg){#fig-r-cell-count}
+
+- Automated Cell Counter reported a significant proportion (97%) of cells were considered viable for suspension and incubation. The final concentration of viable cells per unit volume was $8.33 * 10^5_{mL}$.
+
+- The average size of non-viable (dead) cells was 62% of the average size of viable cells: 13.00 $\mu M$ and 21.06 $\mu M$ respectively. This suggests that non-viable cells were arrested at some point in their growth phase.
+
+![Image capture of HT-1080 cells post-centrifugation aggregating at the bottom of the 96 well ULA plate for further incubation.](images/master_mix_1_b1.jpeg){#fig-r-master-mix-1 width=4.5in}
+
+- The collection of HT-1080 cells with cohesive, un-disrupted membranes demonstrates the vast majority of HT-1080 cells were viable during incubation process.
+
+- The majority of cells aggregated into the bottom of the ULA wells, however, a minority of cells were spread within close-proximity to center of the cell cluster. 
+
+- The visual artifact in the bottom-right hand section of the screen was hypothesized to be a tear in the gel created during aspiration of depleted growth media from the previous incubation step.
+
+## Chemotherapeutic Assay {#sec-r-chem-assay}
+
+### HT-1080 Cell Image Capture at 0 $\mu M$ 5-Fluorouracil (@fig-r-live-0, @fig-r-dead-0) {#sec-r-chem-0}
+
+:::{layout-ncol=2 layout-nrow=1}
+![](images/divito_images/cytox_live_0um_45ms.jpg){#fig-r-live-0 width=2.75in height=2in fig-scap="Image captures of a Calcein AM stain of HT-1080 cells at 0 $\mu M$ 5-F via Nikon TE2000 Inverted Fluouresence Microscope"}
+
+![](images/divito_images/cytox_dead_0um_300ms.jpg){#fig-r-dead-0 width=2.75in height=2in fig-scap="Image captures of a Pl Red stain of HT-1080 cells at 0 $\mu M$ 5-F via Nikon TE2000 Inverted Fluouresence Microscope"}
+:::
+
+- @fig-r-live-0, @fig-r-dead-0 are image captures of a Calcein AM stain, or Pl Red stain of HT-1080 cells at 500 $\mu M$ 5-F via Nikon TE2000 Inverted Fluouresence Microscope respectively.
+
+- @fig-r-live-0 exhibits a un-disrupted morphology with a cohesive boundary of living HT-1080 cells demonstrated by the strong green stain in the exterior. This is corroborated by the absence of dead cells seen in @fig-r-dead-0 suggesting the vast majority of cells in the image are viable and proliferating.
+
+- The shadow artifact in the center of @fig-r-live-0 is a result of the 3 dimensional nature of the cancer spheroid, wherein the microscope focus was only able to capture certain "slices" of the sphereoid before losing focus.
+
+### HT-1080 Cell Image Capture at 10 $\mu M$ 5-Fluorouracil (@fig-r-live-10, @fig-r-dead-10) {#sec-r-chem-10}
+
+:::{layout-ncol=2 layout-nrow=1}
+![](images/divito_images/cytox_live_10um_45ms.jpg){#fig-r-live-10 width=2.75in height=2in fig-scap="Image captures of a Calcein AM stain of HT-1080 cells at 10 $\mu M$ 5-F via Nikon TE2000 Inverted Fluouresence Microscope"}
+
+![](images/divito_images/cytox_dead_10um_300ms.jpg){#fig-r-dead-10 width=2.75in height=2in fig-scap="Image captures of a Pl Red stain of HT-1080 cells at 10 $\mu M$ 5-F via Nikon TE2000 Inverted Fluouresence Microscope"}
+:::
+
+- @fig-r-live-10, @fig-r-dead-10 are image captures of a Calcein AM stain, or Pl Red stain of HT-1080 cells at 10 $\mu M$ 5-F via Nikon TE2000 Inverted Fluouresence Microscope respectively.
+
+- @fig-r-live-10 demonstrates an uneven morphology compared to @fig-r-live-0 where in protrusions of living cells are evident in the top-right most sections of the spheroid, providing a geometery more similar to an ovoid. 
+
+- @fig-r-dead-10 has a slightly greater concentration of dead cells, with stronger concentrations in areas similar to the protrusions observed in @fig-r-live-10, suggesting that the same areas with the greater cell proliferation are also experiencing greater cell death.
+
+### HT-1080 Cell Image Capture at 50 $\mu M$ 5-Fluorouracil (@fig-r-live-50, @fig-r-dead-50) {#sec-r-chem-500}
+
+:::{layout-ncol=2 layout-nrow=1}
+![](images/divito_images/cytox_live_50um_45ms.jpg){#fig-r-live-50 width=2.75in height=2in fig-scap="Image captures of a Calcein AM stain of HT-1080 cells at 50 $\mu M$ 5-F via Nikon TE2000 Inverted Fluouresence Microscope"} 
+
+![](images/divito_images/cytox_dead_50um_300ms.jpg){#fig-r-dead-50 width=2.75in height=2in fig-scap="Image captures of a Pl Red stain of HT-1080 cells at 50 $\mu M$ 5-F via Nikon TE2000 Inverted Fluouresence Microscope"}
+:::
+
+- @fig-r-live-50, @fig-r-dead-50 are image captures of a Calcein AM stain, or Pl Red stain of HT-1080 cells at 50 $\mu M$ 5-F via Nikon TE2000 Inverted Fluouresence Microscope respectively.
+
+- The spheroid morphology in @fig-r-live-50 is significantly disrupted; unlike @fig-r-live-0, there is a jagged boundary of living cells. HT-1080 cells appear to have detached and begun drifting in isolated clusters. Intriguingly, the disruption does not appear to be uniform: "clumps" containing a greater concentration of viable cells appear on different parts of the boundary layer, while other sections appear to be collapsing into the center of the spheroid.
+
+- @fig-r-dead-50 corroborates the disrupted morphology captured in @fig-r-live-50, with a faint "cloud" of dead cells scattered throughout the image. However, there's significant difficulty in finding a concentration of Pl Red stained cells in the bottom half of the image which mirrors the arrangement of viable cells in @fig-r-dead-50.
+
+### HT-1080 Cell Image Capture with Geneticin Exposure (@fig-r-live-g418, @fig-r-dead-g418) {#sec-r-chem-g418}
+
+:::{layout-ncol=2 layout-nrow=1}
+![](images/divito_images/cytox_live_G418_35ms.jpg){#fig-r-live-g418 width=2.75in height=2in fig-scap="Image captures of a Calcein AM stain of HT-1080 cells with Geneticin treatment via Nikon TE2000 Inverted Fluouresence Microscope"}
+
+![](images/divito_images/cytox_dead_G418_300ms.jpg){#fig-r-dead-g418 width=2.75in height=2in fig-scap="Image captures of a Pl Red stain of HT-1080 cells with Geneticin treatment via Nikon TE2000 Inverted Fluouresence Microscope"}
+:::
+
+- @fig-r-live-g418, @fig-r-dead-g418 are image captures of a Calcein AM stain, or Pl Red stain of HT-1080 cells exposed to Geneticin (G418) $\mu M$ 5-F via Nikon TE2000 Inverted Fluouresence Microscope respectively.
+
+- Similar to @fig-r-live-50, exposure to G418 appears to have completely disrupted the morphology of the HT-1080 spheroids: there is no continuous boundary of viable HT-1080 cells with a strong green fluouresence. Instead, the sphereoid appears to have disintegrated with small, isolated clusters of living cells in the top portion of the image.
+
+- @fig-r-dead-g418 is difficult to interpret in that the image background appears to be the same color as the Pl Red stain itself. One explanation could be that the ruptured cells dispersed the stain into the culture media, another, that the vast majority of the stain has disappeared and the image threshold for color had to be artificially increased to detect any fluorescent signal.   
+
 # Discussion
+
+## Validation of Laboratory Technique in Preparing the Invasion Assay
+
+In this experiment, we were able to successfully validate our laboratory technique in successfully preparing a Transwell/Boyden Chamber Invasion assay as described in teh critera in @sec-m-inv-assay. Given that the morphology of the cancer spheroids prepared for use in the invasion assay displayed 1) a significant proportion of viable cells (@fig-r-cell-count), and 2) image captures via compound microscopy which demonstrate the expected morphology of the cancers spheroids, we have significant cause to believe that an invasion assay carried out with our prepared culture would be successful.
+
+With our laboratory technique validated, future experiments would continue build upon this foundation by completing the protocol and deriving quantative data by measuring the number of cancer spheroids able to infiltrate the Invasion Matrix by t=2 hours post plating. The experiment would then compare the data between the chambers with and without an invasion matrix to provide further analysis.
+
+## Validation of 5-Fluorouracil as a Disruptor of HT-1080 Spheroid Morphology
+
+As demonstrated in @fig-r-live-50, 5-F displayed significant capabilities in disintigrating HT-1080 spheroids at both medium and high concentrations. Likewise, 5-F also appeared to have a disruptive effect on HT-1080 spheroids at concentrations as low as 10 $\mu M$. This is an important distinction in that prior literature evinces that 5-Fluorouracil can induce cariovascular toxicity in human patients.[@focaccetti_effects_2015] 
+
+Given this experiment can confirm that 5-F is an effective disruptor of tumor morphology, future research could focus on the disruption of cell-cell and cell-ECM relationships as seen in @fig-r-live-10, where 5-F appears have created heterogenous clusters of cancer cells unlike the sphereical geometery as seen in @fig-r-live-0. A future research hypothesis could explore whether 5-F disrupts the proteins responsible for coherent cell-cell and cell-ECM interactions such as E-cadherin or integrin.[^ps]
+
+{{< pagebreak >}}
 
 # References
 
+[^final]: I got this wrong on the final and I'm still thinking about it...
 
-
+[^ps]: I got sentimental thinking that this could be the last lab report I ever write. Thanks for being a great professor. Your patience (especially for a student who did *not* come from a scientific background) and wisdom with the whole field means a lot, and is personally inspiring. It's got me rethinking about what I want to do and who I want to be. All the best, and thanks for everything.

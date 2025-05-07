@@ -1,0 +1,280 @@
+{
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "# Appendix {.appendix}\n",
+        "\n",
+        "## Bioprocessing Visualizations\n"
+      ],
+      "id": "23947066"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import polars as pd\n",
+        "import polars.selectors as cs\n",
+        "import altair as alt\n",
+        "\n",
+        "width, height = 450, 450\n",
+        "ppi=200\n",
+        "\n",
+        "df = pd.read_csv('data/bgal_kinetic_ferm.csv')\n",
+        "df = df.filter(pd.col(\"Group\") == \"Group A\")\n",
+        "df = df.unpivot(cs.numeric(), index=\"Time\")\n",
+        "df = df.filter(pd.col(\"variable\").str.contains(\"1$|2$\"))\n",
+        "\n",
+        "# Turbidity line chart\n",
+        "chart_bt_kin_ferm = alt.Chart(df).mark_line(point=True).encode(\n",
+        "      x=alt.X('Time', title='Time')\n",
+        "    , y=alt.Y('value:Q', title='Reading')\n",
+        "    , color=alt.Color(\"variable\").scale(scheme=\"tableau20\")\n",
+        ").properties(\n",
+        "      title='Benchtop Fermentation Fractions A405 Readings over Time'\n",
+        "    , width=width\n",
+        "    , height=height)\n",
+        "\n",
+        "chart_bt_kin_ferm.save(\"images/chart_bgal_kin_ferm.png\", ppi=ppi)\n",
+        "chart_bt_kin_ferm.display()"
+      ],
+      "id": "f8c427b0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df = pd.read_csv('data/bgal_kinetic_ferm.csv')\n",
+        "df = df.filter(pd.col(\"Group\") == \"Group A\")\n",
+        "df = df.unpivot(cs.numeric(), index=\"Time\")\n",
+        "df = df.filter(pd.col(\"variable\").str.contains(\"3$|4$\"))\n",
+        "\n",
+        "# Turbidity line chart\n",
+        "chart_bt_kin_sfA = alt.Chart(df).mark_line(point=True).encode(\n",
+        "      x=alt.X('Time', title='Time')\n",
+        "    , y=alt.Y('value:Q', title='Reading')\n",
+        "    , color=alt.Color(\"variable\").scale(scheme=\"tableau20\")\n",
+        ").properties(\n",
+        "      title='Shake Flask B1 Fractions OD600 Readings over Time'\n",
+        "    , width=width\n",
+        "    , height=height)\n",
+        "\n",
+        "chart_bt_kin_sfA.save(\"images/chart_bgal_kin_sfB.png\", ppi=ppi)\n",
+        "chart_bt_kin_sfA.display()"
+      ],
+      "id": "a76cfcd4",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df = pd.read_csv('data/bgal_kinetic_ferm.csv')\n",
+        "df = df.filter(pd.col(\"Group\") == \"Group A\")\n",
+        "df = df.unpivot(cs.numeric(), index=\"Time\")\n",
+        "df = df.filter(pd.col(\"variable\").str.contains(\"5$|6$\"))\n",
+        "\n",
+        "# Turbidity line chart\n",
+        "chart_bt_kin_sfB = alt.Chart(df).mark_line(point=True).encode(\n",
+        "      x=alt.X('Time', title='Time')\n",
+        "    , y=alt.Y('value:Q', title='Reading')\n",
+        "    , color=alt.Color(\"variable\").scale(scheme=\"tableau20\")\n",
+        ").properties(\n",
+        "      title='Shake Flask A1 Fractions A405 Readings over Time'\n",
+        "    , width=width\n",
+        "    , height=height)\n",
+        "\n",
+        "chart_bt_kin_sfB.save(\"images/chart_bgal_kin_sfA.png\", ppi=ppi)\n",
+        "chart_bt_kin_sfB.display()"
+      ],
+      "id": "3166f3d8",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Group B"
+      ],
+      "id": "8a038999"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df = pd.read_csv('data/bgal_kinetic_ferm.csv')\n",
+        "df = df.filter(pd.col(\"Group\") == \"Group B\")\n",
+        "df = df.unpivot(cs.numeric(), index=\"Time\")\n",
+        "df = df.filter(pd.col(\"variable\").str.contains(\"1$|2$\"))\n",
+        "\n",
+        "# Turbidity line chart\n",
+        "chart_bt_kin_ferm = alt.Chart(df).mark_line(point=True).encode(\n",
+        "      x=alt.X('Time', title='Time')\n",
+        "    , y=alt.Y('value:Q', title='Reading')\n",
+        "    , color=alt.Color(\"variable\").scale(scheme=\"tableau20\")\n",
+        ").properties(\n",
+        "      title='Benchtop Fermentation Fractions A405 Readings over Time'\n",
+        "    , width=width\n",
+        "    , height=height)\n",
+        "\n",
+        "# chart_bt_kin_ferm.save(\"images/chart_bgal_kin_ferm.png\", ppi=ppi)\n",
+        "chart_bt_kin_ferm.display()"
+      ],
+      "id": "7d9f5035",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df = pd.read_csv('data/bgal_kinetic_ferm.csv')\n",
+        "df = df.filter(pd.col(\"Group\") == \"Group B\")\n",
+        "df = df.unpivot(cs.numeric(), index=\"Time\")\n",
+        "df = df.filter(pd.col(\"variable\").str.contains(\"3$|4$\"))\n",
+        "\n",
+        "# Turbidity line chart\n",
+        "chart_bt_kin_sfA = alt.Chart(df).mark_line(point=True).encode(\n",
+        "      x=alt.X('Time', title='Time')\n",
+        "    , y=alt.Y('value:Q', title='Reading')\n",
+        "    , color=alt.Color(\"variable\").scale(scheme=\"tableau20\")\n",
+        ").properties(\n",
+        "      title='Shake Flask E1 Fractions A405 Readings over Time'\n",
+        "    , width=width\n",
+        "    , height=height)\n",
+        "\n",
+        "# chart_bt_kin_sfA.save(\"images/chart_bgal_kin_sfA.png\", ppi=ppi)\n",
+        "chart_bt_kin_sfA.display()"
+      ],
+      "id": "17c76188",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df = pd.read_csv('data/bgal_kinetic_ferm.csv')\n",
+        "df = df.filter(pd.col(\"Group\") == \"Group B\")\n",
+        "df = df.unpivot(cs.numeric(), index=\"Time\")\n",
+        "df = df.filter(pd.col(\"variable\").str.contains(\"5$|6$\"))\n",
+        "\n",
+        "# Turbidity line chart\n",
+        "chart_bt_kin_sfB = alt.Chart(df).mark_line(point=True).encode(\n",
+        "      x=alt.X('Time', title='Time')\n",
+        "    , y=alt.Y('value:Q', title='Reading')\n",
+        "    , color=alt.Color(\"variable\").scale(scheme=\"tableau20\")\n",
+        ").properties(\n",
+        "      title='Shake Flask H1 Fractions A405 Readings over Time'\n",
+        "    , width=width\n",
+        "    , height=height)\n",
+        "\n",
+        "# chart_bt_kin_sfB.save(\"images/chart_bgal_kin_sfB.png\", ppi=ppi)\n",
+        "chart_bt_kin_sfB.display()"
+      ],
+      "id": "0664abe0",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "markdown",
+      "metadata": {},
+      "source": [
+        "### Group C"
+      ],
+      "id": "9f110b57"
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df = pd.read_csv('data/bgal_kinetic_ferm.csv')\n",
+        "df = df.filter(pd.col(\"Group\") == \"Group C\")\n",
+        "df = df.unpivot(cs.numeric(), index=\"Time\")\n",
+        "df = df.filter(pd.col(\"variable\").str.contains(\"1$|2$\"))\n",
+        "\n",
+        "# Turbidity line chart\n",
+        "chart_bt_kin_ferm = alt.Chart(df).mark_line(point=True).encode(\n",
+        "      x=alt.X('Time', title='Time')\n",
+        "    , y=alt.Y('value:Q', title='Reading')\n",
+        "    , color=alt.Color(\"variable\").scale(scheme=\"tableau20\")\n",
+        ").properties(\n",
+        "      title='Benchtop Fermentation Fractions A405 Readings over Time'\n",
+        "    , width=width\n",
+        "    , height=height)\n",
+        "\n",
+        "# chart_bt_kin_ferm.save(\"images/chart_bgal_kin_ferm.png\", ppi=ppi)\n",
+        "chart_bt_kin_ferm.display()"
+      ],
+      "id": "31a05074",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df = pd.read_csv('data/bgal_kinetic_ferm.csv')\n",
+        "df = df.filter(pd.col(\"Group\") == \"Group C\")\n",
+        "df = df.unpivot(cs.numeric(), index=\"Time\")\n",
+        "df = df.filter(pd.col(\"variable\").str.contains(\"3$|4$\"))\n",
+        "\n",
+        "# Turbidity line chart\n",
+        "chart_bt_kin_sfA = alt.Chart(df).mark_line(point=True).encode(\n",
+        "      x=alt.X('Time', title='Time')\n",
+        "    , y=alt.Y('value:Q', title='Reading')\n",
+        "    , color=alt.Color(\"variable\").scale(scheme=\"tableau20\")\n",
+        ").properties(\n",
+        "      title='Shake Flask C1 Fractions A405 Readings over Time'\n",
+        "    , width=width\n",
+        "    , height=height)\n",
+        "\n",
+        "# chart_bt_kin_sfA.save(\"images/chart_bgal_kin_sfA.png\", ppi=ppi)\n",
+        "chart_bt_kin_sfA.display()"
+      ],
+      "id": "6022216d",
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "df = pd.read_csv('data/bgal_kinetic_ferm.csv')\n",
+        "df = df.filter(pd.col(\"Group\") == \"Group C\")\n",
+        "df = df.unpivot(cs.numeric(), index=\"Time\")\n",
+        "df = df.filter(pd.col(\"variable\").str.contains(\"5$|6$\"))\n",
+        "\n",
+        "# Turbidity line chart\n",
+        "chart_bt_kin_sfB = alt.Chart(df).mark_line(point=True).encode(\n",
+        "      x=alt.X('Time', title='Time')\n",
+        "    , y=alt.Y('value:Q', title='Reading')\n",
+        "    , color=alt.Color(\"variable\").scale(scheme=\"tableau20\")\n",
+        ").properties(\n",
+        "      title='Shake Flask G1 Fractions A405 Readings over Time'\n",
+        "    , width=width\n",
+        "    , height=height)\n",
+        "\n",
+        "# chart_bt_kin_sfB.save(\"images/chart_bgal_kin_sfB.png\", ppi=ppi)\n",
+        "chart_bt_kin_sfB.display()"
+      ],
+      "id": "5be5bb24",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

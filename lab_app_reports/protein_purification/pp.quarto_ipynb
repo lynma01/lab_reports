@@ -164,7 +164,7 @@
         "  - $T_u = \\frac {Volume_{Pooled}} {Volume_{Assay} * A_{280}} * \\frac {60} {T_{m}}$\n",
         "  - $S_a = \\frac{T_u} {A_{280}*{Volume_{Fractions}}}$\n"
       ],
-      "id": "3ed3b88e"
+      "id": "d2638f02"
     },
     {
       "cell_type": "code",
@@ -194,7 +194,7 @@
         "- Specific Activity (units/mg): {sa}\\n\n",
         "\"\"\")"
       ],
-      "id": "36aef007",
+      "id": "bc540789",
       "execution_count": null,
       "outputs": []
     },
@@ -254,7 +254,7 @@
         "\n",
         "[^la_7]: Donohue Robert, M.S.c, Gimenez Naroa, Phd. Lab Applications of Biotechnology; Lecture Session #8 \"Purification of EcoR1\"."
       ],
-      "id": "d962c574"
+      "id": "5c46a4ee"
     }
   ],
   "metadata": {

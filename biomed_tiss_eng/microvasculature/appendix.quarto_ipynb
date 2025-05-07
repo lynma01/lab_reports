@@ -1,0 +1,68 @@
+{
+  "cells": [
+    {
+      "cell_type": "code",
+      "metadata": {},
+      "source": [
+        "import polars as pl\n",
+        "import altair as alt\n",
+        "\n",
+        "d = pl.read_csv(\"data/vasc.csv\")\n",
+        "\n",
+        "d = d.sql(\"\"\"\n",
+        "SELECT DISTINCT\n",
+        "      time_point\n",
+        "    , vascular_tier\n",
+        "    , treatment\n",
+        "    , COUNT(DISTINCT well_plate) as well_plates\n",
+        "\n",
+        "FROM self\n",
+        "\n",
+        "GROUP BY\n",
+        "      time_point\n",
+        "    , vascular_tier\n",
+        "    , treatment\n",
+        "\n",
+        "ORDER BY\n",
+        "      time_point DESC\n",
+        "    , treatment\n",
+        "    , vascular_tier\n",
+        "\"\"\")\n",
+        "\n",
+        "# Create bar chart\n",
+        "chart = (\n",
+        "    alt.Chart(d)\n",
+        "    .mark_bar(size=40)\n",
+        "    .encode(\n",
+        "          x=alt.X(\"time_point\", title=\"Time Point\")\n",
+        "        , y=alt.Y(\"well_plates:Q\", title=\"Count of Wells\")\n",
+        "        , color=alt.Color(\"vascular_tier:N\", title=\"Vascular Tier\")\n",
+        "        , column=alt.Column(\"treatment:N\", title=\"Treatment\")\n",
+        "    )\n",
+        "    .properties(\n",
+        "          title=alt.Title(\n",
+        "              \"Quantitative Analysis of Microvasculature Formation\"\n",
+        "            , anchor=\"middle\"\n",
+        "        )\n",
+        "        , width=250\n",
+        "        , height=225\n",
+        "    )\n",
+        ")\n",
+        "\n",
+        "chart.save(\"images/analysis.png\", ppi=200)"
+      ],
+      "id": "10697553",
+      "execution_count": null,
+      "outputs": []
+    }
+  ],
+  "metadata": {
+    "kernelspec": {
+      "display_name": "Python 3",
+      "language": "python",
+      "name": "python3"
+    }
+  },
+  "nbformat": 4,
+  "nbformat_minor": 5
+}

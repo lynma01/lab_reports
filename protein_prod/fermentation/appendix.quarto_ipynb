@@ -13,7 +13,7 @@
         "\n",
         "## Shake Flask Visualizations\n"
       ],
-      "id": "c5edecae"
+      "id": "9f6704c0"
     },
     {
       "cell_type": "code",
@@ -45,7 +45,7 @@
         "\n",
         "chart_od.save(\"images/chart_sf_od.png\", ppi=ppi)"
       ],
-      "id": "753b6dbb",
+      "id": "f1c79510",
       "execution_count": null,
       "outputs": []
     },
@@ -55,7 +55,7 @@
       "source": [
         "---\n"
       ],
-      "id": "253cdeb1"
+      "id": "7e13c16c"
     },
     {
       "cell_type": "code",
@@ -76,7 +76,7 @@
         "\n",
         "chart_ph.save(\"images/chart_sf_ph.png\", ppi=ppi)"
       ],
-      "id": "719f9a5e",
+      "id": "861b217a",
       "execution_count": null,
       "outputs": []
     },
@@ -86,7 +86,7 @@
       "source": [
         "---\n"
       ],
-      "id": "9de86227"
+      "id": "62e5d31f"
     },
     {
       "cell_type": "code",
@@ -111,7 +111,7 @@
         "\n",
         "chart_carbon.save(\"images/chart_sf_gl.png\", ppi=ppi)"
       ],
-      "id": "6b01175f",
+      "id": "808f1613",
       "execution_count": null,
       "outputs": []
     },
@@ -121,7 +121,7 @@
       "source": [
         "---\n"
       ],
-      "id": "1f634f73"
+      "id": "40a7b1a8"
     },
     {
       "cell_type": "code",
@@ -147,7 +147,7 @@
         "\n",
         "chart_bt_ph.save(\"images/chart_bt_ph.png\", ppi=ppi)"
       ],
-      "id": "ad14f3ab",
+      "id": "4bc4fc98",
       "execution_count": null,
       "outputs": []
     },
@@ -157,7 +157,7 @@
       "source": [
         "## Bioreactor Visualizations\n"
       ],
-      "id": "a06b12e2"
+      "id": "8c9e6208"
     },
     {
       "cell_type": "code",
@@ -181,7 +181,7 @@
         "\n",
         "chart_bt_od600.save(\"images/chart_bt_od.png\", ppi=ppi)"
       ],
-      "id": "8a929cc8",
+      "id": "8da6f959",
       "execution_count": null,
       "outputs": []
     },
@@ -191,7 +191,7 @@
       "source": [
         "---\n"
       ],
-      "id": "0e0581de"
+      "id": "7706fc0b"
     },
     {
       "cell_type": "code",
@@ -216,7 +216,7 @@
         "chart_bt_carbon.save(\"images/chart_bt_carbon.png\", ppi=ppi)\n",
         "chart_bt_carbon.display()"
       ],
-      "id": "e7e4009b",
+      "id": "a7264b1e",
       "execution_count": null,
       "outputs": []
     },
@@ -226,7 +226,7 @@
       "source": [
         "---\n"
       ],
-      "id": "9a997d0a"
+      "id": "f2164e2e"
     },
     {
       "cell_type": "code",
@@ -259,7 +259,7 @@
         "final_chart = alt.hconcat(chart_bt_rpm, chart_bt_do)\n",
         "final_chart.save(\"images/chart_bt_do.png\", ppi=ppi)"
       ],
-      "id": "07930b48",
+      "id": "cc3760d9",
       "execution_count": null,
       "outputs": []
     }

@@ -27,7 +27,7 @@
         "\n",
         "Data collected from the experiment can be found within @lst-ce-data. The resulting experimental data was used to create the following plot examining the number of thrashes for each of the samples.\n"
       ],
-      "id": "cacc0b8e"
+      "id": "39dba3db"
     },
     {
       "cell_type": "code",
@@ -73,7 +73,7 @@
         "\n",
         "### Plotting Impact of Nanoparticle Toxicity on Germination {#sec-r-mb-chart}\n"
       ],
-      "id": "4e85c099"
+      "id": "6f7fad8a"
     },
     {
       "cell_type": "code",
@@ -154,7 +154,7 @@
         "## Exposure data tables by organism\n",
         "### *C. elegans*"
       ],
-      "id": "bc5be492"
+      "id": "794a5bbe"
     },
     {
       "cell_type": "code",
@@ -164,7 +164,7 @@
         "\n",
         "ce"
       ],
-      "id": "7e0f8ce5",
+      "id": "828895f0",
       "execution_count": null,
       "outputs": []
     },
@@ -174,7 +174,7 @@
       "source": [
         "### Mung Bean seeds"
       ],
-      "id": "b862f91f"
+      "id": "457e4249"
     },
     {
       "cell_type": "code",
@@ -184,7 +184,7 @@
         "\n",
         "pl"
       ],
-      "id": "ec832369",
+      "id": "eed46ddf",
       "execution_count": null,
       "outputs": []
     },
@@ -196,7 +196,7 @@
         "\n",
         "[^tio2_mice]: Benedicte Trouiller, Ramune Reliene, Aya Westbrook, Parrisa Solaimani, and Robert H. Schiestl. Cancer Res. November 15, 20009. \"Titanium Dioxide Nanoparticles Induce DNA Damage and Genetic Instability In vivo in Mice\"; 8784."
       ],
-      "id": "7fa4e6f6"
+      "id": "6ef4944a"
     }
   ],
   "metadata": {

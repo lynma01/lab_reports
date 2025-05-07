@@ -19,7 +19,7 @@
         "\n",
         "## Quantifying the migration of *C. elegans* in the presence of heavy metals\n"
       ],
-      "id": "273174a4"
+      "id": "1ed654b0"
     },
     {
       "cell_type": "code",
@@ -56,7 +56,7 @@
         "\n",
         "## Quantifying the thrashes of *C. elegans* on hemocytometer\n"
       ],
-      "id": "1d05cbf2"
+      "id": "e93a8a94"
     },
     {
       "cell_type": "code",
@@ -91,7 +91,7 @@
         "\n",
         "### Mean observed thrashes of *C. elegans* per exposed sample substance\n"
       ],
-      "id": "14c519a3"
+      "id": "b7fe8c20"
     },
     {
       "cell_type": "code",
@@ -133,7 +133,7 @@
         "\n",
         "[^mt_1]: Donohue Robert, M.S.c, Ascione Richard, Phd. Medical Toxicology; Experimental Manual \"Demonstrate Toxicity of Heavy Metals & Pesticide in Eukaryotic organisms using C. elegans as a Model System.\" pages 7-30."
       ],
-      "id": "12dcc553"
+      "id": "49454e58"
     }
   ],
   "metadata": {

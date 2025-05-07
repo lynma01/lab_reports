@@ -4,15 +4,16 @@ subtitle: Biomedical Tissue Engineering Lab Report - Spring 2025
 date: 2025-05-06
 bibliography: ref.bib
 csl: cell.csl
+lot: false
 ---
 
 # Abstract
 
-Angiogenesis, the de novo formation of vasculature from pre-existing endothelial cells, is a key process in both normal physiology and tumor progression. In this study, we assessed the anti-angiogenic potential of sulforaphane on the SVEC4-10 mouse immortalized endothelial cell line using a three-hour in vitro microvasculature assay. SVEC4-10 cells were seeded onto basement membrane extract in a 96-well plate with one experimental group exposed to sulforaphane. 
+Angiogenesis, the formation of vasculature from endothelial cells, is a key process in both normal physiology and tumor progression. In this study, we assessed the anti-angiogenic potential of sulforaphane on SVEC4-10 mouse endothelial cell line using a three-hour *in-vitro* microvasculature assay. SVEC4-10 cells were seeded onto basement membrane extract in a 96-well plate with one experimental group exposed to sulforaphane.
 
 Images of each SVEC4-10 culture were captured at 0 h and 3 h post-seeding, and cultures were classified into three tiers based on network complexity: Tier 1, densely interconnected tubular networks; Tier 2, partial sprouting without full interconnection; Tier 3, minimal to absent differentiation. 
 
-In untreated wells, the majority of cultures exhibited Tier 1 morphology, characterized by robust capillary-like structures, whereas sulforaphane-treated cultures predominantly fell into Tier 2 or 3, displaying scant cellular elongation and no network formation. These results demonstrate that sulforaphane inhibits early angiogenic sprouting in SVEC4-10 cells. 
+In untreated wells, the majority of cultures exhibited Tier 1 morphology, characterized by robust capillary-like structures, whereas sulforaphane-treated cultures predominantly fell into Tier 2 or 3, displaying negligible cellular elongation and network formation. These results demonstrate that sulforaphane inhibits early angiogenic sprouting in SVEC4-10 cells. 
 
 Although the visual tiering system provided qualitative distinctions, this presents issues experimental reproducibility as researchers select portions of the microwell to evince their own classification. Future studies should incorporate automated image analysis for quantitative measurement of vasculature networks. 
 
@@ -20,11 +21,7 @@ Collectively, our findings support sulforaphane as a effective inhibitor of endo
 
 # Introduction
 
-## Objective
-
-The objective of this experiment was to culture SVEC 4–10 mouse endothelial cells, and validate the inhibitory effect of sulfuraphane on angiogenesis. This experiment is significant because it seeks to further analyze preventive measures for ensuring that solid tumors are unable to recruit healthy vasculature to receive a greater concentration of oxygen and other vital nutrients.
-
-We hypothesize that sulforaphane's inhibitory effect on angiogensis, when targeted at the solid tumors’ microbiome, will diminish their capability to recruit blood vessels to feed oxygen and nutrients, as well as metastasize into the rest of the body.
+The objective of this experiment was to culture SVEC4–10 mouse endothelial cells, and validate the inhibitory effect of sulfuraphane on angiogenesis. This experiment is significant because it seeks to further analyze preventive measures for ensuring that solid tumors are unable to recruit healthy vasculature to receive a greater concentration of oxygen and other vital nutrients.
 
 ## Background
 
@@ -34,17 +31,17 @@ Angiogensis is related to several molecules, such as Vascular Endothelial Growth
 
 ### Solid Tumors & Hypoxic Angiogensis
 
-Hypoxic angiogensis begins with a hypoxic cell environment where an absence of oxygen prevents the efficient degradation of HIF-$1\alpha$.[@magar_molecular_2024] The proliferation of HIF-$1\alpha$ up-regulates VEGF secretion in neighboring cells, as well as proteolytic degradation around the tumor microbiome by MMPs so that new vasculature can begin "sprouting". The VEGF gradient activates endothelial cells, with the highest VEGF exposure promoting Tip Cell differentiation via up-regulation of Dll4.[@mayo_driving_2015]
+Hypoxic angiogensis begins with a cell environment where an oxygen-deficit prevents the efficient degradation of HIF-$1\alpha$.[@magar_molecular_2024] The proliferation of HIF-$1\alpha$ up-regulates VEGF secretion in neighboring cells, as well as proteolytic degradation around the tumor microbiome by MMPs so that new vasculature can begin "sprouting". The VEGF gradient activates endothelial cells, with the highest VEGF exposure promoting Tip Cell differentiation via up-regulation of Dll4.[@mayo_driving_2015]
 
 The Tip Cell's Dll4 then activates Notch signaling in neighboring cells (lateral inhibition), suppressing their Tip Cell potential and directing them to become proliferative Stalk Cells.[@wang_molecular_2020] Jagged-1, often expressed by Stalk Cells, further modulates Notch signaling, causing sprout elongation, stability, and potentially branching. Tip Cells are then further guided by the VEGF gradient, causing the "sprout" of Tip and Stalk cells to continue growing towards the hypoxic area while recruiting further Stalk cells behind them.[@armulik_endothelialpericyte_2005]
 
-As these "sprouts" of Tip and Stalk cells continue to form, pericytes are recuited via the secretion of chemokine Platelet-Derived Growth-Factor $\beta$ (PDGF-$\beta$). Pericytes then bind with stalks cells to increase the stability, and decrease the "leakiness" of the newly formed vascular-tubule by forming a shared basement membrane.[@armulik_endothelialpericyte_2005; @mayo_driving_2015] 
+As these "sprouts" of Tip and Stalk cells continue to form, pericytes are recuited via the secretion of Platelet-Derived Growth-Factor $\beta$ (PDGF-$\beta$). Pericytes then bind with stalks cells to increase the stability, and decrease the "leakiness" of the newly formed vascular-tubule by forming a shared basement membrane.[@armulik_endothelialpericyte_2005; @mayo_driving_2015] 
 
 This hypoxic cell signal is particularly relevant to solid tumors, whose necrotic interior allows for a artificial over-production of HIF-$1\alpha$. This causes healthy tissue around solid tumors to begin forming vasculature to transport oxygen and nutrients into the tumor's necrotic center. This has the added consequence of increasing the risk of cancerous metastasis, as tumor cells infiltrate the lymphatic vessels surrounding the newly formed blood-vessel before being transported throughout the body.[@liu_sulforaphane_2017]
 
 ### Sulforaphane's Mechanism of Inhibiting Angiogensis
 
-The primary chemical mechanism by which sulforaphane inhibits angiogenesis in endothelial cells involves the disruption of the VEGF/VEGFR2 signaling axis.[@liu_sulforaphane_2017] Sulforaphane disrupts the phosphorylation of the VEGFR2 receptor and endothelial microtubule formation. The result is decreased endothelial cell proliferation, migration, and vascular-tubule formation, while also decreasing the viability of endothelial cells in a dose-dependent manner.[@jackson_sulforaphane_2007] 
+The primary chemical mechanism by which sulforaphane inhibits angiogenesis in endothelial cells involves the disruption of VEGF/VEGFR2 signaling.[@liu_sulforaphane_2017] Sulforaphane disrupts the phosphorylation of the VEGFR2 receptor and endothelial microtubule formation. The result is decreased endothelial cell proliferation, migration, and vascular-tubule formation, while also decreasing the viability of endothelial cells in a dose-dependent manner.[@jackson_sulforaphane_2007] 
 
 # Material & Methods
 
@@ -72,7 +69,7 @@ The SVEC4-10 cells were exposed to Trypsin-EDTA for suspension into two "master 
 
 ## Method of Categorization and Analysis {#sec-m-classification}
 
-This experiment used an visual criteria to categorize the image capture of the cultures at each time-point for further analysis. Examining the (n=36) total images of each experimental treatment ("Sulforaphane", "Untreated") at each of the 3 time-points, each of the cultures was classified into one of three "Tiers" based on the following criteria:
+This experiment used a visual criteria to categorize the image capture of the cultures at each time-point for further analysis. Examining the (n=36) total images of each experimental treatment ("Sulforaphane", "Untreated") at each of the 3 time-points, each of the cultures was classified into one of three "Tiers" based on the following criteria:
 
 Cultures which appeared to have densely packed *networks* of inter-connected vasculature fell into the **Tier 1** category; cultures which appeared to contain cells in the process of differentiation, but without the interconnection between cell clusters fell into the **Tier 2** category; finally, cultures in which cellular differentiation was minimal to absent fell into the **Tier 3** category.
 
@@ -86,15 +83,17 @@ Cultures which appeared to have densely packed *networks* of inter-connected vas
 
 - From @fig-r-sulf, it appears cells treated with sulforaphane displayed minimal to no cellular differentiation which would demonstrate the formation of vasculature networks between cell clusters.
 
-- While cell clusters are appearing, and lines of cells are beginning to migrate and arrange themselves between the largest of those clusters- there are no solid lines of interconnecting cells between them.
-
 #### Development of Sulforaphane-Treated Well C4 {#sec-r-sulf-dev}
 
-![](images/sulf_t0_c4.jpeg){#fig-r-sulf-t0c4 width=2in}
-![](images/sulf_t1_c4.jpeg){#fig-r-sulf-t1c4 width=2in}
-![](images/sulf_t2_c4.jpeg){#fig-r-sulf-t2c4 width=2in}
+:::{layout-ncol="3" layout-nrow="1"}
+![](images/sulf_t0_c4.jpeg){#fig-r-sulf1 width=2in fig-scap="Image capture via Invitrogen EVOS XL microscope of Sulforaphane treated well C4 at time-point 0 displaying Tier-3 characteristics."}
 
-- The above three image captures are of the same microplate well (C4) of SVEC4-10 cells treated with sulforaphane at increasing observational time-points from T0 -> T2 from different positions in the well.
+![](images/sulf_t1_c4.jpeg){#fig-r-sulf2 width=2in fig-scap="Image capture via Invitrogen EVOS XL microscope of Sulforaphane treated well C4 at time-point 1 displaying Tier-2 characteristics."}
+
+![](images/sulf_t2_c4.jpeg){#fig-r-sulf3 width=2in fig-scap="Image capture via Invitrogen EVOS XL microscope of Sulforaphane treated well C4 at time-point 1 displaying Tier-1 characteristics."}
+:::
+
+- @fig-r-sulf1, @fig-r-sulf2, and @fig-r-sulf3 are of the same microplate well (C4) of SVEC4-10 cells treated with sulforaphane at increasing observational time-points from T0 -> T2 from different positions in the well. Images were captured via Invitrogen EVOS XL microscope.
 
 - We can observe the behavior of the cells is a three stage process where cells 1) cluster into discrete groups, 2) cluster begin to arrange where individual cells migrate between the clusters to begin forming tip/stalk cells, and 3) vasculature networks solidly link between the clusters.  
 
@@ -108,15 +107,19 @@ Cultures which appeared to have densely packed *networks* of inter-connected vas
 
 #### Development of Experimental Control Well B2 {#sec-r-svec-dev}
 
-![Well B2 at T0](images/svec_t0_b2.jpeg){#fig-r-svec-t0b2 width=2in}
-![Well B2 at T1](images/svec_t1_b2.jpeg){#fig-r-svec-t1b2 width=2in}
-![Well B2 at T2](images/svec_t2_b2.jpeg){#fig-r-svec-t2b2 width=2in}
+:::{layout-ncol=3 layout-nrow=1}
+![](images/svec_t0_b2.jpeg){#fig-r-svec1 width=2in fig-scap="Image capture via Invitrogen EVOS XL microscope of untreated well B2 at time-point 0 displaying Tier-3 characteristics."}
 
-- The above three image captures are of the same microplate well (B2) of SVEC4-10 cells cultured without sulforaphane treatment at increasing observational time-points from T0 -> T2 from different positions in the well.
+![](images/svec_t1_b2.jpeg){#fig-r-svec2 width=2in fig-scap="Image capture via Invitrogen EVOS XL microscope of untreated well B2 at time-point 1 displaying Tier-2 characteristics."}
 
-- Compared to the figures in @sec-r-sulf-dev, we can observe increased formation of immature vascular networks between cell clusters at T1 in the right hand portion of this image capture.
+![](images/svec_t2_b2.jpeg){#fig-r-svec3 width=2in fig-scap="Image capture via Invitrogen EVOS XL microscope of untreated well B2 at time-point 3 displaying Tier-1 characteristics."}
+:::
 
-- Likewise compared to @sec-r-sulf-dev, we can observe a more interconnected and/or mature network of vascular-tubules at T2 suggesting that the absence of sulforaphane treatment allowed for greater vasculature development over time.
+- @fig-r-svec1, @fig-r-svec2, @fig-r-svec3 image captures are of the same microplate well (B2) of SVEC4-10 cells cultured without sulforaphane treatment at increasing observational time-points from T0 -> T2 from different positions in the well. Images were capture via Invitrogen EVOS XL microscope.
+
+- Compared to the figures in @sec-r-sulf-dev, we can observe increased formation of immature vascular networks between cell clusters at T1 in the right hand portion of this image capture despite falling into the same Tier of vasculature formation.
+
+- Likewise compared @fig-r-sulf1, @fig-4-sulf2, and @fig-r-sulf3 we can observe a more interconnected and/or mature network of vascular-tubules at T2 suggesting that the absence of sulforaphane treatment allowed for greater vasculature development over time.
 
 ## Quantative Analysis {#sec-r-quant}
 
